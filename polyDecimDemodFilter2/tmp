@@ -1,0 +1,17 @@
+
+
+mypolyDecimator : entity work.firFilter_top
+my_clk_div : entity work.clk_div_top
+fifo_decim_demod : entity work.fifo_clk_to_decim
+mydigitalDemod : entity work.digitalDemodTest_top
+mybutterworth20bit : entity work.butter_quantized_20bit 
+iir_to_mac_handshake : entity work.ShiftRegister
+mymac20 : entity work.mac16_top 
+
+
+
+
+acc_blk32topRe : entity work.block_ram32
+acc_blk32BottomRe : entity work.block_ram32
+acc_blk32topIm : entity work.block_ram32
+acc_blk32BottomIm : entity work.block_ram32
