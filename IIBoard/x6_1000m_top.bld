@@ -1,0 +1,2241 @@
+Release 14.5 ngdbuild P.58f (lin64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: /opt/Xilinx/14.5/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -intstyle
+ise -dd _ngo -sd remote_sources/_/_/_/_/lib/ip/pcie/x8/sx315t-ff1156 -sd
+remote_sources/_/_/_/_/lib/ip/vfifo/sx315t-ff1156 -sd
+remote_sources/_/_/_/_/lib/ip/vfifo_pb/sx315t-ff1156 -sd
+remote_sources/_/_/_/_/lib/ip/aurora/sx315t-ff1156 -sd remote_sources/_/coregen
+-sd remote_sources/_/_/_/_/lib/common/coregen -sd
+remote_sources/_/ip/ads5400_intf_phy -sd remote_sources/_/ip/dac5682z_intf_phy
+-sd remote_sources/_/ip/dac_lat_cal -nt timestamp -uc
+remote_sources/_/syn/x6_1000m.ucf -p xc6vsx315t-ff1156-1 x6_1000m_top.ngc
+x6_1000m_top.ngd
+
+Reading NGO file "/home/nick/IIBoard/x6_1000m_top.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file
+"remote_sources/_/syn/x6_1000m.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+ERROR:ConstraintSystem:58 - Constraint <NET "lpddr2_c?/mem_clk_div2" TNM =
+   "TNM_lpddr2_mmcm_clk";> [remote_sources/_/syn/x6_1000m.ucf(163)]: NET
+   "lpddr2_c?/mem_clk_div2" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <NET "lpddr2_c?/tb_clk" TNM =
+   "TNM_lpddr2_tb_clk";> [remote_sources/_/syn/x6_1000m.ucf(164)]: NET
+   "lpddr2_c?/tb_clk" does not match any design objects.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC "TS_pex2sysclk_TIG" = FROM
+   "CLK_USER_CLK" TO "TNM_sys_clk" TIG;>
+   [remote_sources/_/syn/x6_1000m.ucf(185)]: Unable to find an active 'TimeGrp'
+   or 'TNM' or 'TPSync' constraint named 'CLK_USER_CLK'.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC "TS_sys2pexclk_TIG" = FROM
+   "TNM_sys_clk" TO "CLK_USER_CLK" TIG;>
+   [remote_sources/_/syn/x6_1000m.ucf(186)]: Unable to find an active 'TimeGrp'
+   or 'TNM' or 'TPSync' constraint named 'CLK_USER_CLK'.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC "TS_pddr2_sys2mmcm_clk_TIG" =
+   FROM "TNM_sys_clk" TO "TNM_lpddr2_mmcm_clk" TIG;>
+   [remote_sources/_/syn/x6_1000m.ucf(189)]: Unable to find an active 'TimeGrp'
+   or 'TNM' or 'TPSync' constraint named 'TNM_lpddr2_mmcm_clk'.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC "TS_pddr2_mmcm2sys_clk_TIG" =
+   FROM "TNM_lpddr2_mmcm_clk" TO "TNM_sys_clk" TIG;>
+   [remote_sources/_/syn/x6_1000m.ucf(190)]: Unable to find an active 'TimeGrp'
+   or 'TNM' or 'TPSync' constraint named 'TNM_lpddr2_mmcm_clk'.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC "TS_lpddr2_tb2sys_clk_TIG" =
+   FROM "TNM_lpddr2_tb_clk" TO "TNM_sys_clk" TIG;>
+   [remote_sources/_/syn/x6_1000m.ucf(191)]: Unable to find an active 'TimeGrp'
+   or 'TNM' or 'TPSync' constraint named 'TNM_lpddr2_tb_clk'.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC "TS_lpddr2_sys2tb_clk_TIG" =
+   FROM "TNM_sys_clk" TO "TNM_lpddr2_tb_clk" TIG;>
+   [remote_sources/_/syn/x6_1000m.ucf(192)]: Unable to find an active 'TimeGrp'
+   or 'TNM' or 'TPSync' constraint named 'TNM_lpddr2_tb_clk'.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC "TS_lpddr2_tb2mmcm_clk_TIG" =
+   FROM "TNM_lpddr2_tb_clk" TO "TNM_lpddr2_mmcm_clk" TIG;>
+   [remote_sources/_/syn/x6_1000m.ucf(193)]: Unable to find an active 'TimeGrp'
+   or 'TNM' or 'TPSync' constraint named 'TNM_lpddr2_tb_clk'.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC "TS_lpddr2_tb2mmcm_clk_TIG" =
+   FROM "TNM_lpddr2_tb_clk" TO "TNM_lpddr2_mmcm_clk" TIG;>
+   [remote_sources/_/syn/x6_1000m.ucf(193)]: Unable to find an active 'TimeGrp'
+   or 'TNM' or 'TPSync' constraint named 'TNM_lpddr2_mmcm_clk'.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC "TS_lpddr2_mmcm2tb_clk_TIG" =
+   FROM "TNM_lpddr2_mmcm_clk" TO "TNM_lpddr2_tb_clk" TIG;>
+   [remote_sources/_/syn/x6_1000m.ucf(194)]: Unable to find an active 'TimeGrp'
+   or 'TNM' or 'TPSync' constraint named 'TNM_lpddr2_mmcm_clk'.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC "TS_lpddr2_mmcm2tb_clk_TIG" =
+   FROM "TNM_lpddr2_mmcm_clk" TO "TNM_lpddr2_tb_clk" TIG;>
+   [remote_sources/_/syn/x6_1000m.ucf(194)]: Unable to find an active 'TimeGrp'
+   or 'TNM' or 'TPSync' constraint named 'TNM_lpddr2_tb_clk'.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC "TS_lpddr2_mmcm2ref_clk_TIG"
+   = FROM "TNM_lpddr2_mmcm_clk" TO "TNM_ref_clk200" TIG;>
+   [remote_sources/_/syn/x6_1000m.ucf(195)]: Unable to find an active 'TimeGrp'
+   or 'TNM' or 'TPSync' constraint named 'TNM_lpddr2_mmcm_clk'.
+
+WARNING:ConstraintSystem:137 - Constraint <NET "dac?_clk_in_?" TNM_NET =
+   "TNM_DAC_CLK_IN";> [remote_sources/_/syn/x6_1000m.ucf(441)]: No appropriate
+   instances for the TNM constraint are driven by "dac0_clk_in_p".
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC "TS_DAC_CLK_IN" = PERIOD
+   "TNM_DAC_CLK_IN" 2 ns;> [remote_sources/_/syn/x6_1000m.ucf(442)]: Unable to
+   find an active 'TNM' or 'TimeGrp' constraint named 'TNM_DAC_CLK_IN'.
+
+WARNING:ConstraintSystem:137 - Constraint <NET "adc?_da_dclk_?" TNM_NET =
+   "TNM_ADC_DCLK";> [remote_sources/_/syn/x6_1000m.ucf(448)]: No appropriate
+   instances for the TNM constraint are driven by "adc0_da_dclk_p".
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC "TS_ADC_DCLK" = PERIOD
+   "TNM_ADC_DCLK" 2 ns;> [remote_sources/_/syn/x6_1000m.ucf(449)]: Unable to
+   find an active 'TNM' or 'TimeGrp' constraint named 'TNM_ADC_DCLK'.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "inst_afe_top/inst_adc0/inst_adc_intf/inst_adc_phy_top/inst_ads5400_phy/inst_
+   idelayctrl" LOC = "IDELAYCTRL_X0Y1";>
+   [remote_sources/_/syn/x6_1000m.ucf(460)]: INST
+   "inst_afe_top/inst_adc0/inst_adc_intf/inst_adc_phy_top/inst_ads5400_phy/inst_
+   idelayctrl" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "inst_afe_top/inst_adc0/inst_adc_intf/inst_adc_phy_top/inst_ads5400_phy/inst_
+   idelayctrl" LOC = "IDELAYCTRL_X0Y1";>
+   [remote_sources/_/syn/x6_1000m.ucf(460)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "inst_afe_top/inst_adc1/inst_adc_intf/inst_adc_phy_top/inst_ads5400_phy/inst_
+   idelayctrl" LOC = "IDELAYCTRL_X0Y0";>
+   [remote_sources/_/syn/x6_1000m.ucf(461)]: INST
+   "inst_afe_top/inst_adc1/inst_adc_intf/inst_adc_phy_top/inst_ads5400_phy/inst_
+   idelayctrl" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "inst_afe_top/inst_adc1/inst_adc_intf/inst_adc_phy_top/inst_ads5400_phy/inst_
+   idelayctrl" LOC = "IDELAYCTRL_X0Y0";>
+   [remote_sources/_/syn/x6_1000m.ucf(461)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "inst_afe_top/inst_dac0_intf/inst_dac_intf/dac5682z_phy_inst/idelayctrl_inst"
+   LOC = "IDELAYCTRL_X0Y3";> [remote_sources/_/syn/x6_1000m.ucf(462)]: INST
+   "inst_afe_top/inst_dac0_intf/inst_dac_intf/dac5682z_phy_inst/idelayctrl_inst"
+   not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "inst_afe_top/inst_dac0_intf/inst_dac_intf/dac5682z_phy_inst/idelayctrl_inst"
+   LOC = "IDELAYCTRL_X0Y3";> [remote_sources/_/syn/x6_1000m.ucf(462)]' could not
+   be found and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "inst_afe_top/inst_dac1_intf/inst_dac_intf/dac5682z_phy_inst/idelayctrl_inst"
+   LOC = "IDELAYCTRL_X0Y2";> [remote_sources/_/syn/x6_1000m.ucf(463)]: INST
+   "inst_afe_top/inst_dac1_intf/inst_dac_intf/dac5682z_phy_inst/idelayctrl_inst"
+   not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "inst_afe_top/inst_dac1_intf/inst_dac_intf/dac5682z_phy_inst/idelayctrl_inst"
+   LOC = "IDELAYCTRL_X0Y2";> [remote_sources/_/syn/x6_1000m.ucf(463)]' could not
+   be found and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "inst_pcie/pex_rst_n" TIG;>
+   [remote_sources/_/syn/x6_1000m.ucf(520)]: NET "inst_pcie/pex_rst_n" not
+   found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "inst_pcie/pex_rst_n" PULLUP |>
+   [remote_sources/_/syn/x6_1000m.ucf(521)]: NET "inst_pcie/pex_rst_n" not
+   found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NODELAY ;>
+   [remote_sources/_/syn/x6_1000m.ucf(521)]: NET "inst_pcie/pex_rst_n" not
+   found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "inst_pcie/pex_ref_clk_n" LOC = V5;>
+   [remote_sources/_/syn/x6_1000m.ucf(535)]: NET "inst_pcie/pex_ref_clk_n" not
+   found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "inst_pcie/pex_ref_clk_n" LOC = V5;>
+   [remote_sources/_/syn/x6_1000m.ucf(535)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "inst_pcie/pex_ref_clk_p" LOC = V6;>
+   [remote_sources/_/syn/x6_1000m.ucf(536)]: NET "inst_pcie/pex_ref_clk_p" not
+   found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "inst_pcie/pex_ref_clk_p" LOC = V6;>
+   [remote_sources/_/syn/x6_1000m.ucf(536)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST "inst_pcie/refclk_ibuf" LOC =
+   IBUFDS_GTXE1_X0Y4;> [remote_sources/_/syn/x6_1000m.ucf(537)]: INST
+   "inst_pcie/refclk_ibuf" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST "inst_pcie/refclk_ibuf" LOC = IBUFDS_GTXE1_X0Y4;>
+   [remote_sources/_/syn/x6_1000m.ucf(537)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "inst_pcie/ep/pcie_2_0_i/pcie_gt_i/gtx_v6_i/GTXD[0].GTX" LOC = GTXE1_X0Y8;>
+   [remote_sources/_/syn/x6_1000m.ucf(547)]: INST
+   "inst_pcie/ep/pcie_2_0_i/pcie_gt_i/gtx_v6_i/GTXD[0].GTX" not found.  Please
+   verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST "inst_pcie/ep/pcie_2_0_i/pcie_gt_i/gtx_v6_i/GTXD[0].GTX" LOC =
+   GTXE1_X0Y8;> [remote_sources/_/syn/x6_1000m.ucf(547)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "inst_pcie/ep/pcie_2_0_i/pcie_gt_i/gtx_v6_i/GTXD[1].GTX" LOC = GTXE1_X0Y9;>
+   [remote_sources/_/syn/x6_1000m.ucf(549)]: INST
+   "inst_pcie/ep/pcie_2_0_i/pcie_gt_i/gtx_v6_i/GTXD[1].GTX" not found.  Please
+   verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST "inst_pcie/ep/pcie_2_0_i/pcie_gt_i/gtx_v6_i/GTXD[1].GTX" LOC =
+   GTXE1_X0Y9;> [remote_sources/_/syn/x6_1000m.ucf(549)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "inst_pcie/ep/pcie_2_0_i/pcie_gt_i/gtx_v6_i/GTXD[2].GTX" LOC = GTXE1_X0Y10;>
+   [remote_sources/_/syn/x6_1000m.ucf(551)]: INST
+   "inst_pcie/ep/pcie_2_0_i/pcie_gt_i/gtx_v6_i/GTXD[2].GTX" not found.  Please
+   verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST "inst_pcie/ep/pcie_2_0_i/pcie_gt_i/gtx_v6_i/GTXD[2].GTX" LOC =
+   GTXE1_X0Y10;> [remote_sources/_/syn/x6_1000m.ucf(551)]' could not be found
+   and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "inst_pcie/ep/pcie_2_0_i/pcie_gt_i/gtx_v6_i/GTXD[3].GTX" LOC = GTXE1_X0Y11;>
+   [remote_sources/_/syn/x6_1000m.ucf(553)]: INST
+   "inst_pcie/ep/pcie_2_0_i/pcie_gt_i/gtx_v6_i/GTXD[3].GTX" not found.  Please
+   verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST "inst_pcie/ep/pcie_2_0_i/pcie_gt_i/gtx_v6_i/GTXD[3].GTX" LOC =
+   GTXE1_X0Y11;> [remote_sources/_/syn/x6_1000m.ucf(553)]' could not be found
+   and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "inst_pcie/ep/pcie_2_0_i/pcie_gt_i/gtx_v6_i/GTXD[4].GTX" LOC = GTXE1_X0Y12;>
+   [remote_sources/_/syn/x6_1000m.ucf(555)]: INST
+   "inst_pcie/ep/pcie_2_0_i/pcie_gt_i/gtx_v6_i/GTXD[4].GTX" not found.  Please
+   verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST "inst_pcie/ep/pcie_2_0_i/pcie_gt_i/gtx_v6_i/GTXD[4].GTX" LOC =
+   GTXE1_X0Y12;> [remote_sources/_/syn/x6_1000m.ucf(555)]' could not be found
+   and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "inst_pcie/ep/pcie_2_0_i/pcie_gt_i/gtx_v6_i/GTXD[5].GTX" LOC = GTXE1_X0Y13;>
+   [remote_sources/_/syn/x6_1000m.ucf(557)]: INST
+   "inst_pcie/ep/pcie_2_0_i/pcie_gt_i/gtx_v6_i/GTXD[5].GTX" not found.  Please
+   verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST "inst_pcie/ep/pcie_2_0_i/pcie_gt_i/gtx_v6_i/GTXD[5].GTX" LOC =
+   GTXE1_X0Y13;> [remote_sources/_/syn/x6_1000m.ucf(557)]' could not be found
+   and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "inst_pcie/ep/pcie_2_0_i/pcie_gt_i/gtx_v6_i/GTXD[6].GTX" LOC = GTXE1_X0Y14;>
+   [remote_sources/_/syn/x6_1000m.ucf(559)]: INST
+   "inst_pcie/ep/pcie_2_0_i/pcie_gt_i/gtx_v6_i/GTXD[6].GTX" not found.  Please
+   verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST "inst_pcie/ep/pcie_2_0_i/pcie_gt_i/gtx_v6_i/GTXD[6].GTX" LOC =
+   GTXE1_X0Y14;> [remote_sources/_/syn/x6_1000m.ucf(559)]' could not be found
+   and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "inst_pcie/ep/pcie_2_0_i/pcie_gt_i/gtx_v6_i/GTXD[7].GTX" LOC = GTXE1_X0Y15;>
+   [remote_sources/_/syn/x6_1000m.ucf(561)]: INST
+   "inst_pcie/ep/pcie_2_0_i/pcie_gt_i/gtx_v6_i/GTXD[7].GTX" not found.  Please
+   verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST "inst_pcie/ep/pcie_2_0_i/pcie_gt_i/gtx_v6_i/GTXD[7].GTX" LOC =
+   GTXE1_X0Y15;> [remote_sources/_/syn/x6_1000m.ucf(561)]' could not be found
+   and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "inst_pcie/ep/pcie_2_0_i/pcie_block_i" LOC = PCIE_X0Y1;>
+   [remote_sources/_/syn/x6_1000m.ucf(565)]: INST
+   "inst_pcie/ep/pcie_2_0_i/pcie_block_i" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST "inst_pcie/ep/pcie_2_0_i/pcie_block_i" LOC = PCIE_X0Y1;>
+   [remote_sources/_/syn/x6_1000m.ucf(565)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "inst_pcie/pex_ref_clk_p" TNM_NET =
+   "PEX_REFCLK" ;> [remote_sources/_/syn/x6_1000m.ucf(571)]: NET
+   "inst_pcie/pex_ref_clk_p" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET
+   "inst_pcie/ep/pcie_clocking_i/clk_125" TNM_NET = "CLK_125" ;>
+   [remote_sources/_/syn/x6_1000m.ucf(572)]: NET
+   "inst_pcie/ep/pcie_clocking_i/clk_125" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET
+   "inst_pcie/ep/pcie_clocking_i/clk_250" TNM_NET = "CLK_USER_CLK" ;>
+   [remote_sources/_/syn/x6_1000m.ucf(573)]: NET
+   "inst_pcie/ep/pcie_clocking_i/clk_250" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC "TS_PEX_REFCLK" = PERIOD
+   "PEX_REFCLK" 250 MHz HIGH 50 % ;> [remote_sources/_/syn/x6_1000m.ucf(575)]:
+   Unable to find an active 'TNM' or 'TimeGrp' constraint named 'PEX_REFCLK'.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC "TS_PEX_CLK125" = PERIOD
+   "CLK_125" TS_PEX_REFCLK/2 HIGH 50 % PRIORITY 100 ;>
+   [remote_sources/_/syn/x6_1000m.ucf(576)]: Unable to find an active 'TNM' or
+   'TimeGrp' constraint named 'CLK_125'.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC "TS_PEX_USRCLK" = PERIOD
+   "CLK_USER_CLK" TS_PEX_REFCLK*1 HIGH 50 % PRIORITY 1;>
+   [remote_sources/_/syn/x6_1000m.ucf(577)]: Unable to find an active 'TNM' or
+   'TimeGrp' constraint named 'CLK_USER_CLK'.
+
+ERROR:ConstraintSystem:59 - Constraint <PIN "inst_pcie/trn_reset_n_i.CLR" TIG ;>
+   [remote_sources/_/syn/x6_1000m.ucf(580)]: PIN "inst_pcie/trn_reset_n_i.CLR"
+   not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <PIN
+   "inst_pcie/ep/pcie_clocking_i/mmcm_adv_i.RST" TIG ;>
+   [remote_sources/_/syn/x6_1000m.ucf(581)]: PIN
+   "inst_pcie/ep/pcie_clocking_i/mmcm_adv_i.RST" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "inst_pcie/dma/pcie_regs/bm_rst_int" TNM = "bm_rst_grp";>
+   [remote_sources/_/syn/x6_1000m.ucf(584)]: INST
+   "inst_pcie/dma/pcie_regs/bm_rst_int" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC TS_PEX_mc_bm_rst = FROM
+   "bm_rst_grp" TO FFS TS_PEX_USRCLK / 2;>
+   [remote_sources/_/syn/x6_1000m.ucf(585)]: Unable to find an active 'TimeGrp'
+   or 'TNM' or 'TPSync' constraint named 'bm_rst_grp'.
+
+ERROR:ConstraintSystem:59 - Constraint <INST "inst_pcie/ep" AREA_GROUP =
+   "AG_pex_core";> [remote_sources/_/syn/x6_1000m.ucf(591)]: INST "inst_pcie/ep"
+   not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem:56 - Constraint <AREA_GROUP "AG_pex_core"
+   RANGE=SLICE_X196Y90:SLICE_X209Y159;>
+   [remote_sources/_/syn/x6_1000m.ucf(592)]: Unable to find an active
+   'Area_Group' constraint named 'AG_pex_core'.
+
+WARNING:ConstraintSystem:56 - Constraint <AREA_GROUP "AG_pex_core"
+   RANGE=RAMB18_X13Y36:RAMB18_X14Y63;> [remote_sources/_/syn/x6_1000m.ucf(593)]:
+   Unable to find an active 'Area_Group' constraint named 'AG_pex_core'.
+
+WARNING:ConstraintSystem:56 - Constraint <AREA_GROUP "AG_pex_core"
+   RANGE=RAMB36_X13Y18:RAMB36_X14Y31;> [remote_sources/_/syn/x6_1000m.ucf(594)]:
+   Unable to find an active 'Area_Group' constraint named 'AG_pex_core'.
+
+ERROR:ConstraintSystem:59 - Constraint <INST "inst_pcie/dma" AREA_GROUP =
+   "AG_pex_dma";> [remote_sources/_/syn/x6_1000m.ucf(596)]: INST "inst_pcie/dma"
+   not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem:56 - Constraint <AREA_GROUP "AG_pex_dma"
+   RANGE=SLICE_X168Y90:SLICE_X199Y159;>
+   [remote_sources/_/syn/x6_1000m.ucf(597)]: Unable to find an active
+   'Area_Group' constraint named 'AG_pex_dma'.
+
+WARNING:ConstraintSystem:56 - Constraint <AREA_GROUP "AG_pex_dma"
+   RANGE=RAMB18_X11Y36:RAMB18_X13Y63;> [remote_sources/_/syn/x6_1000m.ucf(598)]:
+   Unable to find an active 'Area_Group' constraint named 'AG_pex_dma'.
+
+WARNING:ConstraintSystem:56 - Constraint <AREA_GROUP "AG_pex_dma"
+   RANGE=RAMB36_X11Y18:RAMB36_X13Y31;> [remote_sources/_/syn/x6_1000m.ucf(599)]:
+   Unable to find an active 'Area_Group' constraint named 'AG_pex_dma'.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "inst_pcie/dma/xfer_machine/posted_pkt_gen/posted_fifo" AREA_GROUP =
+   "AG_pex_posted";> [remote_sources/_/syn/x6_1000m.ucf(601)]: INST
+   "inst_pcie/dma/xfer_machine/posted_pkt_gen/posted_fifo" not found.  Please
+   verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem:56 - Constraint <AREA_GROUP "AG_pex_posted"
+   RANGE=RAMB36_X12Y24:RAMB36_X12Y25;> [remote_sources/_/syn/x6_1000m.ucf(602)]:
+   Unable to find an active 'Area_Group' constraint named 'AG_pex_posted'.
+
+WARNING:ConstraintSystem:56 - Constraint <AREA_GROUP "AG_pex_posted"
+   RANGE=RAMB18_X12Y48:RAMB18_X12Y51;> [remote_sources/_/syn/x6_1000m.ucf(603)]:
+   Unable to find an active 'Area_Group' constraint named 'AG_pex_posted'.
+
+ERROR:ConstraintSystem:59 - Constraint <INST "inst_pcie/dma/pcie_rx_fifo"
+   AREA_GROUP = "AG_pex_rxfifo";> [remote_sources/_/syn/x6_1000m.ucf(605)]: INST
+   "inst_pcie/dma/pcie_rx_fifo" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem:56 - Constraint <AREA_GROUP "AG_pex_rxfifo" RANGE =
+   RAMB36_X12Y26:RAMB36_X12Y31;> [remote_sources/_/syn/x6_1000m.ucf(606)]:
+   Unable to find an active 'Area_Group' constraint named 'AG_pex_rxfifo'.
+
+ERROR:ConstraintSystem:58 - Constraint <NET
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/clk_rsync[?]" TNM_NET
+   = "TNM_C0_clk_rsync";> [remote_sources/_/syn/x6_1000m.ucf(619)]: NET
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/clk_rsync[?]" does
+   not match any design objects.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC "TS_C0_clk_rsync" = PERIOD
+   "TNM_C0_clk_rsync" 5 ns;> [remote_sources/_/syn/x6_1000m.ucf(620)]: Unable to
+   find an active 'TNM' or 'TimeGrp' constraint named 'TNM_C0_clk_rsync'.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_oserdes_rsync" LOC = "OLOGIC_X2Y183";>
+   [remote_sources/_/syn/x6_1000m.ucf(720)]: INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_oserdes_rsync" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_oserdes_rsync" LOC = "OLOGIC_X2Y183";>
+   [remote_sources/_/syn/x6_1000m.ucf(720)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_odelay_rsync"  LOC = "IODELAY_X2Y183";>
+   [remote_sources/_/syn/x6_1000m.ucf(721)]: INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_odelay_rsync" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_odelay_rsync"  LOC = "IODELAY_X2Y183";>
+   [remote_sources/_/syn/x6_1000m.ucf(721)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_bufr_rsync"    LOC = "BUFR_X2Y9";>
+   [remote_sources/_/syn/x6_1000m.ucf(722)]: INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_bufr_rsync" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_bufr_rsync"    LOC = "BUFR_X2Y9";>
+   [remote_sources/_/syn/x6_1000m.ucf(722)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[0].u_oserdes_cpt" LOC = "OLOGIC_X2Y179";>
+   [remote_sources/_/syn/x6_1000m.ucf(736)]: INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[0].u_oserdes_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[0].u_oserdes_cpt" LOC = "OLOGIC_X2Y179";>
+   [remote_sources/_/syn/x6_1000m.ucf(736)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[0].u_odelay_cpt"  LOC = "IODELAY_X2Y179";>
+   [remote_sources/_/syn/x6_1000m.ucf(737)]: INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[0].u_odelay_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[0].u_odelay_cpt"  LOC = "IODELAY_X2Y179";>
+   [remote_sources/_/syn/x6_1000m.ucf(737)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[1].u_oserdes_cpt" LOC = "OLOGIC_X2Y141";>
+   [remote_sources/_/syn/x6_1000m.ucf(740)]: INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[1].u_oserdes_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[1].u_oserdes_cpt" LOC = "OLOGIC_X2Y141";>
+   [remote_sources/_/syn/x6_1000m.ucf(740)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[1].u_odelay_cpt"  LOC = "IODELAY_X2Y141";>
+   [remote_sources/_/syn/x6_1000m.ucf(741)]: INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[1].u_odelay_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[1].u_odelay_cpt"  LOC = "IODELAY_X2Y141";>
+   [remote_sources/_/syn/x6_1000m.ucf(741)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[2].u_oserdes_cpt" LOC = "OLOGIC_X2Y139";>
+   [remote_sources/_/syn/x6_1000m.ucf(744)]: INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[2].u_oserdes_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[2].u_oserdes_cpt" LOC = "OLOGIC_X2Y139";>
+   [remote_sources/_/syn/x6_1000m.ucf(744)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[2].u_odelay_cpt"  LOC = "IODELAY_X2Y139";>
+   [remote_sources/_/syn/x6_1000m.ucf(745)]: INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[2].u_odelay_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[2].u_odelay_cpt"  LOC = "IODELAY_X2Y139";>
+   [remote_sources/_/syn/x6_1000m.ucf(745)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[3].u_oserdes_cpt" LOC = "OLOGIC_X2Y137";>
+   [remote_sources/_/syn/x6_1000m.ucf(748)]: INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[3].u_oserdes_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[3].u_oserdes_cpt" LOC = "OLOGIC_X2Y137";>
+   [remote_sources/_/syn/x6_1000m.ucf(748)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[3].u_odelay_cpt"  LOC = "IODELAY_X2Y137";>
+   [remote_sources/_/syn/x6_1000m.ucf(749)]: INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[3].u_odelay_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[3].u_odelay_cpt"  LOC = "IODELAY_X2Y137";>
+   [remote_sources/_/syn/x6_1000m.ucf(749)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_infrastructure/u_mmcm_adv"
+   LOC = "MMCM_ADV_X0Y9";> [remote_sources/_/syn/x6_1000m.ucf(754)]: INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_infrastructure/u_mmcm_adv"
+   not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_infrastructure/u_mmcm_adv"
+   LOC = "MMCM_ADV_X0Y9";> [remote_sources/_/syn/x6_1000m.ucf(754)]' could not
+   be found and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_idelayctrl"
+   IODELAY_GROUP=LPDDR2_C0;> [remote_sources/_/syn/x6_1000m.ucf(759)]: INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_idelayctrl" not found. 
+   Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_clock_io/gen_ck
+   [*].u_phy_ck_iob_fb/u_iodelay_ck_p" IODELAY_GROUP=LPDDR2_C0;>
+   [remote_sources/_/syn/x6_1000m.ucf(760)]: INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_clock_io/gen_ck
+   [*].u_phy_ck_iob_fb/u_iodelay_ck_p" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_control_io/gen_
+   cke[*].u_iodelay_cke" IODELAY_GROUP=LPDDR2_C0;>
+   [remote_sources/_/syn/x6_1000m.ucf(761)]: INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_control_io/gen_
+   cke[*].u_iodelay_cke" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_control_io/gen_
+   cs_n[*].u_iodelay_cs_n" IODELAY_GROUP=LPDDR2_C0;>
+   [remote_sources/_/syn/x6_1000m.ucf(762)]: INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_control_io/gen_
+   cs_n[*].u_iodelay_cs_n" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_control_io/gen_
+   ca[*].u_iodelay_ca" IODELAY_GROUP=LPDDR2_C0;>
+   [remote_sources/_/syn/x6_1000m.ucf(763)]: INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_control_io/gen_
+   ca[*].u_iodelay_ca" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_data_io/gen_dm_
+   inst.gen_dm[*].u_phy_dm_iob/u_odelay_dm" IODELAY_GROUP=LPDDR2_C0;>
+   [remote_sources/_/syn/x6_1000m.ucf(764)]: INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_data_io/gen_dm_
+   inst.gen_dm[*].u_phy_dm_iob/u_odelay_dm" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_data_io/gen_dq[
+   *].u_iob_dq/u_iodelay_dq" IODELAY_GROUP=LPDDR2_C0;>
+   [remote_sources/_/syn/x6_1000m.ucf(765)]: INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_data_io/gen_dq[
+   *].u_iob_dq/u_iodelay_dq" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_data_io/gen_dqs
+   [*].u_phy_dqs_iob/u_iodelay_dqs_p_early" IODELAY_GROUP=LPDDR2_C0;>
+   [remote_sources/_/syn/x6_1000m.ucf(766)]: INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_data_io/gen_dqs
+   [*].u_phy_dqs_iob/u_iodelay_dqs_p_early" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[*].u_odelay_cpt" IODELAY_GROUP=LPDDR2_C0;>
+   [remote_sources/_/syn/x6_1000m.ucf(767)]: INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[*].u_odelay_cpt" does not match any design objects.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_odelay_rsync" IODELAY_GROUP=LPDDR2_C0;>
+   [remote_sources/_/syn/x6_1000m.ucf(768)]: INST
+   "lpddr2_c0/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_odelay_rsync" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:58 - Constraint <NET
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/clk_rsync[?]" TNM_NET
+   = "TNM_C1_clk_rsync";> [remote_sources/_/syn/x6_1000m.ucf(788)]: NET
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/clk_rsync[?]" does
+   not match any design objects.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC "TS_C1_clk_rsync" = PERIOD
+   "TNM_C1_clk_rsync" 5 ns;> [remote_sources/_/syn/x6_1000m.ucf(789)]: Unable to
+   find an active 'TNM' or 'TimeGrp' constraint named 'TNM_C1_clk_rsync'.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_oserdes_rsync" LOC = "OLOGIC_X1Y143";>
+   [remote_sources/_/syn/x6_1000m.ucf(889)]: INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_oserdes_rsync" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_oserdes_rsync" LOC = "OLOGIC_X1Y143";>
+   [remote_sources/_/syn/x6_1000m.ucf(889)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_odelay_rsync"  LOC = "IODELAY_X1Y143";>
+   [remote_sources/_/syn/x6_1000m.ucf(890)]: INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_odelay_rsync" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_odelay_rsync"  LOC = "IODELAY_X1Y143";>
+   [remote_sources/_/syn/x6_1000m.ucf(890)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_bufr_rsync"    LOC = "BUFR_X1Y7";>
+   [remote_sources/_/syn/x6_1000m.ucf(891)]: INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_bufr_rsync" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_bufr_rsync"    LOC = "BUFR_X1Y7";>
+   [remote_sources/_/syn/x6_1000m.ucf(891)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[0].u_oserdes_cpt" LOC = "OLOGIC_X1Y181";>
+   [remote_sources/_/syn/x6_1000m.ucf(905)]: INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[0].u_oserdes_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[0].u_oserdes_cpt" LOC = "OLOGIC_X1Y181";>
+   [remote_sources/_/syn/x6_1000m.ucf(905)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[0].u_odelay_cpt"  LOC = "IODELAY_X1Y181";>
+   [remote_sources/_/syn/x6_1000m.ucf(906)]: INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[0].u_odelay_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[0].u_odelay_cpt"  LOC = "IODELAY_X1Y181";>
+   [remote_sources/_/syn/x6_1000m.ucf(906)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[1].u_oserdes_cpt" LOC = "OLOGIC_X1Y179";>
+   [remote_sources/_/syn/x6_1000m.ucf(909)]: INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[1].u_oserdes_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[1].u_oserdes_cpt" LOC = "OLOGIC_X1Y179";>
+   [remote_sources/_/syn/x6_1000m.ucf(909)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[1].u_odelay_cpt"  LOC = "IODELAY_X1Y179";>
+   [remote_sources/_/syn/x6_1000m.ucf(910)]: INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[1].u_odelay_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[1].u_odelay_cpt"  LOC = "IODELAY_X1Y179";>
+   [remote_sources/_/syn/x6_1000m.ucf(910)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[2].u_oserdes_cpt" LOC = "OLOGIC_X1Y177";>
+   [remote_sources/_/syn/x6_1000m.ucf(913)]: INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[2].u_oserdes_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[2].u_oserdes_cpt" LOC = "OLOGIC_X1Y177";>
+   [remote_sources/_/syn/x6_1000m.ucf(913)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[2].u_odelay_cpt"  LOC = "IODELAY_X1Y177";>
+   [remote_sources/_/syn/x6_1000m.ucf(914)]: INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[2].u_odelay_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[2].u_odelay_cpt"  LOC = "IODELAY_X1Y177";>
+   [remote_sources/_/syn/x6_1000m.ucf(914)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[3].u_oserdes_cpt" LOC = "OLOGIC_X1Y139";>
+   [remote_sources/_/syn/x6_1000m.ucf(917)]: INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[3].u_oserdes_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[3].u_oserdes_cpt" LOC = "OLOGIC_X1Y139";>
+   [remote_sources/_/syn/x6_1000m.ucf(917)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[3].u_odelay_cpt"  LOC = "IODELAY_X1Y139";>
+   [remote_sources/_/syn/x6_1000m.ucf(918)]: INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[3].u_odelay_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[3].u_odelay_cpt"  LOC = "IODELAY_X1Y139";>
+   [remote_sources/_/syn/x6_1000m.ucf(918)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_infrastructure/u_mmcm_adv"
+   LOC = "MMCM_ADV_X0Y7";> [remote_sources/_/syn/x6_1000m.ucf(923)]: INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_infrastructure/u_mmcm_adv"
+   not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_infrastructure/u_mmcm_adv"
+   LOC = "MMCM_ADV_X0Y7";> [remote_sources/_/syn/x6_1000m.ucf(923)]' could not
+   be found and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_idelayctrl"
+   IODELAY_GROUP=LPDDR2_C1;> [remote_sources/_/syn/x6_1000m.ucf(928)]: INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_idelayctrl" not found. 
+   Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_clock_io/gen_ck
+   [*].u_phy_ck_iob_fb/u_iodelay_ck_p" IODELAY_GROUP=LPDDR2_C1;>
+   [remote_sources/_/syn/x6_1000m.ucf(929)]: INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_clock_io/gen_ck
+   [*].u_phy_ck_iob_fb/u_iodelay_ck_p" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_control_io/gen_
+   cke[*].u_iodelay_cke" IODELAY_GROUP=LPDDR2_C1;>
+   [remote_sources/_/syn/x6_1000m.ucf(930)]: INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_control_io/gen_
+   cke[*].u_iodelay_cke" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_control_io/gen_
+   cs_n[*].u_iodelay_cs_n" IODELAY_GROUP=LPDDR2_C1;>
+   [remote_sources/_/syn/x6_1000m.ucf(931)]: INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_control_io/gen_
+   cs_n[*].u_iodelay_cs_n" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_control_io/gen_
+   ca[*].u_iodelay_ca" IODELAY_GROUP=LPDDR2_C1;>
+   [remote_sources/_/syn/x6_1000m.ucf(932)]: INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_control_io/gen_
+   ca[*].u_iodelay_ca" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_data_io/gen_dm_
+   inst.gen_dm[*].u_phy_dm_iob/u_odelay_dm" IODELAY_GROUP=LPDDR2_C1;>
+   [remote_sources/_/syn/x6_1000m.ucf(933)]: INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_data_io/gen_dm_
+   inst.gen_dm[*].u_phy_dm_iob/u_odelay_dm" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_data_io/gen_dq[
+   *].u_iob_dq/u_iodelay_dq" IODELAY_GROUP=LPDDR2_C1;>
+   [remote_sources/_/syn/x6_1000m.ucf(934)]: INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_data_io/gen_dq[
+   *].u_iob_dq/u_iodelay_dq" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_data_io/gen_dqs
+   [*].u_phy_dqs_iob/u_iodelay_dqs_p_early" IODELAY_GROUP=LPDDR2_C1;>
+   [remote_sources/_/syn/x6_1000m.ucf(935)]: INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_data_io/gen_dqs
+   [*].u_phy_dqs_iob/u_iodelay_dqs_p_early" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[*].u_odelay_cpt" IODELAY_GROUP=LPDDR2_C1;>
+   [remote_sources/_/syn/x6_1000m.ucf(936)]: INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[*].u_odelay_cpt" does not match any design objects.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_odelay_rsync" IODELAY_GROUP=LPDDR2_C1;>
+   [remote_sources/_/syn/x6_1000m.ucf(937)]: INST
+   "lpddr2_c1/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_odelay_rsync" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:58 - Constraint <NET
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/clk_rsync[?]" TNM_NET
+   =" TNM_C2_clk_rsync";> [remote_sources/_/syn/x6_1000m.ucf(957)]: NET
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/clk_rsync[?]" does
+   not match any design objects.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC "TS_C2_clk_rsync" = PERIOD
+   "TNM_C2_clk_rsync" 5 ns;> [remote_sources/_/syn/x6_1000m.ucf(958)]: Unable to
+   find an active 'TNM' or 'TimeGrp' constraint named 'TNM_C2_clk_rsync'.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_oserdes_rsync" LOC = "OLOGIC_X2Y63";>
+   [remote_sources/_/syn/x6_1000m.ucf(1058)]: INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_oserdes_rsync" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_oserdes_rsync" LOC = "OLOGIC_X2Y63";>
+   [remote_sources/_/syn/x6_1000m.ucf(1058)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_odelay_rsync"  LOC = "IODELAY_X2Y63";>
+   [remote_sources/_/syn/x6_1000m.ucf(1059)]: INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_odelay_rsync" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_odelay_rsync"  LOC = "IODELAY_X2Y63";>
+   [remote_sources/_/syn/x6_1000m.ucf(1059)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_bufr_rsync"    LOC = "BUFR_X2Y3";>
+   [remote_sources/_/syn/x6_1000m.ucf(1060)]: INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_bufr_rsync" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_bufr_rsync"    LOC = "BUFR_X2Y3";>
+   [remote_sources/_/syn/x6_1000m.ucf(1060)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[0].u_oserdes_cpt" LOC = "OLOGIC_X2Y59";>
+   [remote_sources/_/syn/x6_1000m.ucf(1074)]: INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[0].u_oserdes_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[0].u_oserdes_cpt" LOC = "OLOGIC_X2Y59";>
+   [remote_sources/_/syn/x6_1000m.ucf(1074)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[0].u_odelay_cpt"  LOC = "IODELAY_X2Y59";>
+   [remote_sources/_/syn/x6_1000m.ucf(1075)]: INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[0].u_odelay_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[0].u_odelay_cpt"  LOC = "IODELAY_X2Y59";>
+   [remote_sources/_/syn/x6_1000m.ucf(1075)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[1].u_oserdes_cpt" LOC = "OLOGIC_X2Y21";>
+   [remote_sources/_/syn/x6_1000m.ucf(1078)]: INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[1].u_oserdes_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[1].u_oserdes_cpt" LOC = "OLOGIC_X2Y21";>
+   [remote_sources/_/syn/x6_1000m.ucf(1078)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[1].u_odelay_cpt"  LOC = "IODELAY_X2Y21";>
+   [remote_sources/_/syn/x6_1000m.ucf(1079)]: INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[1].u_odelay_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[1].u_odelay_cpt"  LOC = "IODELAY_X2Y21";>
+   [remote_sources/_/syn/x6_1000m.ucf(1079)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[2].u_oserdes_cpt" LOC = "OLOGIC_X2Y19";>
+   [remote_sources/_/syn/x6_1000m.ucf(1082)]: INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[2].u_oserdes_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[2].u_oserdes_cpt" LOC = "OLOGIC_X2Y19";>
+   [remote_sources/_/syn/x6_1000m.ucf(1082)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[2].u_odelay_cpt"  LOC = "IODELAY_X2Y19";>
+   [remote_sources/_/syn/x6_1000m.ucf(1083)]: INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[2].u_odelay_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[2].u_odelay_cpt"  LOC = "IODELAY_X2Y19";>
+   [remote_sources/_/syn/x6_1000m.ucf(1083)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[3].u_oserdes_cpt" LOC = "OLOGIC_X2Y17";>
+   [remote_sources/_/syn/x6_1000m.ucf(1086)]: INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[3].u_oserdes_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[3].u_oserdes_cpt" LOC = "OLOGIC_X2Y17";>
+   [remote_sources/_/syn/x6_1000m.ucf(1086)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[3].u_odelay_cpt"  LOC = "IODELAY_X2Y17";>
+   [remote_sources/_/syn/x6_1000m.ucf(1087)]: INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[3].u_odelay_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[3].u_odelay_cpt"  LOC = "IODELAY_X2Y17";>
+   [remote_sources/_/syn/x6_1000m.ucf(1087)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_infrastructure/u_mmcm_adv"
+   LOC = "MMCM_ADV_X0Y3";> [remote_sources/_/syn/x6_1000m.ucf(1092)]: INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_infrastructure/u_mmcm_adv"
+   not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_infrastructure/u_mmcm_adv"
+   LOC = "MMCM_ADV_X0Y3";> [remote_sources/_/syn/x6_1000m.ucf(1092)]' could not
+   be found and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_idelayctrl"
+   IODELAY_GROUP=LPDDR2_C2;> [remote_sources/_/syn/x6_1000m.ucf(1097)]: INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_idelayctrl" not found. 
+   Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_clock_io/gen_ck
+   [*].u_phy_ck_iob_fb/u_iodelay_ck_p" IODELAY_GROUP=LPDDR2_C2;>
+   [remote_sources/_/syn/x6_1000m.ucf(1098)]: INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_clock_io/gen_ck
+   [*].u_phy_ck_iob_fb/u_iodelay_ck_p" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_control_io/gen_
+   cke[*].u_iodelay_cke" IODELAY_GROUP=LPDDR2_C2;>
+   [remote_sources/_/syn/x6_1000m.ucf(1099)]: INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_control_io/gen_
+   cke[*].u_iodelay_cke" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_control_io/gen_
+   cs_n[*].u_iodelay_cs_n" IODELAY_GROUP=LPDDR2_C2;>
+   [remote_sources/_/syn/x6_1000m.ucf(1100)]: INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_control_io/gen_
+   cs_n[*].u_iodelay_cs_n" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_control_io/gen_
+   ca[*].u_iodelay_ca" IODELAY_GROUP=LPDDR2_C2;>
+   [remote_sources/_/syn/x6_1000m.ucf(1101)]: INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_control_io/gen_
+   ca[*].u_iodelay_ca" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_data_io/gen_dm_
+   inst.gen_dm[*].u_phy_dm_iob/u_odelay_dm" IODELAY_GROUP=LPDDR2_C2;>
+   [remote_sources/_/syn/x6_1000m.ucf(1102)]: INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_data_io/gen_dm_
+   inst.gen_dm[*].u_phy_dm_iob/u_odelay_dm" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_data_io/gen_dq[
+   *].u_iob_dq/u_iodelay_dq" IODELAY_GROUP=LPDDR2_C2;>
+   [remote_sources/_/syn/x6_1000m.ucf(1103)]: INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_data_io/gen_dq[
+   *].u_iob_dq/u_iodelay_dq" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_data_io/gen_dqs
+   [*].u_phy_dqs_iob/u_iodelay_dqs_p_early" IODELAY_GROUP=LPDDR2_C2;>
+   [remote_sources/_/syn/x6_1000m.ucf(1104)]: INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_data_io/gen_dqs
+   [*].u_phy_dqs_iob/u_iodelay_dqs_p_early" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[*].u_odelay_cpt" IODELAY_GROUP=LPDDR2_C2;>
+   [remote_sources/_/syn/x6_1000m.ucf(1105)]: INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[*].u_odelay_cpt" does not match any design objects.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_odelay_rsync" IODELAY_GROUP=LPDDR2_C2;>
+   [remote_sources/_/syn/x6_1000m.ucf(1106)]: INST
+   "lpddr2_c2/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_odelay_rsync" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:58 - Constraint <NET
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/clk_rsync[?]" TNM_NET
+   = "TNM_C3_clk_rsync";> [remote_sources/_/syn/x6_1000m.ucf(1126)]: NET
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/clk_rsync[?]" does
+   not match any design objects.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC "TS_C3_clk_rsync" = PERIOD
+   "TNM_C3_clk_rsync" 5 ns;> [remote_sources/_/syn/x6_1000m.ucf(1127)]: Unable
+   to find an active 'TNM' or 'TimeGrp' constraint named 'TNM_C3_clk_rsync'.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_oserdes_rsync" LOC = "OLOGIC_X1Y23";>
+   [remote_sources/_/syn/x6_1000m.ucf(1227)]: INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_oserdes_rsync" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_oserdes_rsync" LOC = "OLOGIC_X1Y23";>
+   [remote_sources/_/syn/x6_1000m.ucf(1227)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_odelay_rsync"  LOC = "IODELAY_X1Y23";>
+   [remote_sources/_/syn/x6_1000m.ucf(1228)]: INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_odelay_rsync" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_odelay_rsync"  LOC = "IODELAY_X1Y23";>
+   [remote_sources/_/syn/x6_1000m.ucf(1228)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_bufr_rsync"    LOC = "BUFR_X1Y1";>
+   [remote_sources/_/syn/x6_1000m.ucf(1229)]: INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_bufr_rsync" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_bufr_rsync"    LOC = "BUFR_X1Y1";>
+   [remote_sources/_/syn/x6_1000m.ucf(1229)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[0].u_oserdes_cpt" LOC = "OLOGIC_X1Y61";>
+   [remote_sources/_/syn/x6_1000m.ucf(1243)]: INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[0].u_oserdes_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[0].u_oserdes_cpt" LOC = "OLOGIC_X1Y61";>
+   [remote_sources/_/syn/x6_1000m.ucf(1243)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[0].u_odelay_cpt"  LOC = "IODELAY_X1Y61";>
+   [remote_sources/_/syn/x6_1000m.ucf(1244)]: INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[0].u_odelay_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[0].u_odelay_cpt"  LOC = "IODELAY_X1Y61";>
+   [remote_sources/_/syn/x6_1000m.ucf(1244)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[1].u_oserdes_cpt" LOC = "OLOGIC_X1Y59";>
+   [remote_sources/_/syn/x6_1000m.ucf(1247)]: INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[1].u_oserdes_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[1].u_oserdes_cpt" LOC = "OLOGIC_X1Y59";>
+   [remote_sources/_/syn/x6_1000m.ucf(1247)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[1].u_odelay_cpt"  LOC = "IODELAY_X1Y59";>
+   [remote_sources/_/syn/x6_1000m.ucf(1248)]: INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[1].u_odelay_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[1].u_odelay_cpt"  LOC = "IODELAY_X1Y59";>
+   [remote_sources/_/syn/x6_1000m.ucf(1248)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[2].u_oserdes_cpt" LOC = "OLOGIC_X1Y57";>
+   [remote_sources/_/syn/x6_1000m.ucf(1251)]: INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[2].u_oserdes_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[2].u_oserdes_cpt" LOC = "OLOGIC_X1Y57";>
+   [remote_sources/_/syn/x6_1000m.ucf(1251)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[2].u_odelay_cpt"  LOC = "IODELAY_X1Y57";>
+   [remote_sources/_/syn/x6_1000m.ucf(1252)]: INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[2].u_odelay_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[2].u_odelay_cpt"  LOC = "IODELAY_X1Y57";>
+   [remote_sources/_/syn/x6_1000m.ucf(1252)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[3].u_oserdes_cpt" LOC = "OLOGIC_X1Y19";>
+   [remote_sources/_/syn/x6_1000m.ucf(1255)]: INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[3].u_oserdes_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[3].u_oserdes_cpt" LOC = "OLOGIC_X1Y19";>
+   [remote_sources/_/syn/x6_1000m.ucf(1255)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[3].u_odelay_cpt"  LOC = "IODELAY_X1Y19";>
+   [remote_sources/_/syn/x6_1000m.ucf(1256)]: INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[3].u_odelay_cpt" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[3].u_odelay_cpt"  LOC = "IODELAY_X1Y19";>
+   [remote_sources/_/syn/x6_1000m.ucf(1256)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_infrastructure/u_mmcm_adv"
+   LOC = "MMCM_ADV_X0Y1";> [remote_sources/_/syn/x6_1000m.ucf(1261)]: INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_infrastructure/u_mmcm_adv"
+   not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_infrastructure/u_mmcm_adv"
+   LOC = "MMCM_ADV_X0Y1";> [remote_sources/_/syn/x6_1000m.ucf(1261)]' could not
+   be found and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_idelayctrl"
+   IODELAY_GROUP=LPDDR2_C3;> [remote_sources/_/syn/x6_1000m.ucf(1266)]: INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_idelayctrl" not found. 
+   Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_clock_io/gen_ck
+   [*].u_phy_ck_iob_fb/u_iodelay_ck_p" IODELAY_GROUP=LPDDR2_C3;>
+   [remote_sources/_/syn/x6_1000m.ucf(1267)]: INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_clock_io/gen_ck
+   [*].u_phy_ck_iob_fb/u_iodelay_ck_p" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_control_io/gen_
+   cke[*].u_iodelay_cke" IODELAY_GROUP=LPDDR2_C3;>
+   [remote_sources/_/syn/x6_1000m.ucf(1268)]: INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_control_io/gen_
+   cke[*].u_iodelay_cke" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_control_io/gen_
+   cs_n[*].u_iodelay_cs_n" IODELAY_GROUP=LPDDR2_C3;>
+   [remote_sources/_/syn/x6_1000m.ucf(1269)]: INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_control_io/gen_
+   cs_n[*].u_iodelay_cs_n" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_control_io/gen_
+   ca[*].u_iodelay_ca" IODELAY_GROUP=LPDDR2_C3;>
+   [remote_sources/_/syn/x6_1000m.ucf(1270)]: INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_control_io/gen_
+   ca[*].u_iodelay_ca" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_data_io/gen_dm_
+   inst.gen_dm[*].u_phy_dm_iob/u_odelay_dm" IODELAY_GROUP=LPDDR2_C3;>
+   [remote_sources/_/syn/x6_1000m.ucf(1271)]: INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_data_io/gen_dm_
+   inst.gen_dm[*].u_phy_dm_iob/u_odelay_dm" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_data_io/gen_dq[
+   *].u_iob_dq/u_iodelay_dq" IODELAY_GROUP=LPDDR2_C3;>
+   [remote_sources/_/syn/x6_1000m.ucf(1272)]: INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_data_io/gen_dq[
+   *].u_iob_dq/u_iodelay_dq" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_data_io/gen_dqs
+   [*].u_phy_dqs_iob/u_iodelay_dqs_p_early" IODELAY_GROUP=LPDDR2_C3;>
+   [remote_sources/_/syn/x6_1000m.ucf(1273)]: INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_data_io/gen_dqs
+   [*].u_phy_dqs_iob/u_iodelay_dqs_p_early" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[*].u_odelay_cpt" IODELAY_GROUP=LPDDR2_C3;>
+   [remote_sources/_/syn/x6_1000m.ucf(1274)]: INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_ck_cpt[*].u_odelay_cpt" does not match any design objects.
+
+ERROR:ConstraintSystem:59 - Constraint <INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_odelay_rsync" IODELAY_GROUP=LPDDR2_C3;>
+   [remote_sources/_/syn/x6_1000m.ucf(1275)]: INST
+   "lpddr2_c3/lpddr2_intf_top_inst/u_lpddr2_intf/u_phy_top/u_phy_read/u_phy_rdcl
+   k_gen/gen_loop_col0.u_odelay_rsync" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+INFO:ConstraintSystem:178 - TNM 'TNM_sys_clk_i', used in period specification
+   'TS_sys_clk_i', was traced into MMCM_ADV instance u_mmcm_adv. The following
+   new TNM groups and period specifications were generated at the MMCM_ADV
+   output(s): 
+   CLKOUT0: <TIMESPEC TS_inst_crm_inst_sys_clk_clkout0 = PERIOD
+   "inst_crm_inst_sys_clk_clkout0" TS_sys_clk_i / 1.3 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'TNM_sys_clk_i', used in period specification
+   'TS_sys_clk_i', was traced into MMCM_ADV instance u_mmcm_adv. The following
+   new TNM groups and period specifications were generated at the MMCM_ADV
+   output(s): 
+   CLKOUT0: <TIMESPEC TS_inst_crm_inst_mem_clk_clkout0 = PERIOD
+   "inst_crm_inst_mem_clk_clkout0" TS_sys_clk_i HIGH 50%>
+
+WARNING:ConstraintSystem:192 - The TNM 'TNM_lpddr2_mmcm_clk', does not directly
+   or indirectly drive any flip-flops, latches and/or RAMS and cannot be
+   actively used by the referencing TIg constraint ''. If clock manager blocks
+   are directly or indirectly driven, a new TNM constraint will not be derived
+   since the none of the referencing constraints are a PERIOD constraint. This
+   TNM is used in the following user groups and/or specifications:
+   <TIMESPEC "TS_pddr2_sys2mmcm_clk_TIG" = FROM "TNM_sys_clk" TO
+   "TNM_lpddr2_mmcm_clk" TIG;> [remote_sources/_/syn/x6_1000m.ucf(189)]
+   <TIMESPEC "TS_pddr2_mmcm2sys_clk_TIG" = FROM "TNM_lpddr2_mmcm_clk" TO
+   "TNM_sys_clk" TIG;> [remote_sources/_/syn/x6_1000m.ucf(190)]
+   <TIMESPEC "TS_lpddr2_tb2mmcm_clk_TIG" = FROM "TNM_lpddr2_tb_clk" TO
+   "TNM_lpddr2_mmcm_clk" TIG;> [remote_sources/_/syn/x6_1000m.ucf(193)]
+   <TIMESPEC "TS_lpddr2_mmcm2tb_clk_TIG" = FROM "TNM_lpddr2_mmcm_clk" TO
+   "TNM_lpddr2_tb_clk" TIG;> [remote_sources/_/syn/x6_1000m.ucf(194)]
+   <TIMESPEC "TS_lpddr2_mmcm2ref_clk_TIG" = FROM "TNM_lpddr2_mmcm_clk" TO
+   "TNM_ref_clk200" TIG;> [remote_sources/_/syn/x6_1000m.ucf(195)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC "TS_pddr2_sys2mmcm_clk_TIG" = FROM "TNM_sys_clk" TO
+   "TNM_lpddr2_mmcm_clk" TIG;> [remote_sources/_/syn/x6_1000m.ucf(189)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC "TS_pddr2_mmcm2sys_clk_TIG" = FROM "TNM_lpddr2_mmcm_clk" TO
+   "TNM_sys_clk" TIG;> [remote_sources/_/syn/x6_1000m.ucf(190)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC "TS_lpddr2_tb2mmcm_clk_TIG" = FROM "TNM_lpddr2_tb_clk" TO
+   "TNM_lpddr2_mmcm_clk" TIG;> [remote_sources/_/syn/x6_1000m.ucf(193)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC "TS_lpddr2_mmcm2tb_clk_TIG" = FROM "TNM_lpddr2_mmcm_clk" TO
+   "TNM_lpddr2_tb_clk" TIG;> [remote_sources/_/syn/x6_1000m.ucf(194)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC "TS_lpddr2_mmcm2ref_clk_TIG" = FROM "TNM_lpddr2_mmcm_clk" TO
+   "TNM_ref_clk200" TIG;> [remote_sources/_/syn/x6_1000m.ucf(195)]
+
+WARNING:ConstraintSystem:192 - The TNM 'TNM_lpddr2_tb_clk', does not directly or
+   indirectly drive any flip-flops, latches and/or RAMS and cannot be actively
+   used by the referencing TIg constraint ''. If clock manager blocks are
+   directly or indirectly driven, a new TNM constraint will not be derived since
+   the none of the referencing constraints are a PERIOD constraint. This TNM is
+   used in the following user groups and/or specifications:
+   <TIMESPEC "TS_lpddr2_tb2sys_clk_TIG" = FROM "TNM_lpddr2_tb_clk" TO
+   "TNM_sys_clk" TIG;> [remote_sources/_/syn/x6_1000m.ucf(191)]
+   <TIMESPEC "TS_lpddr2_sys2tb_clk_TIG" = FROM "TNM_sys_clk" TO
+   "TNM_lpddr2_tb_clk" TIG;> [remote_sources/_/syn/x6_1000m.ucf(192)]
+   <TIMESPEC "TS_lpddr2_tb2mmcm_clk_TIG" = FROM "TNM_lpddr2_tb_clk" TO
+   "TNM_lpddr2_mmcm_clk" TIG;> [remote_sources/_/syn/x6_1000m.ucf(193)]
+   <TIMESPEC "TS_lpddr2_mmcm2tb_clk_TIG" = FROM "TNM_lpddr2_mmcm_clk" TO
+   "TNM_lpddr2_tb_clk" TIG;> [remote_sources/_/syn/x6_1000m.ucf(194)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC "TS_lpddr2_tb2sys_clk_TIG" = FROM "TNM_lpddr2_tb_clk" TO
+   "TNM_sys_clk" TIG;> [remote_sources/_/syn/x6_1000m.ucf(191)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC "TS_lpddr2_sys2tb_clk_TIG" = FROM "TNM_sys_clk" TO
+   "TNM_lpddr2_tb_clk" TIG;> [remote_sources/_/syn/x6_1000m.ucf(192)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC "TS_lpddr2_tb2mmcm_clk_TIG" = FROM "TNM_lpddr2_tb_clk" TO
+   "TNM_lpddr2_mmcm_clk" TIG;> [remote_sources/_/syn/x6_1000m.ucf(193)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC "TS_lpddr2_mmcm2tb_clk_TIG" = FROM "TNM_lpddr2_mmcm_clk" TO
+   "TNM_lpddr2_tb_clk" TIG;> [remote_sources/_/syn/x6_1000m.ucf(194)]
+
+WARNING:ConstraintSystem:191 - The TNM 'TNM_DAC_CLK_IN', does not directly or
+   indirectly drive any flip-flops, latches and/or RAMS and cannot be actively
+   used by the referencing Period constraint 'TS_DAC_CLK_IN'. If clock manager
+   blocks are directly or indirectly driven, a new TNM constraint will not be
+   derived even though the referencing constraint is a PERIOD constraint unless
+   an output of the clock manager drives flip-flops, latches or RAMs. This TNM
+   is used in the following user PERIOD specification:
+   <TIMESPEC "TS_DAC_CLK_IN" = PERIOD "TNM_DAC_CLK_IN" 2 ns;>
+   [remote_sources/_/syn/x6_1000m.ucf(442)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC "TS_DAC_CLK_IN" = PERIOD "TNM_DAC_CLK_IN" 2 ns;>
+   [remote_sources/_/syn/x6_1000m.ucf(442)]
+
+WARNING:ConstraintSystem:191 - The TNM 'TNM_ADC_DCLK', does not directly or
+   indirectly drive any flip-flops, latches and/or RAMS and cannot be actively
+   used by the referencing Period constraint 'TS_ADC_DCLK'. If clock manager
+   blocks are directly or indirectly driven, a new TNM constraint will not be
+   derived even though the referencing constraint is a PERIOD constraint unless
+   an output of the clock manager drives flip-flops, latches or RAMs. This TNM
+   is used in the following user PERIOD specification:
+   <TIMESPEC "TS_ADC_DCLK" = PERIOD "TNM_ADC_DCLK" 2 ns;>
+   [remote_sources/_/syn/x6_1000m.ucf(449)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC "TS_ADC_DCLK" = PERIOD "TNM_ADC_DCLK" 2 ns;>
+   [remote_sources/_/syn/x6_1000m.ucf(449)]
+
+WARNING:ConstraintSystem:191 - The TNM 'PEX_REFCLK', does not directly or
+   indirectly drive any flip-flops, latches and/or RAMS and cannot be actively
+   used by the referencing Period constraint 'TS_PEX_REFCLK'. If clock manager
+   blocks are directly or indirectly driven, a new TNM constraint will not be
+   derived even though the referencing constraint is a PERIOD constraint unless
+   an output of the clock manager drives flip-flops, latches or RAMs. This TNM
+   is used in the following user PERIOD specification:
+   <TIMESPEC "TS_PEX_REFCLK" = PERIOD "PEX_REFCLK" 250 MHz HIGH 50 % ;>
+   [remote_sources/_/syn/x6_1000m.ucf(575)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC "TS_PEX_REFCLK" = PERIOD "PEX_REFCLK" 250 MHz HIGH 50 % ;>
+   [remote_sources/_/syn/x6_1000m.ucf(575)]
+
+WARNING:ConstraintSystem:191 - The TNM 'CLK_125', does not directly or
+   indirectly drive any flip-flops, latches and/or RAMS and cannot be actively
+   used by the referencing Period constraint 'TS_PEX_CLK125'. If clock manager
+   blocks are directly or indirectly driven, a new TNM constraint will not be
+   derived even though the referencing constraint is a PERIOD constraint unless
+   an output of the clock manager drives flip-flops, latches or RAMs. This TNM
+   is used in the following user PERIOD specification:
+   <TIMESPEC "TS_PEX_CLK125" = PERIOD "CLK_125" TS_PEX_REFCLK/2 HIGH 50 %
+   PRIORITY 100 ;> [remote_sources/_/syn/x6_1000m.ucf(576)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC "TS_PEX_CLK125" = PERIOD "CLK_125" TS_PEX_REFCLK/2 HIGH 50 %
+   PRIORITY 100 ;> [remote_sources/_/syn/x6_1000m.ucf(576)]
+
+WARNING:ConstraintSystem:190 - The TNM 'CLK_USER_CLK', does not directly or
+   indirectly drive any flip-flops, latches and/or RAMS and cannot be actively
+   used by the referencing Period constraint 'TS_PEX_USRCLK'. If clock manager
+   blocks are directly or indirectly driven, a new TNM and PERIOD are derived
+   only if the PERIOD constraint is the only referencing constraint and if an
+   output of the clock manager block drives flip-flops, latches or RAMs.  
+   This TNM is used in the following user groups and/or specifications:
+   <TIMESPEC "TS_pex2sysclk_TIG" = FROM "CLK_USER_CLK" TO "TNM_sys_clk" TIG;>
+   [remote_sources/_/syn/x6_1000m.ucf(185)]
+   <TIMESPEC "TS_sys2pexclk_TIG" = FROM "TNM_sys_clk" TO "CLK_USER_CLK" TIG;>
+   [remote_sources/_/syn/x6_1000m.ucf(186)]
+   <TIMESPEC "TS_PEX_USRCLK" = PERIOD "CLK_USER_CLK" TS_PEX_REFCLK*1 HIGH 50 %
+   PRIORITY 1;> [remote_sources/_/syn/x6_1000m.ucf(577)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC "TS_pex2sysclk_TIG" = FROM "CLK_USER_CLK" TO "TNM_sys_clk" TIG;>
+   [remote_sources/_/syn/x6_1000m.ucf(185)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC "TS_sys2pexclk_TIG" = FROM "TNM_sys_clk" TO "CLK_USER_CLK" TIG;>
+   [remote_sources/_/syn/x6_1000m.ucf(186)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC "TS_PEX_USRCLK" = PERIOD "CLK_USER_CLK" TS_PEX_REFCLK*1 HIGH 50 %
+   PRIORITY 1;> [remote_sources/_/syn/x6_1000m.ucf(577)]
+
+WARNING:ConstraintSystem:193 - The TNM 'bm_rst_grp', does not directly or
+   indirectly drive any flip-flops, latches and/or RAMs and cannot be actively
+   used by the referencing MaxDelay constraint 'TS_PEX_mc_bm_rst'. If clock
+   manager blocks are directly or indirectly driven, a new TNM constraint will
+   not be derived since the referencing constraint is not a PERIOD constraint.
+   This TNM is used in the following user group or specification:
+   <TIMESPEC TS_PEX_mc_bm_rst = FROM "bm_rst_grp" TO FFS TS_PEX_USRCLK / 2;>
+   [remote_sources/_/syn/x6_1000m.ucf(585)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC TS_PEX_mc_bm_rst = FROM "bm_rst_grp" TO FFS TS_PEX_USRCLK / 2;>
+   [remote_sources/_/syn/x6_1000m.ucf(585)]
+
+WARNING:ConstraintSystem:191 - The TNM 'TNM_C0_clk_rsync', does not directly or
+   indirectly drive any flip-flops, latches and/or RAMS and cannot be actively
+   used by the referencing Period constraint 'TS_C0_clk_rsync'. If clock manager
+   blocks are directly or indirectly driven, a new TNM constraint will not be
+   derived even though the referencing constraint is a PERIOD constraint unless
+   an output of the clock manager drives flip-flops, latches or RAMs. This TNM
+   is used in the following user PERIOD specification:
+   <TIMESPEC "TS_C0_clk_rsync" = PERIOD "TNM_C0_clk_rsync" 5 ns;>
+   [remote_sources/_/syn/x6_1000m.ucf(620)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC "TS_C0_clk_rsync" = PERIOD "TNM_C0_clk_rsync" 5 ns;>
+   [remote_sources/_/syn/x6_1000m.ucf(620)]
+
+WARNING:ConstraintSystem:191 - The TNM 'TNM_C1_clk_rsync', does not directly or
+   indirectly drive any flip-flops, latches and/or RAMS and cannot be actively
+   used by the referencing Period constraint 'TS_C1_clk_rsync'. If clock manager
+   blocks are directly or indirectly driven, a new TNM constraint will not be
+   derived even though the referencing constraint is a PERIOD constraint unless
+   an output of the clock manager drives flip-flops, latches or RAMs. This TNM
+   is used in the following user PERIOD specification:
+   <TIMESPEC "TS_C1_clk_rsync" = PERIOD "TNM_C1_clk_rsync" 5 ns;>
+   [remote_sources/_/syn/x6_1000m.ucf(789)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC "TS_C1_clk_rsync" = PERIOD "TNM_C1_clk_rsync" 5 ns;>
+   [remote_sources/_/syn/x6_1000m.ucf(789)]
+
+WARNING:ConstraintSystem:194 - The TNM ' TNM_C2_clk_rsync', does not directly or
+   indirectly drive any flip-flops, latches and/or RAMs and is not actively used
+   by any referencing constraint.
+
+WARNING:ConstraintSystem:191 - The TNM 'TNM_C3_clk_rsync', does not directly or
+   indirectly drive any flip-flops, latches and/or RAMS and cannot be actively
+   used by the referencing Period constraint 'TS_C3_clk_rsync'. If clock manager
+   blocks are directly or indirectly driven, a new TNM constraint will not be
+   derived even though the referencing constraint is a PERIOD constraint unless
+   an output of the clock manager drives flip-flops, latches or RAMs. This TNM
+   is used in the following user PERIOD specification:
+   <TIMESPEC "TS_C3_clk_rsync" = PERIOD "TNM_C3_clk_rsync" 5 ns;>
+   [remote_sources/_/syn/x6_1000m.ucf(1127)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC "TS_C3_clk_rsync" = PERIOD "TNM_C3_clk_rsync" 5 ns;>
+   [remote_sources/_/syn/x6_1000m.ucf(1127)]
+
+Done...
+
+Checking expanded design ...
+ERROR:NgdBuild:604 - logical block 'inst_pcie' with type 'ii_pcie_intf' could
+   not be resolved. A pin name misspelling can cause this, a missing edif or ngc
+   file, case mismatch between the block name and the edif or ngc file name, or
+   the misspelling of a type name. Symbol 'ii_pcie_intf' is not supported in
+   target 'virtex6'.
+ERROR:NgdBuild:604 - logical block 'lpddr2_c2' with type 'ii_vfifo' could not be
+   resolved. A pin name misspelling can cause this, a missing edif or ngc file,
+   case mismatch between the block name and the edif or ngc file name, or the
+   misspelling of a type name. Symbol 'ii_vfifo' is not supported in target
+   'virtex6'.
+ERROR:NgdBuild:604 - logical block 'lpddr2_c3' with type 'ii_vfifo' could not be
+   resolved. A pin name misspelling can cause this, a missing edif or ngc file,
+   case mismatch between the block name and the edif or ngc file name, or the
+   misspelling of a type name. Symbol 'ii_vfifo' is not supported in target
+   'virtex6'.
+ERROR:NgdBuild:604 - logical block 'lpddr2_c0' with type 'ii_vfifo_pb' could not
+   be resolved. A pin name misspelling can cause this, a missing edif or ngc
+   file, case mismatch between the block name and the edif or ngc file name, or
+   the misspelling of a type name. Symbol 'ii_vfifo_pb' is not supported in
+   target 'virtex6'.
+ERROR:NgdBuild:604 - logical block 'lpddr2_c1' with type 'ii_vfifo_pb' could not
+   be resolved. A pin name misspelling can cause this, a missing edif or ngc
+   file, case mismatch between the block name and the edif or ngc file name, or
+   the misspelling of a type name. Symbol 'ii_vfifo_pb' is not supported in
+   target 'virtex6'.
+ERROR:NgdBuild:604 - logical block 'lpbk_fifo' with type 'sfifo_512x128_bltin'
+   could not be resolved. A pin name misspelling can cause this, a missing edif
+   or ngc file, case mismatch between the block name and the edif or ngc file
+   name, or the misspelling of a type name. Symbol 'sfifo_512x128_bltin' is not
+   supported in target 'virtex6'.
+ERROR:NgdBuild:604 - logical block 'inst_afe_top/inst_adc0/data_fifo' with type
+   'afifo_2kx96_bram' could not be resolved. A pin name misspelling can cause
+   this, a missing edif or ngc file, case mismatch between the block name and
+   the edif or ngc file name, or the misspelling of a type name. Symbol
+   'afifo_2kx96_bram' is not supported in target 'virtex6'.
+ERROR:NgdBuild:604 - logical block
+   'inst_afe_top/inst_adc0/trigger_pri_inst/trig_fifo_inst' with type
+   'sfifo_32x48_ft' could not be resolved. A pin name misspelling can cause
+   this, a missing edif or ngc file, case mismatch between the block name and
+   the edif or ngc file name, or the misspelling of a type name. Symbol
+   'sfifo_32x48_ft' is not supported in target 'virtex6'.
+ERROR:NgdBuild:604 - logical block
+   'inst_afe_top/inst_adc0/inst_adc_intf/inst_adc_phy_top' with type
+   'ii_ads5400_phy_top' could not be resolved. A pin name misspelling can cause
+   this, a missing edif or ngc file, case mismatch between the block name and
+   the edif or ngc file name, or the misspelling of a type name. Symbol
+   'ii_ads5400_phy_top' is not supported in target 'virtex6'.
+ERROR:NgdBuild:604 - logical block
+   'inst_afe_top/inst_adc0/inst_vita_framer/hdr_fifo' with type 'afifo_256x128'
+   could not be resolved. A pin name misspelling can cause this, a missing edif
+   or ngc file, case mismatch between the block name and the edif or ngc file
+   name, or the misspelling of a type name. Symbol 'afifo_256x128' is not
+   supported in target 'virtex6'.
+ERROR:NgdBuild:604 - logical block
+   'inst_afe_top/inst_adc0/inst_vita_framer/dst_fifo' with type
+   'sfifo_512x128_bltin' could not be resolved. A pin name misspelling can cause
+   this, a missing edif or ngc file, case mismatch between the block name and
+   the edif or ngc file name, or the misspelling of a type name. Symbol
+   'sfifo_512x128_bltin' is not supported in target 'virtex6'.
+ERROR:NgdBuild:604 - logical block 'inst_afe_top/inst_adc1/data_fifo' with type
+   'afifo_2kx96_bram' could not be resolved. A pin name misspelling can cause
+   this, a missing edif or ngc file, case mismatch between the block name and
+   the edif or ngc file name, or the misspelling of a type name. Symbol
+   'afifo_2kx96_bram' is not supported in target 'virtex6'.
+ERROR:NgdBuild:604 - logical block
+   'inst_afe_top/inst_adc1/trigger_pri_inst/trig_fifo_inst' with type
+   'sfifo_32x48_ft' could not be resolved. A pin name misspelling can cause
+   this, a missing edif or ngc file, case mismatch between the block name and
+   the edif or ngc file name, or the misspelling of a type name. Symbol
+   'sfifo_32x48_ft' is not supported in target 'virtex6'.
+ERROR:NgdBuild:604 - logical block
+   'inst_afe_top/inst_adc1/inst_adc_intf/inst_adc_phy_top' with type
+   'ii_ads5400_phy_top' could not be resolved. A pin name misspelling can cause
+   this, a missing edif or ngc file, case mismatch between the block name and
+   the edif or ngc file name, or the misspelling of a type name. Symbol
+   'ii_ads5400_phy_top' is not supported in target 'virtex6'.
+ERROR:NgdBuild:604 - logical block
+   'inst_afe_top/inst_adc1/inst_vita_framer/hdr_fifo' with type 'afifo_256x128'
+   could not be resolved. A pin name misspelling can cause this, a missing edif
+   or ngc file, case mismatch between the block name and the edif or ngc file
+   name, or the misspelling of a type name. Symbol 'afifo_256x128' is not
+   supported in target 'virtex6'.
+ERROR:NgdBuild:604 - logical block
+   'inst_afe_top/inst_adc1/inst_vita_framer/dst_fifo' with type
+   'sfifo_512x128_bltin' could not be resolved. A pin name misspelling can cause
+   this, a missing edif or ngc file, case mismatch between the block name and
+   the edif or ngc file name, or the misspelling of a type name. Symbol
+   'sfifo_512x128_bltin' is not supported in target 'virtex6'.
+ERROR:NgdBuild:604 - logical block
+   'inst_afe_top/inst_dac0_intf/trigger_pri_inst/trig_fifo_inst' with type
+   'sfifo_32x48_ft' could not be resolved. A pin name misspelling can cause
+   this, a missing edif or ngc file, case mismatch between the block name and
+   the edif or ngc file name, or the misspelling of a type name. Symbol
+   'sfifo_32x48_ft' is not supported in target 'virtex6'.
+ERROR:NgdBuild:604 - logical block
+   'inst_afe_top/inst_dac0_intf/inst_dac_intf/lat_cal_inst' with type
+   'ii_dac_lat_cal' could not be resolved. A pin name misspelling can cause
+   this, a missing edif or ngc file, case mismatch between the block name and
+   the edif or ngc file name, or the misspelling of a type name. Symbol
+   'ii_dac_lat_cal' is not supported in target 'virtex6'.
+ERROR:NgdBuild:604 - logical block
+   'inst_afe_top/inst_dac0_intf/inst_dac_intf/inst_dac_fifo' with type
+   'afifo_512x64_bram' could not be resolved. A pin name misspelling can cause
+   this, a missing edif or ngc file, case mismatch between the block name and
+   the edif or ngc file name, or the misspelling of a type name. Symbol
+   'afifo_512x64_bram' is not supported in target 'virtex6'.
+ERROR:NgdBuild:604 - logical block
+   'inst_afe_top/inst_dac0_intf/inst_dac_intf/dac5682z_phy_inst' with type
+   'ii_dac5682z_phy' could not be resolved. A pin name misspelling can cause
+   this, a missing edif or ngc file, case mismatch between the block name and
+   the edif or ngc file name, or the misspelling of a type name. Symbol
+   'ii_dac5682z_phy' is not supported in target 'virtex6'.
+ERROR:NgdBuild:604 - logical block
+   'inst_afe_top/inst_dac0_intf/inst_dac_intf/inst_dac_test_gen/inst_dds0' with
+   type 'dds_16b' could not be resolved. A pin name misspelling can cause this,
+   a missing edif or ngc file, case mismatch between the block name and the edif
+   or ngc file name, or the misspelling of a type name. Symbol 'dds_16b' is not
+   supported in target 'virtex6'.
+ERROR:NgdBuild:604 - logical block
+   'inst_afe_top/inst_dac0_intf/inst_dac_intf/inst_dac_test_gen/inst_dds1' with
+   type 'dds_16b' could not be resolved. A pin name misspelling can cause this,
+   a missing edif or ngc file, case mismatch between the block name and the edif
+   or ngc file name, or the misspelling of a type name. Symbol 'dds_16b' is not
+   supported in target 'virtex6'.
+ERROR:NgdBuild:604 - logical block
+   'inst_afe_top/inst_dac0_intf/inst_dac_intf/inst_dac_test_gen/inst_dds2' with
+   type 'dds_16b' could not be resolved. A pin name misspelling can cause this,
+   a missing edif or ngc file, case mismatch between the block name and the edif
+   or ngc file name, or the misspelling of a type name. Symbol 'dds_16b' is not
+   supported in target 'virtex6'.
+ERROR:NgdBuild:604 - logical block
+   'inst_afe_top/inst_dac0_intf/inst_dac_intf/inst_dac_test_gen/inst_dds3' with
+   type 'dds_16b' could not be resolved. A pin name misspelling can cause this,
+   a missing edif or ngc file, case mismatch between the block name and the edif
+   or ngc file name, or the misspelling of a type name. Symbol 'dds_16b' is not
+   supported in target 'virtex6'.
+ERROR:NgdBuild:604 - logical block
+   'inst_afe_top/inst_dac1_intf/trigger_pri_inst/trig_fifo_inst' with type
+   'sfifo_32x48_ft' could not be resolved. A pin name misspelling can cause
+   this, a missing edif or ngc file, case mismatch between the block name and
+   the edif or ngc file name, or the misspelling of a type name. Symbol
+   'sfifo_32x48_ft' is not supported in target 'virtex6'.
+ERROR:NgdBuild:604 - logical block
+   'inst_afe_top/inst_dac1_intf/inst_dac_intf/lat_cal_inst' with type
+   'ii_dac_lat_cal' could not be resolved. A pin name misspelling can cause
+   this, a missing edif or ngc file, case mismatch between the block name and
+   the edif or ngc file name, or the misspelling of a type name. Symbol
+   'ii_dac_lat_cal' is not supported in target 'virtex6'.
+ERROR:NgdBuild:604 - logical block
+   'inst_afe_top/inst_dac1_intf/inst_dac_intf/inst_dac_fifo' with type
+   'afifo_512x64_bram' could not be resolved. A pin name misspelling can cause
+   this, a missing edif or ngc file, case mismatch between the block name and
+   the edif or ngc file name, or the misspelling of a type name. Symbol
+   'afifo_512x64_bram' is not supported in target 'virtex6'.
+ERROR:NgdBuild:604 - logical block
+   'inst_afe_top/inst_dac1_intf/inst_dac_intf/dac5682z_phy_inst' with type
+   'ii_dac5682z_phy' could not be resolved. A pin name misspelling can cause
+   this, a missing edif or ngc file, case mismatch between the block name and
+   the edif or ngc file name, or the misspelling of a type name. Symbol
+   'ii_dac5682z_phy' is not supported in target 'virtex6'.
+ERROR:NgdBuild:604 - logical block
+   'inst_afe_top/inst_dac1_intf/inst_dac_intf/inst_dac_test_gen/inst_dds0' with
+   type 'dds_16b' could not be resolved. A pin name misspelling can cause this,
+   a missing edif or ngc file, case mismatch between the block name and the edif
+   or ngc file name, or the misspelling of a type name. Symbol 'dds_16b' is not
+   supported in target 'virtex6'.
+ERROR:NgdBuild:604 - logical block
+   'inst_afe_top/inst_dac1_intf/inst_dac_intf/inst_dac_test_gen/inst_dds1' with
+   type 'dds_16b' could not be resolved. A pin name misspelling can cause this,
+   a missing edif or ngc file, case mismatch between the block name and the edif
+   or ngc file name, or the misspelling of a type name. Symbol 'dds_16b' is not
+   supported in target 'virtex6'.
+ERROR:NgdBuild:604 - logical block
+   'inst_afe_top/inst_dac1_intf/inst_dac_intf/inst_dac_test_gen/inst_dds2' with
+   type 'dds_16b' could not be resolved. A pin name misspelling can cause this,
+   a missing edif or ngc file, case mismatch between the block name and the edif
+   or ngc file name, or the misspelling of a type name. Symbol 'dds_16b' is not
+   supported in target 'virtex6'.
+ERROR:NgdBuild:604 - logical block
+   'inst_afe_top/inst_dac1_intf/inst_dac_intf/inst_dac_test_gen/inst_dds3' with
+   type 'dds_16b' could not be resolved. A pin name misspelling can cause this,
+   a missing edif or ngc file, case mismatch between the block name and the edif
+   or ngc file name, or the misspelling of a type name. Symbol 'dds_16b' is not
+   supported in target 'virtex6'.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "bl.fifo_36_inst_bl_1.fifo_36_bl_1" of type "FIFO36E1".  This attribute will
+   be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "bl.fifo_36_inst_bl_1.fifo_36_bl_1" of type "FIFO36E1".  This attribute will
+   be ignored.
+ERROR:NgdBuild:604 - logical block 'inst_dac_rtr/dac_rtr_fifo' with type
+   'sfifo_512x128_bltin' could not be resolved. A pin name misspelling can cause
+   this, a missing edif or ngc file, case mismatch between the block name and
+   the edif or ngc file name, or the misspelling of a type name. Symbol
+   'sfifo_512x128_bltin' is not supported in target 'virtex6'.
+ERROR:NgdBuild:604 - logical block 'inst_dac_rtr/inst_dac0_cmdfifo' with type
+   'sfifo_32x128_dist' could not be resolved. A pin name misspelling can cause
+   this, a missing edif or ngc file, case mismatch between the block name and
+   the edif or ngc file name, or the misspelling of a type name. Symbol
+   'sfifo_32x128_dist' is not supported in target 'virtex6'.
+ERROR:NgdBuild:604 - logical block 'inst_dac_rtr/inst_dac1_cmdfifo' with type
+   'sfifo_32x128_dist' could not be resolved. A pin name misspelling can cause
+   this, a missing edif or ngc file, case mismatch between the block name and
+   the edif or ngc file name, or the misspelling of a type name. Symbol
+   'sfifo_32x128_dist' is not supported in target 'virtex6'.
+ERROR:NgdBuild:604 - logical block 'inst_velo_pad/dst_fifo' with type
+   'sfifo_512x128_bram' could not be resolved. A pin name misspelling can cause
+   this, a missing edif or ngc file, case mismatch between the block name and
+   the edif or ngc file name, or the misspelling of a type name. Symbol
+   'sfifo_512x128_bram' is not supported in target 'virtex6'.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "bl.fifo_36_inst_bl_1.fifo_36_bl_1" of type "FIFO36E1".  This attribute will
+   be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "bl.fifo_36_inst_bl_1.fifo_36_bl_1" of type "FIFO36E1".  This attribute will
+   be ignored.
+ERROR:NgdBuild:604 - logical block 'inst_vmvr/dst_fifo' with type
+   'sfifo_512x128_bram' could not be resolved. A pin name misspelling can cause
+   this, a missing edif or ngc file, case mismatch between the block name and
+   the edif or ngc file name, or the misspelling of a type name. Symbol
+   'sfifo_512x128_bram' is not supported in target 'virtex6'.
+WARNING:NgdBuild:452 - logical net 'N429' has no driver
+WARNING:NgdBuild:452 - logical net 'N430' has no driver
+WARNING:NgdBuild:452 - logical net 'N431' has no driver
+WARNING:NgdBuild:452 - logical net 'N432' has no driver
+WARNING:NgdBuild:452 - logical net 'N433' has no driver
+WARNING:NgdBuild:452 - logical net 'N434' has no driver
+WARNING:NgdBuild:452 - logical net 'N435' has no driver
+WARNING:NgdBuild:452 - logical net 'N436' has no driver
+WARNING:NgdBuild:452 - logical net 'N437' has no driver
+WARNING:NgdBuild:452 - logical net 'N438' has no driver
+WARNING:NgdBuild:452 - logical net 'N439' has no driver
+WARNING:NgdBuild:452 - logical net 'N440' has no driver
+WARNING:NgdBuild:452 - logical net 'N441' has no driver
+WARNING:NgdBuild:452 - logical net 'N442' has no driver
+WARNING:NgdBuild:452 - logical net 'N443' has no driver
+WARNING:NgdBuild:452 - logical net 'N444' has no driver
+WARNING:NgdBuild:452 - logical net 'N445' has no driver
+WARNING:NgdBuild:452 - logical net 'N446' has no driver
+WARNING:NgdBuild:452 - logical net 'N447' has no driver
+WARNING:NgdBuild:452 - logical net 'N448' has no driver
+WARNING:NgdBuild:452 - logical net 'N449' has no driver
+WARNING:NgdBuild:452 - logical net 'N450' has no driver
+WARNING:NgdBuild:452 - logical net 'N451' has no driver
+WARNING:NgdBuild:452 - logical net 'N452' has no driver
+WARNING:NgdBuild:452 - logical net 'N453' has no driver
+WARNING:NgdBuild:452 - logical net 'N454' has no driver
+WARNING:NgdBuild:452 - logical net 'N455' has no driver
+WARNING:NgdBuild:452 - logical net 'N456' has no driver
+WARNING:NgdBuild:452 - logical net 'N457' has no driver
+WARNING:NgdBuild:452 - logical net 'N458' has no driver
+WARNING:NgdBuild:452 - logical net 'N459' has no driver
+WARNING:NgdBuild:452 - logical net 'N460' has no driver
+WARNING:NgdBuild:452 - logical net 'N461' has no driver
+WARNING:NgdBuild:452 - logical net 'N462' has no driver
+WARNING:NgdBuild:452 - logical net 'N463' has no driver
+WARNING:NgdBuild:452 - logical net 'N464' has no driver
+WARNING:NgdBuild:452 - logical net 'N465' has no driver
+WARNING:NgdBuild:452 - logical net 'N466' has no driver
+WARNING:NgdBuild:452 - logical net 'N467' has no driver
+WARNING:NgdBuild:452 - logical net 'N468' has no driver
+WARNING:NgdBuild:452 - logical net 'N469' has no driver
+WARNING:NgdBuild:452 - logical net 'N470' has no driver
+WARNING:NgdBuild:452 - logical net 'N471' has no driver
+WARNING:NgdBuild:452 - logical net 'N472' has no driver
+WARNING:NgdBuild:452 - logical net 'N473' has no driver
+WARNING:NgdBuild:452 - logical net 'N474' has no driver
+WARNING:NgdBuild:452 - logical net 'N475' has no driver
+WARNING:NgdBuild:452 - logical net 'N476' has no driver
+WARNING:NgdBuild:452 - logical net 'N477' has no driver
+WARNING:NgdBuild:452 - logical net 'N478' has no driver
+WARNING:NgdBuild:452 - logical net 'N479' has no driver
+WARNING:NgdBuild:452 - logical net 'N480' has no driver
+WARNING:NgdBuild:452 - logical net 'N481' has no driver
+WARNING:NgdBuild:452 - logical net 'N482' has no driver
+WARNING:NgdBuild:452 - logical net 'N483' has no driver
+WARNING:NgdBuild:452 - logical net 'N484' has no driver
+WARNING:NgdBuild:452 - logical net 'N485' has no driver
+WARNING:NgdBuild:452 - logical net 'N486' has no driver
+WARNING:NgdBuild:452 - logical net 'N487' has no driver
+WARNING:NgdBuild:452 - logical net 'N488' has no driver
+WARNING:NgdBuild:452 - logical net 'N489' has no driver
+WARNING:NgdBuild:452 - logical net 'N490' has no driver
+WARNING:NgdBuild:452 - logical net 'N491' has no driver
+WARNING:NgdBuild:452 - logical net 'N492' has no driver
+WARNING:NgdBuild:452 - logical net 'N493' has no driver
+WARNING:NgdBuild:452 - logical net 'N494' has no driver
+WARNING:NgdBuild:452 - logical net 'N495' has no driver
+WARNING:NgdBuild:452 - logical net 'N496' has no driver
+WARNING:NgdBuild:452 - logical net 'N497' has no driver
+WARNING:NgdBuild:452 - logical net 'N498' has no driver
+WARNING:NgdBuild:452 - logical net 'N499' has no driver
+WARNING:NgdBuild:452 - logical net 'N500' has no driver
+WARNING:NgdBuild:452 - logical net 'N501' has no driver
+WARNING:NgdBuild:452 - logical net 'N502' has no driver
+WARNING:NgdBuild:452 - logical net 'N503' has no driver
+WARNING:NgdBuild:452 - logical net 'N504' has no driver
+WARNING:NgdBuild:452 - logical net 'N505' has no driver
+WARNING:NgdBuild:452 - logical net 'N506' has no driver
+WARNING:NgdBuild:452 - logical net 'N507' has no driver
+WARNING:NgdBuild:452 - logical net 'N508' has no driver
+WARNING:NgdBuild:452 - logical net 'N512' has no driver
+WARNING:NgdBuild:452 - logical net 'N513' has no driver
+WARNING:NgdBuild:452 - logical net 'N515' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<127>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<126>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<125>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<124>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<111>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<110>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<109>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<108>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<95>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<94>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<93>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<92>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<79>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<78>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<77>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<76>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<63>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<62>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<61>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<60>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<47>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<46>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<45>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<44>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<31>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<30>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<29>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<28>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<15>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<14>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<13>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc0/inst_vita_framer/src_fifo_din<12>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<127>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<126>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<125>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<124>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<111>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<110>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<109>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<108>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<95>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<94>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<93>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<92>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<79>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<78>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<77>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<76>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<63>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<62>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<61>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<60>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<47>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<46>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<45>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<44>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<31>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<30>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<29>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<28>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<15>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<14>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<13>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'inst_afe_top/inst_adc1/inst_vita_framer/src_fifo_din<12>' has no driver
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:   160
+  Number of warnings: 279
+
+Total memory usage is 561976 kilobytes
+
+Total REAL time to NGDBUILD completion:  36 sec
+Total CPU time to NGDBUILD completion:   36 sec
+
+One or more errors were found during NGDBUILD.  No NGD file will be written.
+
+Writing NGDBUILD log file "x6_1000m_top.bld"...

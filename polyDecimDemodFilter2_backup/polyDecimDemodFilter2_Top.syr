@@ -1,0 +1,1002 @@
+Release 14.5 - xst P.58f (lin64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> 
+Reading design: polyDecimDemodFilter2_Top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "polyDecimDemodFilter2_Top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "polyDecimDemodFilter2_Top"
+Output Format                      : NGC
+Target Device                      : xc6slx45-2-fgg484
+
+---- Source Options
+Top Module Name                    : polyDecimDemodFilter2_Top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/nick/polyDecimDemodFilter2/ipcore_dir/polyDecimator.vhd" into library work
+Parsing entity <polyDecimator>.
+Parsing architecture <polyDecimator_a> of entity <polydecimator>.
+Parsing VHDL file "/home/nick/polyDecimDemodFilter2/ipcore_dir/fifo_clk_to_decim.vhd" into library work
+Parsing entity <fifo_clk_to_decim>.
+Parsing architecture <fifo_clk_to_decim_a> of entity <fifo_clk_to_decim>.
+Parsing VHDL file "/home/nick/polyDecimDemodFilter2/ipcore_dir/ncoTest.vhd" into library work
+Parsing entity <ncoTest>.
+Parsing architecture <ncoTest_a> of entity <ncotest>.
+Parsing VHDL file "/home/nick/polyDecimDemodFilter2/ipcore_dir/mul16by20.vhd" into library work
+Parsing entity <mul16by20>.
+Parsing architecture <mul16by20_a> of entity <mul16by20>.
+Parsing VHDL file "/home/nick/polyDecimDemodFilter2/ipcore_dir/block_ram16.vhd" into library work
+Parsing entity <block_ram16>.
+Parsing architecture <block_ram16_a> of entity <block_ram16>.
+Parsing VHDL file "/home/nick/polyDecimDemodFilter2/ipcore_dir/c_mul32by40.vhd" into library work
+Parsing entity <c_mul32by40>.
+Parsing architecture <c_mul32by40_a> of entity <c_mul32by40>.
+Parsing VHDL file "/home/nick/polyDecimDemodFilter2/ipcore_dir/acc40.vhd" into library work
+Parsing entity <acc40>.
+Parsing architecture <acc40_a> of entity <acc40>.
+Parsing VHDL file "/home/nick/polyDecimDemodFilter2/mac16_top.vhd" into library work
+Parsing entity <mac16_top>.
+Parsing architecture <arch> of entity <mac16_top>.
+Parsing VHDL file "/home/nick/polyDecimDemodFilter2/firFilter_top.vhd" into library work
+Parsing entity <firFilter_top>.
+Parsing architecture <arch> of entity <firfilter_top>.
+Parsing VHDL file "/home/nick/polyDecimDemodFilter2/digitalDemodTest_top.vhd" into library work
+Parsing entity <digitalDemodTest_top>.
+Parsing architecture <arch> of entity <digitaldemodtest_top>.
+Parsing VHDL file "/home/nick/polyDecimDemodFilter2/clk_div_top.vhd" into library work
+Parsing entity <clk_div_top>.
+Parsing architecture <arch> of entity <clk_div_top>.
+Parsing VHDL file "/home/nick/polyDecimDemodFilter2/butter_quantized_20bit.vhd" into library work
+Parsing entity <butter_quantized_20bit>.
+Parsing architecture <rtl> of entity <butter_quantized_20bit>.
+Parsing VHDL file "/home/nick/polyDecimDemodFilter2/polyDecimDemodFilter2_top.vhd" into library work
+Parsing entity <polyDecimDemodFilter2_Top>.
+Parsing architecture <Behavioral> of entity <polydecimdemodfilter2_top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <polyDecimDemodFilter2_Top> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:1127 - "/home/nick/polyDecimDemodFilter2/polyDecimDemodFilter2_top.vhd" Line 128: Assignment to throwawaybits ignored, since the identifier is never used
+
+Elaborating entity <firFilter_top> (architecture <arch>) from library <work>.
+
+Elaborating entity <polyDecimator> (architecture <polyDecimator_a>) from library <work>.
+WARNING:HDLCompiler:634 - "/home/nick/polyDecimDemodFilter2/firFilter_top.vhd" Line 36: Net <tValidConfig> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/nick/polyDecimDemodFilter2/firFilter_top.vhd" Line 38: Net <configData[7]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/nick/polyDecimDemodFilter2/firFilter_top.vhd" Line 41: Net <tValidReload> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/nick/polyDecimDemodFilter2/firFilter_top.vhd" Line 43: Net <tlastReload> does not have a driver.
+
+Elaborating entity <clk_div_top> (architecture <arch>) from library <work>.
+
+Elaborating entity <fifo_clk_to_decim> (architecture <fifo_clk_to_decim_a>) from library <work>.
+WARNING:HDLCompiler:92 - "/home/nick/polyDecimDemodFilter2/polyDecimDemodFilter2_top.vhd" Line 176: full should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/nick/polyDecimDemodFilter2/polyDecimDemodFilter2_top.vhd" Line 179: empty should be on the sensitivity list of the process
+
+Elaborating entity <digitalDemodTest_top> (architecture <arch>) with generics from library <work>.
+WARNING:HDLCompiler:871 - "/home/nick/polyDecimDemodFilter2/digitalDemodTest_top.vhd" Line 33: Using initial value 4.0 for bit_growth since it is never assigned
+WARNING:HDLCompiler:1127 - "/home/nick/polyDecimDemodFilter2/digitalDemodTest_top.vhd" Line 49: Assignment to pad ignored, since the identifier is never used
+
+Elaborating entity <ncoTest> (architecture <ncoTest_a>) from library <work>.
+
+Elaborating entity <mul16by20> (architecture <mul16by20_a>) from library <work>.
+
+Elaborating entity <butter_quantized_20bit> (architecture <rtl>) from library <work>.
+
+Elaborating entity <mac16_top> (architecture <arch>) from library <work>.
+
+Elaborating entity <block_ram16> (architecture <block_ram16_a>) from library <work>.
+
+Elaborating entity <c_mul32by40> (architecture <c_mul32by40_a>) from library <work>.
+
+Elaborating entity <acc40> (architecture <acc40_a>) from library <work>.
+WARNING:HDLCompiler:634 - "/home/nick/polyDecimDemodFilter2/mac16_top.vhd" Line 60: Net <inputA[47]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <polyDecimDemodFilter2_Top>.
+    Related source file is "/home/nick/polyDecimDemodFilter2/polyDecimDemodFilter2_top.vhd".
+WARNING:Xst:647 - Input <tValidIn_Array<15:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <runSignals<15:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/home/nick/polyDecimDemodFilter2/polyDecimDemodFilter2_top.vhd" line 190: Output port <tValidOut> of the instance <mydigitalDemod> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/nick/polyDecimDemodFilter2/polyDecimDemodFilter2_top.vhd" line 236: Output port <mulOutput> of the instance <mymac20> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/nick/polyDecimDemodFilter2/polyDecimDemodFilter2_top.vhd" line 236: Output port <blockRamOutput> of the instance <mymac20> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <writeEn>.
+    Found 1-bit register for signal <readEn>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <polyDecimDemodFilter2_Top> synthesized.
+
+Synthesizing Unit <firFilter_top>.
+    Related source file is "/home/nick/polyDecimDemodFilter2/firFilter_top.vhd".
+WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <runFilter> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <reloadCoef> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/home/nick/polyDecimDemodFilter2/firFilter_top.vhd" line 52: Output port <s_axis_data_tready> of the instance <myfirFilterTest> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/nick/polyDecimDemodFilter2/firFilter_top.vhd" line 52: Output port <s_axis_config_tready> of the instance <myfirFilterTest> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/nick/polyDecimDemodFilter2/firFilter_top.vhd" line 52: Output port <s_axis_reload_tready> of the instance <myfirFilterTest> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/nick/polyDecimDemodFilter2/firFilter_top.vhd" line 52: Output port <event_s_reload_tlast_missing> of the instance <myfirFilterTest> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/nick/polyDecimDemodFilter2/firFilter_top.vhd" line 52: Output port <event_s_reload_tlast_unexpected> of the instance <myfirFilterTest> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <configData> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <tValidConfig> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <tValidReload> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <tlastReload> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <firFilter_top> synthesized.
+
+Synthesizing Unit <clk_div_top>.
+    Related source file is "/home/nick/polyDecimDemodFilter2/clk_div_top.vhd".
+WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <temp_clk>.
+    Found 4-bit register for signal <clk_div_counter>.
+    Found 4-bit adder for signal <clk_div_counter[3]_GND_11_o_add_0_OUT> created at line 30.
+    Found 4-bit comparator equal for signal <clk_div_counter[3]_max_count[3]_equal_2_o> created at line 31
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   5 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <clk_div_top> synthesized.
+
+Synthesizing Unit <digitalDemodTest_top>.
+    Related source file is "/home/nick/polyDecimDemodFilter2/digitalDemodTest_top.vhd".
+        decimFactor = 16
+    Summary:
+	no macro.
+Unit <digitalDemodTest_top> synthesized.
+
+Synthesizing Unit <butter_quantized_20bit>.
+    Related source file is "/home/nick/polyDecimDemodFilter2/butter_quantized_20bit.vhd".
+    Found 20-bit register for signal <input_register_im>.
+    Found 20-bit register for signal <output_register_re>.
+    Found 20-bit register for signal <output_register_im>.
+    Found 20-bit register for signal <input_register_re>.
+    Found 16-bit register for signal <delay_section1_re<0>>.
+    Found 16-bit register for signal <delay_section1_re<1>>.
+    Found 16-bit register for signal <delay_section1_im<0>>.
+    Found 16-bit register for signal <delay_section1_im<1>>.
+    Found 16-bit register for signal <delay_section2_re<0>>.
+    Found 16-bit register for signal <delay_section2_re<1>>.
+    Found 16-bit register for signal <delay_section2_im<0>>.
+    Found 16-bit register for signal <delay_section2_im<1>>.
+    Found 16-bit register for signal <delay_section3_re>.
+    Found 16-bit register for signal <delay_section3_im>.
+    Found 41-bit adder for signal <n0206> created at line 286.
+    Found 41-bit adder for signal <n0207> created at line 287.
+    Found 30-bit adder for signal <n0216> created at line 291.
+    Found 30-bit adder for signal <n0217> created at line 292.
+    Found 41-bit adder for signal <add_temp> created at line 355.
+    Found 41-bit adder for signal <add_temp_1> created at line 360.
+    Found 41-bit adder for signal <add_temp_2> created at line 365.
+    Found 41-bit adder for signal <add_temp_3> created at line 370.
+    Found 34-bit adder for signal <n0260> created at line 373.
+    Found 34-bit adder for signal <n0261> created at line 374.
+    Found 41-bit adder for signal <n0266> created at line 382.
+    Found 41-bit adder for signal <n0267> created at line 383.
+    Found 30-bit adder for signal <n0276> created at line 387.
+    Found 30-bit adder for signal <n0277> created at line 388.
+    Found 41-bit adder for signal <add_temp_4> created at line 451.
+    Found 41-bit adder for signal <add_temp_5> created at line 456.
+    Found 41-bit adder for signal <add_temp_6> created at line 461.
+    Found 41-bit adder for signal <add_temp_7> created at line 466.
+    Found 34-bit adder for signal <n0320> created at line 469.
+    Found 34-bit adder for signal <n0321> created at line 470.
+    Found 41-bit adder for signal <n0326> created at line 478.
+    Found 41-bit adder for signal <n0327> created at line 479.
+    Found 30-bit adder for signal <n0332> created at line 483.
+    Found 30-bit adder for signal <n0333> created at line 484.
+    Found 41-bit adder for signal <add_temp_8> created at line 527.
+    Found 41-bit adder for signal <add_temp_9> created at line 532.
+    Found 34-bit adder for signal <n0358> created at line 535.
+    Found 34-bit adder for signal <n0359> created at line 536.
+    Found 40-bit subtractor for signal <sub_temp<39:0>> created at line 136.
+    Found 40-bit subtractor for signal <sub_temp_1<39:0>> created at line 139.
+    Found 40-bit subtractor for signal <sub_temp_2<39:0>> created at line 142.
+    Found 40-bit subtractor for signal <sub_temp_3<39:0>> created at line 145.
+    Found 40-bit subtractor for signal <sub_temp_4<39:0>> created at line 195.
+    Found 40-bit subtractor for signal <sub_temp_5<39:0>> created at line 198.
+    Found 40-bit subtractor for signal <sub_temp_6<39:0>> created at line 201.
+    Found 40-bit subtractor for signal <sub_temp_7<39:0>> created at line 204.
+    Found 40-bit subtractor for signal <sub_temp_8<39:0>> created at line 246.
+    Found 40-bit subtractor for signal <sub_temp_9<39:0>> created at line 249.
+    Found 20x12-bit multiplier for signal <n0204[31:0]> created at line 280.
+    Found 20x12-bit multiplier for signal <n0205[31:0]> created at line 283.
+    Found 16x16-bit multiplier for signal <a2mul1_re> created at line 312.
+    Found 16x16-bit multiplier for signal <a2mul1_im> created at line 314.
+    Found 16x15-bit multiplier for signal <n0226[30:0]> created at line 316.
+    Found 16x15-bit multiplier for signal <n0227[30:0]> created at line 318.
+    Found 16x12-bit multiplier for signal <n0264[27:0]> created at line 376.
+    Found 16x12-bit multiplier for signal <n0265[27:0]> created at line 379.
+    Found 16x16-bit multiplier for signal <a2mul2_re> created at line 408.
+    Found 16x16-bit multiplier for signal <a2mul2_im> created at line 410.
+    Found 16x15-bit multiplier for signal <n0286[30:0]> created at line 412.
+    Found 16x15-bit multiplier for signal <n0287[30:0]> created at line 414.
+    Found 16x16-bit multiplier for signal <mul_temp_4> created at line 472.
+    Found 16x16-bit multiplier for signal <mul_temp_5> created at line 475.
+    Found 16x15-bit multiplier for signal <n0338[30:0]> created at line 502.
+    Found 16x15-bit multiplier for signal <n0339[30:0]> created at line 504.
+    Summary:
+	inferred  16 Multiplier(s).
+	inferred  38 Adder/Subtractor(s).
+	inferred 240 D-type flip-flop(s).
+Unit <butter_quantized_20bit> synthesized.
+
+Synthesizing Unit <mac16_top>.
+    Related source file is "/home/nick/polyDecimDemodFilter2/mac16_top.vhd".
+WARNING:Xst:647 - Input <trigger_array<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <trigger_array<4:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <clk_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <clk_en> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2935 - Signal 'inputA<47:44>', unconnected in block 'mac16_top', is tied to its initial value (0000).
+WARNING:Xst:2935 - Signal 'inputA<23:20>', unconnected in block 'mac16_top', is tied to its initial value (0000).
+    Found 12-bit register for signal <writeAddr>.
+    Found 12-bit register for signal <readAddr>.
+    Found 1-bit register for signal <tValidIn_mul>.
+    Found 1-bit register for signal <write_en>.
+    Found 1-bit register for signal <acc_rst_l>.
+    Found 12-bit adder for signal <writeAddr[11]_GND_21_o_add_4_OUT> created at line 101.
+    Found 12-bit adder for signal <readAddr[11]_GND_21_o_add_6_OUT> created at line 106.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  27 D-type flip-flop(s).
+Unit <mac16_top> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 16
+ 16x12-bit multiplier                                  : 2
+ 16x15-bit multiplier                                  : 6
+ 16x16-bit multiplier                                  : 6
+ 20x12-bit multiplier                                  : 2
+# Adders/Subtractors                                   : 41
+ 12-bit adder                                          : 2
+ 30-bit adder                                          : 6
+ 34-bit adder                                          : 6
+ 4-bit adder                                           : 1
+ 40-bit subtractor                                     : 10
+ 41-bit adder                                          : 16
+# Registers                                            : 23
+ 1-bit register                                        : 6
+ 12-bit register                                       : 2
+ 16-bit register                                       : 10
+ 20-bit register                                       : 4
+ 4-bit register                                        : 1
+# Comparators                                          : 1
+ 4-bit comparator equal                                : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/fifo_clk_to_decim.ngc>.
+Reading core <ipcore_dir/polyDecimator.ngc>.
+Reading Secure Unit <blk00000001>.
+Reading core <ipcore_dir/ncoTest.ngc>.
+Reading Secure Unit <blk00000001>.
+Reading core <ipcore_dir/mul16by20.ngc>.
+Reading Secure Unit <blk00000001>.
+Reading core <ipcore_dir/block_ram16.ngc>.
+Reading core <ipcore_dir/c_mul32by40.ngc>.
+Reading Secure Unit <blk00000001>.
+Reading core <ipcore_dir/acc40.ngc>.
+Reading Secure Unit <blk00000001>.
+Loading core <fifo_clk_to_decim> for timing and area information for instance <fifo_decim_demod>.
+Loading core <polyDecimator> for timing and area information for instance <myfirFilterTest>.
+Loading core <ncoTest> for timing and area information for instance <myncotest>.
+Loading core <mul16by20> for timing and area information for instance <mynewmul16by20Re>.
+Loading core <mul16by20> for timing and area information for instance <mynewmul16by20Im>.
+Loading core <block_ram16> for timing and area information for instance <myblock_ram32>.
+Loading core <c_mul32by40> for timing and area information for instance <myc_mul32by40>.
+Loading core <acc40> for timing and area information for instance <myacc40Re>.
+Loading core <acc40> for timing and area information for instance <myacc40Im>.
+
+Synthesizing (advanced) Unit <butter_quantized_20bit>.
+	Multiplier <Mmult_n0338[30:0]> in block <butter_quantized_20bit> and adder/subtractor <Msub_sub_temp_8<39:0>_Madd> in block <butter_quantized_20bit> are combined into a MAC<Maddsub_n0338[30:0]>.
+	Multiplier <Mmult_n0339[30:0]> in block <butter_quantized_20bit> and adder/subtractor <Msub_sub_temp_9<39:0>_Madd> in block <butter_quantized_20bit> are combined into a MAC<Maddsub_n0339[30:0]>.
+	Multiplier <Mmult_n0286[30:0]> in block <butter_quantized_20bit> and adder/subtractor <Msub_sub_temp_6<39:0>_Madd> in block <butter_quantized_20bit> are combined into a MAC<Maddsub_n0286[30:0]>.
+	Multiplier <Mmult_n0287[30:0]> in block <butter_quantized_20bit> and adder/subtractor <Msub_sub_temp_7<39:0>_Madd> in block <butter_quantized_20bit> are combined into a MAC<Maddsub_n0287[30:0]>.
+	Multiplier <Mmult_a2mul2_re> in block <butter_quantized_20bit> and adder/subtractor <Msub_sub_temp_4<39:0>_Madd> in block <butter_quantized_20bit> are combined into a MAC<Maddsub_a2mul2_re>.
+	Multiplier <Mmult_a2mul2_im> in block <butter_quantized_20bit> and adder/subtractor <Msub_sub_temp_5<39:0>_Madd> in block <butter_quantized_20bit> are combined into a MAC<Maddsub_a2mul2_im>.
+	Multiplier <Mmult_n0226[30:0]> in block <butter_quantized_20bit> and adder/subtractor <Msub_sub_temp_2<39:0>_Madd> in block <butter_quantized_20bit> are combined into a MAC<Maddsub_n0226[30:0]>.
+	Multiplier <Mmult_n0227[30:0]> in block <butter_quantized_20bit> and adder/subtractor <Msub_sub_temp_3<39:0>_Madd> in block <butter_quantized_20bit> are combined into a MAC<Maddsub_n0227[30:0]>.
+	Multiplier <Mmult_a2mul1_re> in block <butter_quantized_20bit> and adder/subtractor <Msub_sub_temp<39:0>_Madd> in block <butter_quantized_20bit> are combined into a MAC<Maddsub_a2mul1_re>.
+	Multiplier <Mmult_a2mul1_im> in block <butter_quantized_20bit> and adder/subtractor <Msub_sub_temp_1<39:0>_Madd> in block <butter_quantized_20bit> are combined into a MAC<Maddsub_a2mul1_im>.
+Unit <butter_quantized_20bit> synthesized (advanced).
+
+Synthesizing (advanced) Unit <clk_div_top>.
+The following registers are absorbed into counter <clk_div_counter>: 1 register on signal <clk_div_counter>.
+Unit <clk_div_top> synthesized (advanced).
+
+Synthesizing (advanced) Unit <mac16_top>.
+The following registers are absorbed into counter <writeAddr>: 1 register on signal <writeAddr>.
+The following registers are absorbed into counter <readAddr>: 1 register on signal <readAddr>.
+Unit <mac16_top> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# MACs                                                 : 10
+ 16x15-to-30-bit MAC                                   : 6
+ 16x16-to-30-bit MAC                                   : 4
+# Multipliers                                          : 6
+ 16x12-bit multiplier                                  : 2
+ 16x16-bit multiplier                                  : 2
+ 20x12-bit multiplier                                  : 2
+# Adders/Subtractors                                   : 28
+ 30-bit adder                                          : 6
+ 34-bit adder                                          : 16
+ 39-bit adder                                          : 6
+# Counters                                             : 3
+ 12-bit up counter                                     : 2
+ 4-bit up counter                                      : 1
+# Registers                                            : 246
+ Flip-Flops                                            : 246
+# Comparators                                          : 1
+ 4-bit comparator equal                                : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <output_register_im_16> in Unit <butter_quantized_20bit> is equivalent to the following 3 FFs/Latches, which will be removed : <output_register_im_17> <output_register_im_18> <output_register_im_19> 
+INFO:Xst:2261 - The FF/Latch <output_register_re_16> in Unit <butter_quantized_20bit> is equivalent to the following 3 FFs/Latches, which will be removed : <output_register_re_17> <output_register_re_18> <output_register_re_19> 
+
+Optimizing unit <polyDecimDemodFilter2_Top> ...
+
+Optimizing unit <mac16_top> ...
+
+Optimizing unit <butter_quantized_20bit> ...
+INFO:Xst:2261 - The FF/Latch <mybutterworth20bit/output_register_re_16> in Unit <polyDecimDemodFilter2_Top> is equivalent to the following FF/Latch, which will be removed : <mybutterworth20bit/output_register_re_15> 
+INFO:Xst:2261 - The FF/Latch <mybutterworth20bit/output_register_im_16> in Unit <polyDecimDemodFilter2_Top> is equivalent to the following FF/Latch, which will be removed : <mybutterworth20bit/output_register_im_15> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block polyDecimDemodFilter2_Top, actual ratio is 5.
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <fifo_decim_demod> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <fifo_decim_demod> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <fifo_decim_demod> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <fifo_decim_demod> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <fifo_decim_demod> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <fifo_decim_demod> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <fifo_decim_demod> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <fifo_decim_demod> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 266
+ Flip-Flops                                            : 266
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : polyDecimDemodFilter2_Top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1618
+#      GND                         : 4
+#      INV                         : 22
+#      LUT1                        : 206
+#      LUT2                        : 228
+#      LUT3                        : 131
+#      LUT4                        : 127
+#      LUT5                        : 6
+#      LUT6                        : 19
+#      MUXCY                       : 510
+#      VCC                         : 3
+#      XORCY                       : 362
+# FlipFlops/Latches                : 440
+#      FD                          : 5
+#      FDC                         : 97
+#      FDCE                        : 315
+#      FDE                         : 3
+#      FDP                         : 14
+#      FDPE                        : 2
+#      FDR                         : 4
+# RAMS                             : 13
+#      RAMB16BWER                  : 11
+#      RAMB8BWER                   : 2
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 186
+#      IBUF                        : 90
+#      OBUF                        : 96
+# DSPs                             : 22
+#      DSP48A1                     : 22
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45fgg484-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             440  out of  54576     0%  
+ Number of Slice LUTs:                  739  out of  27288     2%  
+    Number used as Logic:               739  out of  27288     2%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    897
+   Number with an unused Flip Flop:     457  out of    897    50%  
+   Number with an unused LUT:           158  out of    897    17%  
+   Number of fully used LUT-FF pairs:   282  out of    897    31%  
+   Number of unique control sets:        23
+
+IO Utilization: 
+ Number of IOs:                         260
+ Number of bonded IOBs:                 187  out of    316    59%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               12  out of    116    10%  
+    Number using Block RAM only:         12
+ Number of BUFG/BUFGCTRL/BUFHCEs:         2  out of     16    12%  
+ Number of DSP48A1s:                     22  out of     58    37%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)               | Load  |
+-----------------------------------+-------------------------------------+-------+
+clk                                | BUFGP                               | 1225  |
+my_clk_div/temp_clk                | BUFG                                | 760   |
+N1                                 | NONE(mybutterworth20bit/Madd_n03331)| 6     |
+-----------------------------------+-------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 75.275ns (Maximum Frequency: 13.285MHz)
+   Minimum input arrival time before clock: 5.372ns
+   Maximum output required time after clock: 4.162ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 75.275ns (frequency: 13.285MHz)
+  Total number of paths / destination ports: 175210608482955350919903298191360 / 2897
+-------------------------------------------------------------------------
+Delay:               75.275ns (Levels of Logic = 202)
+  Source:            mybutterworth20bit/input_register_im_16 (FF)
+  Destination:       mybutterworth20bit/output_register_im_16 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: mybutterworth20bit/input_register_im_16 to mybutterworth20bit/output_register_im_16
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.525   0.681  mybutterworth20bit/input_register_im_16 (mybutterworth20bit/input_register_im_16)
+     DSP48A1:B16->M18      1   3.894   0.682  mybutterworth20bit/Mmult_n0205[31:0]_submult_0 (mybutterworth20bit/Mmult_n0205[31:0]_submult_0_18)
+     LUT2:I1->O            1   0.254   0.000  mybutterworth20bit/Mmult_n0205[31:0]0_Madd_lut<18> (mybutterworth20bit/Mmult_n0205[31:0]0_Madd_lut<18>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworth20bit/Mmult_n0205[31:0]0_Madd_cy<18> (mybutterworth20bit/Mmult_n0205[31:0]0_Madd_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Mmult_n0205[31:0]0_Madd_cy<19> (mybutterworth20bit/Mmult_n0205[31:0]0_Madd_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Mmult_n0205[31:0]0_Madd_cy<20> (mybutterworth20bit/Mmult_n0205[31:0]0_Madd_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Mmult_n0205[31:0]0_Madd_cy<21> (mybutterworth20bit/Mmult_n0205[31:0]0_Madd_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Mmult_n0205[31:0]0_Madd_cy<22> (mybutterworth20bit/Mmult_n0205[31:0]0_Madd_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Mmult_n0205[31:0]0_Madd_cy<23> (mybutterworth20bit/Mmult_n0205[31:0]0_Madd_cy<23>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Mmult_n0205[31:0]0_Madd_cy<24> (mybutterworth20bit/Mmult_n0205[31:0]0_Madd_cy<24>)
+     XORCY:CI->O          26   0.206   1.420  mybutterworth20bit/Mmult_n0205[31:0]0_Madd_xor<25> (mybutterworth20bit/n0205[31:0]<25>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworth20bit/Madd_n0207_Madd_lut<0> (mybutterworth20bit/Madd_n0207_Madd_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<0> (mybutterworth20bit/Madd_n0207_Madd_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<1> (mybutterworth20bit/Madd_n0207_Madd_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<2> (mybutterworth20bit/Madd_n0207_Madd_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<3> (mybutterworth20bit/Madd_n0207_Madd_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<4> (mybutterworth20bit/Madd_n0207_Madd_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<5> (mybutterworth20bit/Madd_n0207_Madd_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<6> (mybutterworth20bit/Madd_n0207_Madd_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<7> (mybutterworth20bit/Madd_n0207_Madd_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<8> (mybutterworth20bit/Madd_n0207_Madd_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<9> (mybutterworth20bit/Madd_n0207_Madd_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<10> (mybutterworth20bit/Madd_n0207_Madd_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<11> (mybutterworth20bit/Madd_n0207_Madd_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<12> (mybutterworth20bit/Madd_n0207_Madd_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<13> (mybutterworth20bit/Madd_n0207_Madd_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<14> (mybutterworth20bit/Madd_n0207_Madd_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<15> (mybutterworth20bit/Madd_n0207_Madd_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<16> (mybutterworth20bit/Madd_n0207_Madd_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<17> (mybutterworth20bit/Madd_n0207_Madd_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<18> (mybutterworth20bit/Madd_n0207_Madd_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<19> (mybutterworth20bit/Madd_n0207_Madd_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<20> (mybutterworth20bit/Madd_n0207_Madd_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<21> (mybutterworth20bit/Madd_n0207_Madd_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<22> (mybutterworth20bit/Madd_n0207_Madd_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<23> (mybutterworth20bit/Madd_n0207_Madd_cy<23>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<24> (mybutterworth20bit/Madd_n0207_Madd_cy<24>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<25> (mybutterworth20bit/Madd_n0207_Madd_cy<25>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<26> (mybutterworth20bit/Madd_n0207_Madd_cy<26>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<27> (mybutterworth20bit/Madd_n0207_Madd_cy<27>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<28> (mybutterworth20bit/Madd_n0207_Madd_cy<28>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<29> (mybutterworth20bit/Madd_n0207_Madd_cy<29>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<30> (mybutterworth20bit/Madd_n0207_Madd_cy<30>)
+     MUXCY:CI->O           0   0.023   0.000  mybutterworth20bit/Madd_n0207_Madd_cy<31> (mybutterworth20bit/Madd_n0207_Madd_cy<31>)
+     XORCY:CI->O          25   0.206   1.402  mybutterworth20bit/Madd_n0207_Madd_xor<32> (mybutterworth20bit/n0207<32>)
+     DSP48A1:C23->PCOUT47    1   3.149   0.000  mybutterworth20bit/Maddsub_a2mul1_im (mybutterworth20bit/Maddsub_a2mul1_im_PCOUT_to_Maddsub_n0227[30:0]_PCIN_47)
+     DSP48A1:PCIN47->P14    2   2.645   0.725  mybutterworth20bit/Maddsub_n0227[30:0] (mybutterworth20bit/sub_temp_3<14>)
+     INV:I->O             13   0.255   1.097  mybutterworth20bit/a1sum1_im[14]_INV_110_o1_INV_0 (mybutterworth20bit/a1sum1_im[14]_INV_110_o)
+     DSP48A1:B0->P15       3   3.651   0.994  mybutterworth20bit/Madd_n02171 (mybutterworth20bit/n0217<15>)
+     LUT3:I0->O            1   0.235   0.682  mybutterworth20bit/Madd_add_temp_3_Madd1 (mybutterworth20bit/Madd_add_temp_3_Madd1)
+     LUT4:I3->O            1   0.254   0.000  mybutterworth20bit/Madd_add_temp_3_Madd_lut<0>2 (mybutterworth20bit/Madd_add_temp_3_Madd_lut<0>2)
+     MUXCY:S->O            1   0.215   0.000  mybutterworth20bit/Madd_add_temp_3_Madd_cy<0>_14 (mybutterworth20bit/Madd_add_temp_3_Madd_cy<0>15)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_add_temp_3_Madd_cy<0>_15 (mybutterworth20bit/Madd_add_temp_3_Madd_cy<0>16)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_add_temp_3_Madd_cy<0>_16 (mybutterworth20bit/Madd_add_temp_3_Madd_cy<0>17)
+     XORCY:CI->O           9   0.206   0.976  mybutterworth20bit/Madd_add_temp_3_Madd_xor<0>_17 (mybutterworth20bit/add_temp_3<18>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworth20bit/Madd_n0261_lut<1> (mybutterworth20bit/Madd_n0261_lut<1>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworth20bit/Madd_n0261_cy<1> (mybutterworth20bit/Madd_n0261_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0261_cy<2> (mybutterworth20bit/Madd_n0261_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0261_cy<3> (mybutterworth20bit/Madd_n0261_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0261_cy<4> (mybutterworth20bit/Madd_n0261_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0261_cy<5> (mybutterworth20bit/Madd_n0261_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0261_cy<6> (mybutterworth20bit/Madd_n0261_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0261_cy<7> (mybutterworth20bit/Madd_n0261_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0261_cy<8> (mybutterworth20bit/Madd_n0261_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0261_cy<9> (mybutterworth20bit/Madd_n0261_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0261_cy<10> (mybutterworth20bit/Madd_n0261_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0261_cy<11> (mybutterworth20bit/Madd_n0261_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0261_cy<12> (mybutterworth20bit/Madd_n0261_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0261_cy<13> (mybutterworth20bit/Madd_n0261_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0261_cy<14> (mybutterworth20bit/Madd_n0261_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0261_cy<15> (mybutterworth20bit/Madd_n0261_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0261_cy<16> (mybutterworth20bit/Madd_n0261_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0261_cy<17> (mybutterworth20bit/Madd_n0261_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0261_cy<18> (mybutterworth20bit/Madd_n0261_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0261_cy<19> (mybutterworth20bit/Madd_n0261_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0261_cy<20> (mybutterworth20bit/Madd_n0261_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0261_cy<21> (mybutterworth20bit/Madd_n0261_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0261_cy<22> (mybutterworth20bit/Madd_n0261_cy<22>)
+     MUXCY:CI->O           0   0.023   0.000  mybutterworth20bit/Madd_n0261_cy<23> (mybutterworth20bit/Madd_n0261_cy<23>)
+     XORCY:CI->O           3   0.206   0.765  mybutterworth20bit/Madd_n0261_xor<24> (mybutterworth20bit/n0261<33>)
+     DSP48A1:B15->M16     17   3.894   1.209  mybutterworth20bit/Mmult_n0265[27:0] (mybutterworth20bit/n0265[27:0]<16>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworth20bit/Madd_n0267_Madd_lut<2> (mybutterworth20bit/Madd_n0267_Madd_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworth20bit/Madd_n0267_Madd_cy<2> (mybutterworth20bit/Madd_n0267_Madd_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0267_Madd_cy<3> (mybutterworth20bit/Madd_n0267_Madd_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0267_Madd_cy<4> (mybutterworth20bit/Madd_n0267_Madd_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0267_Madd_cy<5> (mybutterworth20bit/Madd_n0267_Madd_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0267_Madd_cy<6> (mybutterworth20bit/Madd_n0267_Madd_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0267_Madd_cy<7> (mybutterworth20bit/Madd_n0267_Madd_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0267_Madd_cy<8> (mybutterworth20bit/Madd_n0267_Madd_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0267_Madd_cy<9> (mybutterworth20bit/Madd_n0267_Madd_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0267_Madd_cy<10> (mybutterworth20bit/Madd_n0267_Madd_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0267_Madd_cy<11> (mybutterworth20bit/Madd_n0267_Madd_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0267_Madd_cy<12> (mybutterworth20bit/Madd_n0267_Madd_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0267_Madd_cy<13> (mybutterworth20bit/Madd_n0267_Madd_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0267_Madd_cy<14> (mybutterworth20bit/Madd_n0267_Madd_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0267_Madd_cy<15> (mybutterworth20bit/Madd_n0267_Madd_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0267_Madd_cy<16> (mybutterworth20bit/Madd_n0267_Madd_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0267_Madd_cy<17> (mybutterworth20bit/Madd_n0267_Madd_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0267_Madd_cy<18> (mybutterworth20bit/Madd_n0267_Madd_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0267_Madd_cy<19> (mybutterworth20bit/Madd_n0267_Madd_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0267_Madd_cy<20> (mybutterworth20bit/Madd_n0267_Madd_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0267_Madd_cy<21> (mybutterworth20bit/Madd_n0267_Madd_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0267_Madd_cy<22> (mybutterworth20bit/Madd_n0267_Madd_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0267_Madd_cy<23> (mybutterworth20bit/Madd_n0267_Madd_cy<23>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0267_Madd_cy<24> (mybutterworth20bit/Madd_n0267_Madd_cy<24>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0267_Madd_cy<25> (mybutterworth20bit/Madd_n0267_Madd_cy<25>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0267_Madd_cy<26> (mybutterworth20bit/Madd_n0267_Madd_cy<26>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0267_Madd_cy<27> (mybutterworth20bit/Madd_n0267_Madd_cy<27>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0267_Madd_cy<28> (mybutterworth20bit/Madd_n0267_Madd_cy<28>)
+     MUXCY:CI->O           0   0.023   0.000  mybutterworth20bit/Madd_n0267_Madd_cy<29> (mybutterworth20bit/Madd_n0267_Madd_cy<29>)
+     XORCY:CI->O          20   0.206   1.285  mybutterworth20bit/Madd_n0267_Madd_xor<30> (mybutterworth20bit/n0267<37>)
+     DSP48A1:C28->PCOUT47    1   3.149   0.000  mybutterworth20bit/Maddsub_a2mul2_im (mybutterworth20bit/Maddsub_a2mul2_im_PCOUT_to_Maddsub_n0287[30:0]_PCIN_47)
+     DSP48A1:PCIN47->P14    2   2.645   0.725  mybutterworth20bit/Maddsub_n0287[30:0] (mybutterworth20bit/sub_temp_7<14>)
+     INV:I->O             13   0.255   1.097  mybutterworth20bit/a1sum2_im[14]_INV_353_o1_INV_0 (mybutterworth20bit/a1sum2_im[14]_INV_353_o)
+     DSP48A1:B0->P15       3   3.651   0.994  mybutterworth20bit/Madd_n02771 (mybutterworth20bit/n0277<15>)
+     LUT3:I0->O            1   0.235   0.682  mybutterworth20bit/Madd_add_temp_7_Madd1 (mybutterworth20bit/Madd_add_temp_7_Madd1)
+     LUT4:I3->O            1   0.254   0.000  mybutterworth20bit/Madd_add_temp_7_Madd_lut<0>2 (mybutterworth20bit/Madd_add_temp_7_Madd_lut<0>2)
+     MUXCY:S->O            1   0.215   0.000  mybutterworth20bit/Madd_add_temp_7_Madd_cy<0>_14 (mybutterworth20bit/Madd_add_temp_7_Madd_cy<0>15)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_add_temp_7_Madd_cy<0>_15 (mybutterworth20bit/Madd_add_temp_7_Madd_cy<0>16)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_add_temp_7_Madd_cy<0>_16 (mybutterworth20bit/Madd_add_temp_7_Madd_cy<0>17)
+     XORCY:CI->O           9   0.206   0.976  mybutterworth20bit/Madd_add_temp_7_Madd_xor<0>_17 (mybutterworth20bit/add_temp_7<18>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworth20bit/Madd_n0321_lut<1> (mybutterworth20bit/Madd_n0321_lut<1>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworth20bit/Madd_n0321_cy<1> (mybutterworth20bit/Madd_n0321_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0321_cy<2> (mybutterworth20bit/Madd_n0321_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0321_cy<3> (mybutterworth20bit/Madd_n0321_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0321_cy<4> (mybutterworth20bit/Madd_n0321_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0321_cy<5> (mybutterworth20bit/Madd_n0321_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0321_cy<6> (mybutterworth20bit/Madd_n0321_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0321_cy<7> (mybutterworth20bit/Madd_n0321_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0321_cy<8> (mybutterworth20bit/Madd_n0321_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0321_cy<9> (mybutterworth20bit/Madd_n0321_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0321_cy<10> (mybutterworth20bit/Madd_n0321_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0321_cy<11> (mybutterworth20bit/Madd_n0321_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0321_cy<12> (mybutterworth20bit/Madd_n0321_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0321_cy<13> (mybutterworth20bit/Madd_n0321_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0321_cy<14> (mybutterworth20bit/Madd_n0321_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0321_cy<15> (mybutterworth20bit/Madd_n0321_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0321_cy<16> (mybutterworth20bit/Madd_n0321_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0321_cy<17> (mybutterworth20bit/Madd_n0321_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0321_cy<18> (mybutterworth20bit/Madd_n0321_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0321_cy<19> (mybutterworth20bit/Madd_n0321_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0321_cy<20> (mybutterworth20bit/Madd_n0321_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0321_cy<21> (mybutterworth20bit/Madd_n0321_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0321_cy<22> (mybutterworth20bit/Madd_n0321_cy<22>)
+     MUXCY:CI->O           0   0.023   0.000  mybutterworth20bit/Madd_n0321_cy<23> (mybutterworth20bit/Madd_n0321_cy<23>)
+     XORCY:CI->O           3   0.206   0.765  mybutterworth20bit/Madd_n0321_xor<24> (mybutterworth20bit/n0321<33>)
+     DSP48A1:B15->M16     17   3.894   1.209  mybutterworth20bit/Mmult_mul_temp_5 (mybutterworth20bit/mul_temp_5<16>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworth20bit/Madd_n0327_Madd_lut<2> (mybutterworth20bit/Madd_n0327_Madd_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworth20bit/Madd_n0327_Madd_cy<2> (mybutterworth20bit/Madd_n0327_Madd_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0327_Madd_cy<3> (mybutterworth20bit/Madd_n0327_Madd_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0327_Madd_cy<4> (mybutterworth20bit/Madd_n0327_Madd_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0327_Madd_cy<5> (mybutterworth20bit/Madd_n0327_Madd_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0327_Madd_cy<6> (mybutterworth20bit/Madd_n0327_Madd_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0327_Madd_cy<7> (mybutterworth20bit/Madd_n0327_Madd_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0327_Madd_cy<8> (mybutterworth20bit/Madd_n0327_Madd_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0327_Madd_cy<9> (mybutterworth20bit/Madd_n0327_Madd_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0327_Madd_cy<10> (mybutterworth20bit/Madd_n0327_Madd_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0327_Madd_cy<11> (mybutterworth20bit/Madd_n0327_Madd_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0327_Madd_cy<12> (mybutterworth20bit/Madd_n0327_Madd_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0327_Madd_cy<13> (mybutterworth20bit/Madd_n0327_Madd_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0327_Madd_cy<14> (mybutterworth20bit/Madd_n0327_Madd_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0327_Madd_cy<15> (mybutterworth20bit/Madd_n0327_Madd_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0327_Madd_cy<16> (mybutterworth20bit/Madd_n0327_Madd_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0327_Madd_cy<17> (mybutterworth20bit/Madd_n0327_Madd_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0327_Madd_cy<18> (mybutterworth20bit/Madd_n0327_Madd_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0327_Madd_cy<19> (mybutterworth20bit/Madd_n0327_Madd_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0327_Madd_cy<20> (mybutterworth20bit/Madd_n0327_Madd_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0327_Madd_cy<21> (mybutterworth20bit/Madd_n0327_Madd_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0327_Madd_cy<22> (mybutterworth20bit/Madd_n0327_Madd_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0327_Madd_cy<23> (mybutterworth20bit/Madd_n0327_Madd_cy<23>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0327_Madd_cy<24> (mybutterworth20bit/Madd_n0327_Madd_cy<24>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0327_Madd_cy<25> (mybutterworth20bit/Madd_n0327_Madd_cy<25>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0327_Madd_cy<26> (mybutterworth20bit/Madd_n0327_Madd_cy<26>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0327_Madd_cy<27> (mybutterworth20bit/Madd_n0327_Madd_cy<27>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0327_Madd_cy<28> (mybutterworth20bit/Madd_n0327_Madd_cy<28>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0327_Madd_cy<29> (mybutterworth20bit/Madd_n0327_Madd_cy<29>)
+     MUXCY:CI->O           0   0.023   0.000  mybutterworth20bit/Madd_n0327_Madd_cy<30> (mybutterworth20bit/Madd_n0327_Madd_cy<30>)
+     XORCY:CI->O          19   0.206   1.260  mybutterworth20bit/Madd_n0327_Madd_xor<31> (mybutterworth20bit/n0327<38>)
+     DSP48A1:C29->P14      2   3.141   0.725  mybutterworth20bit/Maddsub_n0339[30:0] (mybutterworth20bit/sub_temp_9<14>)
+     INV:I->O             13   0.255   1.097  mybutterworth20bit/a1sum3_im[14]_INV_461_o1_INV_0 (mybutterworth20bit/a1sum3_im[14]_INV_461_o)
+     DSP48A1:B0->P14       2   3.651   0.726  mybutterworth20bit/Madd_n03331 (mybutterworth20bit/n0333<14>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworth20bit/Madd_add_temp_9_Madd_lut<2> (mybutterworth20bit/Madd_add_temp_9_Madd_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworth20bit/Madd_add_temp_9_Madd_cy<2> (mybutterworth20bit/Madd_add_temp_9_Madd_cy<2>)
+     XORCY:CI->O           2   0.206   0.726  mybutterworth20bit/Madd_add_temp_9_Madd_xor<3> (mybutterworth20bit/add_temp_9<14>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworth20bit/Madd_n0359_lut<2> (mybutterworth20bit/Madd_n0359_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworth20bit/Madd_n0359_cy<2> (mybutterworth20bit/Madd_n0359_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0359_cy<3> (mybutterworth20bit/Madd_n0359_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0359_cy<4> (mybutterworth20bit/Madd_n0359_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0359_cy<5> (mybutterworth20bit/Madd_n0359_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0359_cy<6> (mybutterworth20bit/Madd_n0359_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0359_cy<7> (mybutterworth20bit/Madd_n0359_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0359_cy<8> (mybutterworth20bit/Madd_n0359_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0359_cy<9> (mybutterworth20bit/Madd_n0359_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0359_cy<10> (mybutterworth20bit/Madd_n0359_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0359_cy<11> (mybutterworth20bit/Madd_n0359_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0359_cy<12> (mybutterworth20bit/Madd_n0359_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0359_cy<13> (mybutterworth20bit/Madd_n0359_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0359_cy<14> (mybutterworth20bit/Madd_n0359_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0359_cy<15> (mybutterworth20bit/Madd_n0359_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0359_cy<16> (mybutterworth20bit/Madd_n0359_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworth20bit/Madd_n0359_cy<17> (mybutterworth20bit/Madd_n0359_cy<17>)
+     MUXCY:CI->O           0   0.023   0.000  mybutterworth20bit/Madd_n0359_cy<18> (mybutterworth20bit/Madd_n0359_cy<18>)
+     XORCY:CI->O           1   0.206   0.000  mybutterworth20bit/Madd_n0359_xor<19> (mybutterworth20bit/n0359<30>)
+     FDCE:D                    0.074          mybutterworth20bit/output_register_im_16
+    ----------------------------------------
+    Total                     75.275ns (52.375ns logic, 22.900ns route)
+                                       (69.6% logic, 30.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'my_clk_div/temp_clk'
+  Clock period: 8.414ns (frequency: 118.857MHz)
+  Total number of paths / destination ports: 44058859 / 2219
+-------------------------------------------------------------------------
+Delay:               8.414ns (Levels of Logic = 44)
+  Source:            sec_inst (FF)
+  Destination:       sec_inst (FF)
+  Source Clock:      my_clk_div/temp_clk rising
+  Destination Clock: my_clk_div/temp_clk rising
+
+  Data Path: sec_inst to sec_inst
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SEC:C->out           21   0.525   1.538  sec_inst (sec_net)
+     end scope: 'mydigitalDemod/myncotest/blk00000001:m_axis_data_tdata<1>'
+     end scope: 'mydigitalDemod/myncotest:m_axis_data_tdata<1>'
+     begin scope: 'mydigitalDemod/mynewmul16by20Re:a<1>'
+     begin scope: 'mydigitalDemod/mynewmul16by20Re/blk00000001:A<1>'
+     SEC:in->out           1   0.235   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.215   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           0   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           3   0.206   0.874  sec_inst (sec_net)
+     SEC:in->out           1   0.250   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.215   0.000  sec_inst (sec_net)
+     SEC:in->out           0   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           6   0.206   0.984  sec_inst (sec_net)
+     SEC:in->out           1   0.250   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.215   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           0   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           8   0.206   1.052  sec_inst (sec_net)
+     SEC:in->out           1   0.250   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.215   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           0   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.206   0.000  sec_inst (sec_net)
+     SEC:in                    0.074          sec_inst
+    ----------------------------------------
+    Total                      8.414ns (3.966ns logic, 4.448ns route)
+                                       (47.1% logic, 52.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 519 / 504
+-------------------------------------------------------------------------
+Offset:              5.212ns (Levels of Logic = 3)
+  Source:            max_count<1> (PAD)
+  Destination:       my_clk_div/clk_div_counter_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: max_count<1> to my_clk_div/clk_div_counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.328   0.958  max_count_1_IBUF (max_count_1_IBUF)
+     LUT4:I0->O            2   0.254   1.156  my_clk_div/clk_div_counter[3]_max_count[3]_equal_2_o4_SW0 (N01)
+     LUT5:I0->O            4   0.254   0.803  my_clk_div/clk_div_counter[3]_max_count[3]_equal_2_o4 (my_clk_div/clk_div_counter[3]_max_count[3]_equal_2_o)
+     FDR:R                     0.459          my_clk_div/clk_div_counter_0
+    ----------------------------------------
+    Total                      5.212ns (2.295ns logic, 2.917ns route)
+                                       (44.0% logic, 56.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'my_clk_div/temp_clk'
+  Total number of paths / destination ports: 519 / 216
+-------------------------------------------------------------------------
+Offset:              5.372ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       writeEn (FF)
+  Destination Clock: my_clk_div/temp_clk rising
+
+  Data Path: rst to writeEn
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           339   1.328   2.669  rst_IBUF (rst_IBUF)
+     LUT3:I0->O            1   0.235   0.681  empty_rst_OR_4_o1 (empty_rst_OR_4_o)
+     FDCE:CLR                  0.459          writeEn
+    ----------------------------------------
+    Total                      5.372ns (2.022ns logic, 3.350ns route)
+                                       (37.6% logic, 62.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'my_clk_div/temp_clk'
+  Total number of paths / destination ports: 96 / 96
+-------------------------------------------------------------------------
+Offset:              4.162ns (Levels of Logic = 2)
+  Source:            sec_inst (FF)
+  Destination:       acc<95> (PAD)
+  Source Clock:      my_clk_div/temp_clk rising
+
+  Data Path: sec_inst to acc<95>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SEC:C->out            2   0.525   0.725  sec_inst (sec_net)
+     end scope: 'mymac20/myacc40Im/blk00000001:Q<47>'
+     end scope: 'mymac20/myacc40Im:q<47>'
+     OBUF:I->O                 2.912          acc_95_OBUF (acc<95>)
+    ----------------------------------------
+    Total                      4.162ns (3.437ns logic, 0.725ns route)
+                                       (82.6% logic, 17.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock N1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   68.376|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+-------------------+---------+---------+---------+---------+
+                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------+---------+---------+---------+---------+
+clk                |   75.275|         |         |         |
+my_clk_div/temp_clk|    2.705|         |         |         |
+-------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock my_clk_div/temp_clk
+-------------------+---------+---------+---------+---------+
+                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------+---------+---------+---------+---------+
+clk                |   11.259|         |         |         |
+my_clk_div/temp_clk|    8.414|         |         |         |
+-------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 26.00 secs
+Total CPU time to Xst completion: 25.34 secs
+ 
+--> 
+
+
+Total memory usage is 437768 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   26 (   0 filtered)
+Number of infos    :   21 (   0 filtered)
+

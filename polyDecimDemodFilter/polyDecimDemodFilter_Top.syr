@@ -1,0 +1,1695 @@
+Release 14.5 - xst P.58f (lin64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+Reading design: polyDecimDemodFilter_Top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "polyDecimDemodFilter_Top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "polyDecimDemodFilter_Top"
+Output Format                      : NGC
+Target Device                      : xc6slx45-2-fgg484
+
+---- Source Options
+Top Module Name                    : polyDecimDemodFilter_Top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/nick/polyDecimDemodFilter/ipcore_dir/polyDecimator.vhd" into library work
+Parsing entity <polyDecimator>.
+Parsing architecture <polyDecimator_a> of entity <polydecimator>.
+Parsing VHDL file "/home/nick/polyDecimDemodFilter/ipcore_dir/ncoTest.vhd" into library work
+Parsing entity <ncoTest>.
+Parsing architecture <ncoTest_a> of entity <ncotest>.
+Parsing VHDL file "/home/nick/polyDecimDemodFilter/ipcore_dir/mul16to32.vhd" into library work
+Parsing entity <mul16to32>.
+Parsing architecture <mul16to32_a> of entity <mul16to32>.
+Parsing VHDL file "/home/nick/polyDecimDemodFilter/firFilter_top.vhd" into library work
+Parsing entity <firFilter_top>.
+Parsing architecture <arch> of entity <firfilter_top>.
+Parsing VHDL file "/home/nick/polyDecimDemodFilter/digitalDemodTest_top.vhd" into library work
+Parsing entity <digitalDemodTest_top>.
+Parsing architecture <arch> of entity <digitaldemodtest_top>.
+Parsing VHDL file "/home/nick/polyDecimDemodFilter/butter_quantized.vhd" into library work
+Parsing entity <butter_quantized>.
+Parsing architecture <rtl> of entity <butter_quantized>.
+Parsing VHDL file "/home/nick/polyDecimDemodFilter/polyDecimDemodFilter_Top.vhd" into library work
+Parsing entity <polyDecimDemodFilter_Top>.
+Parsing architecture <Behavioral> of entity <polydecimdemodfilter_top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <polyDecimDemodFilter_Top> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <firFilter_top> (architecture <arch>) from library <work>.
+
+Elaborating entity <polyDecimator> (architecture <polyDecimator_a>) from library <work>.
+
+Elaborating entity <digitalDemodTest_top> (architecture <arch>) from library <work>.
+
+Elaborating entity <ncoTest> (architecture <ncoTest_a>) from library <work>.
+
+Elaborating entity <mul16to32> (architecture <mul16to32_a>) from library <work>.
+
+Elaborating entity <butter_quantized> (architecture <rtl>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <polyDecimDemodFilter_Top>.
+    Related source file is "/home/nick/polyDecimDemodFilter/polyDecimDemodFilter_Top.vhd".
+WARNING:Xst:647 - Input <tValidIn_Array<15:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <runSignals<15:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <decimFactor> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/home/nick/polyDecimDemodFilter/polyDecimDemodFilter_Top.vhd" line 73: Output port <tValidOut> of the instance <mypolyDecimator> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/nick/polyDecimDemodFilter/polyDecimDemodFilter_Top.vhd" line 88: Output port <tValidOut> of the instance <mydigitalDemod> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <polyDecimDemodFilter_Top> synthesized.
+
+Synthesizing Unit <firFilter_top>.
+    Related source file is "/home/nick/polyDecimDemodFilter/firFilter_top.vhd".
+WARNING:Xst:647 - Input <reloadCoefData> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <numtaps> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <runFilter> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <reloadCoef> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/home/nick/polyDecimDemodFilter/firFilter_top.vhd" line 71: Output port <s_axis_data_tready> of the instance <myfirFilterTest> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <firFilter_top> synthesized.
+
+Synthesizing Unit <digitalDemodTest_top>.
+    Related source file is "/home/nick/polyDecimDemodFilter/digitalDemodTest_top.vhd".
+    Summary:
+	no macro.
+Unit <digitalDemodTest_top> synthesized.
+
+Synthesizing Unit <butter_quantized>.
+    Related source file is "/home/nick/polyDecimDemodFilter/butter_quantized.vhd".
+    Found 16-bit register for signal <delay_section1<0>>.
+    Found 16-bit register for signal <delay_section1<1>>.
+    Found 16-bit register for signal <delay_section2<0>>.
+    Found 16-bit register for signal <delay_section2<1>>.
+    Found 16-bit register for signal <delay_section3<0>>.
+    Found 16-bit register for signal <delay_section3<1>>.
+    Found 16-bit register for signal <delay_section4<0>>.
+    Found 16-bit register for signal <delay_section4<1>>.
+    Found 16-bit register for signal <delay_section5<0>>.
+    Found 16-bit register for signal <delay_section5<1>>.
+    Found 16-bit register for signal <delay_section6<0>>.
+    Found 16-bit register for signal <delay_section6<1>>.
+    Found 16-bit register for signal <delay_section7<0>>.
+    Found 16-bit register for signal <delay_section7<1>>.
+    Found 16-bit register for signal <delay_section8<0>>.
+    Found 16-bit register for signal <delay_section8<1>>.
+    Found 16-bit register for signal <delay_section9<0>>.
+    Found 16-bit register for signal <delay_section9<1>>.
+    Found 16-bit register for signal <delay_section10<0>>.
+    Found 16-bit register for signal <delay_section10<1>>.
+    Found 16-bit register for signal <delay_section11<0>>.
+    Found 16-bit register for signal <delay_section11<1>>.
+    Found 16-bit register for signal <delay_section12<0>>.
+    Found 16-bit register for signal <delay_section12<1>>.
+    Found 16-bit register for signal <delay_section13<0>>.
+    Found 16-bit register for signal <delay_section13<1>>.
+    Found 16-bit register for signal <delay_section14<0>>.
+    Found 16-bit register for signal <delay_section14<1>>.
+    Found 16-bit register for signal <delay_section15<0>>.
+    Found 16-bit register for signal <delay_section15<1>>.
+    Found 16-bit register for signal <delay_section16<0>>.
+    Found 16-bit register for signal <delay_section16<1>>.
+    Found 16-bit register for signal <delay_section17<0>>.
+    Found 16-bit register for signal <delay_section17<1>>.
+    Found 16-bit register for signal <delay_section18>.
+    Found 16-bit register for signal <output_register>.
+    Found 16-bit register for signal <input_register>.
+    Found 37-bit adder for signal <n0538> created at line 649.
+    Found 30-bit adder for signal <n0542> created at line 653.
+    Found 41-bit adder for signal <add_temp> created at line 686.
+    Found 41-bit adder for signal <add_temp_1> created at line 691.
+    Found 34-bit adder for signal <n0560> created at line 694.
+    Found 37-bit adder for signal <n0563> created at line 699.
+    Found 30-bit adder for signal <n0567> created at line 703.
+    Found 41-bit adder for signal <add_temp_2> created at line 736.
+    Found 41-bit adder for signal <add_temp_3> created at line 741.
+    Found 34-bit adder for signal <n0585> created at line 744.
+    Found 37-bit adder for signal <n0588> created at line 749.
+    Found 30-bit adder for signal <n0592> created at line 753.
+    Found 41-bit adder for signal <add_temp_4> created at line 786.
+    Found 41-bit adder for signal <add_temp_5> created at line 791.
+    Found 34-bit adder for signal <n0610> created at line 794.
+    Found 37-bit adder for signal <n0613> created at line 799.
+    Found 30-bit adder for signal <n0617> created at line 803.
+    Found 41-bit adder for signal <add_temp_6> created at line 836.
+    Found 41-bit adder for signal <add_temp_7> created at line 841.
+    Found 34-bit adder for signal <n0635> created at line 844.
+    Found 37-bit adder for signal <n0638> created at line 849.
+    Found 30-bit adder for signal <n0642> created at line 853.
+    Found 41-bit adder for signal <add_temp_8> created at line 886.
+    Found 41-bit adder for signal <add_temp_9> created at line 891.
+    Found 34-bit adder for signal <n0660> created at line 894.
+    Found 37-bit adder for signal <n0663> created at line 899.
+    Found 30-bit adder for signal <n0667> created at line 903.
+    Found 41-bit adder for signal <add_temp_10> created at line 936.
+    Found 41-bit adder for signal <add_temp_11> created at line 941.
+    Found 34-bit adder for signal <n0685> created at line 944.
+    Found 37-bit adder for signal <n0688> created at line 949.
+    Found 30-bit adder for signal <n0692> created at line 953.
+    Found 41-bit adder for signal <add_temp_12> created at line 986.
+    Found 41-bit adder for signal <add_temp_13> created at line 991.
+    Found 34-bit adder for signal <n0710> created at line 994.
+    Found 37-bit adder for signal <n0713> created at line 999.
+    Found 30-bit adder for signal <n0717> created at line 1003.
+    Found 41-bit adder for signal <add_temp_14> created at line 1036.
+    Found 41-bit adder for signal <add_temp_15> created at line 1041.
+    Found 34-bit adder for signal <n0735> created at line 1044.
+    Found 37-bit adder for signal <n0738> created at line 1049.
+    Found 30-bit adder for signal <n0742> created at line 1053.
+    Found 41-bit adder for signal <add_temp_16> created at line 1086.
+    Found 41-bit adder for signal <add_temp_17> created at line 1091.
+    Found 34-bit adder for signal <n0760> created at line 1094.
+    Found 37-bit adder for signal <n0763> created at line 1099.
+    Found 30-bit adder for signal <n0767> created at line 1103.
+    Found 41-bit adder for signal <add_temp_18> created at line 1136.
+    Found 41-bit adder for signal <add_temp_19> created at line 1141.
+    Found 34-bit adder for signal <n0785> created at line 1144.
+    Found 37-bit adder for signal <n0788> created at line 1149.
+    Found 30-bit adder for signal <n0792> created at line 1153.
+    Found 41-bit adder for signal <add_temp_20> created at line 1186.
+    Found 41-bit adder for signal <add_temp_21> created at line 1191.
+    Found 34-bit adder for signal <n0810> created at line 1194.
+    Found 37-bit adder for signal <n0813> created at line 1199.
+    Found 30-bit adder for signal <n0817> created at line 1203.
+    Found 41-bit adder for signal <add_temp_22> created at line 1236.
+    Found 41-bit adder for signal <add_temp_23> created at line 1241.
+    Found 34-bit adder for signal <n0835> created at line 1244.
+    Found 37-bit adder for signal <n0838> created at line 1249.
+    Found 30-bit adder for signal <n0842> created at line 1253.
+    Found 41-bit adder for signal <add_temp_24> created at line 1286.
+    Found 41-bit adder for signal <add_temp_25> created at line 1291.
+    Found 34-bit adder for signal <n0860> created at line 1294.
+    Found 37-bit adder for signal <n0863> created at line 1299.
+    Found 30-bit adder for signal <n0867> created at line 1303.
+    Found 41-bit adder for signal <add_temp_26> created at line 1336.
+    Found 41-bit adder for signal <add_temp_27> created at line 1341.
+    Found 34-bit adder for signal <n0885> created at line 1344.
+    Found 37-bit adder for signal <n0888> created at line 1349.
+    Found 30-bit adder for signal <n0892> created at line 1353.
+    Found 41-bit adder for signal <add_temp_28> created at line 1386.
+    Found 41-bit adder for signal <add_temp_29> created at line 1391.
+    Found 34-bit adder for signal <n0910> created at line 1394.
+    Found 37-bit adder for signal <n0913> created at line 1399.
+    Found 30-bit adder for signal <n0917> created at line 1403.
+    Found 41-bit adder for signal <add_temp_30> created at line 1436.
+    Found 41-bit adder for signal <add_temp_31> created at line 1441.
+    Found 34-bit adder for signal <n0935> created at line 1444.
+    Found 37-bit adder for signal <n0938> created at line 1449.
+    Found 30-bit adder for signal <n0942> created at line 1453.
+    Found 41-bit adder for signal <add_temp_32> created at line 1486.
+    Found 41-bit adder for signal <add_temp_33> created at line 1491.
+    Found 34-bit adder for signal <n0960> created at line 1494.
+    Found 37-bit adder for signal <n0962> created at line 1498.
+    Found 30-bit adder for signal <n0965> created at line 1502.
+    Found 41-bit adder for signal <add_temp_34> created at line 1527.
+    Found 34-bit adder for signal <n0974> created at line 1530.
+    Found 40-bit subtractor for signal <sub_temp<39:0>> created at line 205.
+    Found 40-bit subtractor for signal <sub_temp_1<39:0>> created at line 230.
+    Found 40-bit subtractor for signal <sub_temp_2<39:0>> created at line 255.
+    Found 40-bit subtractor for signal <sub_temp_3<39:0>> created at line 280.
+    Found 40-bit subtractor for signal <sub_temp_4<39:0>> created at line 305.
+    Found 40-bit subtractor for signal <sub_temp_5<39:0>> created at line 330.
+    Found 40-bit subtractor for signal <sub_temp_6<39:0>> created at line 355.
+    Found 40-bit subtractor for signal <sub_temp_7<39:0>> created at line 380.
+    Found 40-bit subtractor for signal <sub_temp_8<39:0>> created at line 405.
+    Found 40-bit subtractor for signal <sub_temp_9<39:0>> created at line 430.
+    Found 40-bit subtractor for signal <sub_temp_10<39:0>> created at line 455.
+    Found 40-bit subtractor for signal <sub_temp_11<39:0>> created at line 480.
+    Found 40-bit subtractor for signal <sub_temp_12<39:0>> created at line 505.
+    Found 40-bit subtractor for signal <sub_temp_13<39:0>> created at line 530.
+    Found 40-bit subtractor for signal <sub_temp_14<39:0>> created at line 555.
+    Found 40-bit subtractor for signal <sub_temp_15<39:0>> created at line 580.
+    Found 40-bit subtractor for signal <sub_temp_16<39:0>> created at line 605.
+    Found 16x15-bit multiplier for signal <n0537[30:0]> created at line 646.
+    Found 16x15-bit multiplier for signal <n0546[30:0]> created at line 669.
+    Found 16x15-bit multiplier for signal <n0562[30:0]> created at line 696.
+    Found 16x15-bit multiplier for signal <n0571[30:0]> created at line 719.
+    Found 16x15-bit multiplier for signal <n0587[30:0]> created at line 746.
+    Found 16x15-bit multiplier for signal <n0596[30:0]> created at line 769.
+    Found 16x15-bit multiplier for signal <n0612[30:0]> created at line 796.
+    Found 16x15-bit multiplier for signal <n0621[30:0]> created at line 819.
+    Found 16x15-bit multiplier for signal <n0637[30:0]> created at line 846.
+    Found 16x14-bit multiplier for signal <n0646[29:0]> created at line 869.
+    Found 16x15-bit multiplier for signal <n0662[30:0]> created at line 896.
+    Found 16x14-bit multiplier for signal <n0671[29:0]> created at line 919.
+    Found 16x15-bit multiplier for signal <n0687[30:0]> created at line 946.
+    Found 16x14-bit multiplier for signal <n0696[29:0]> created at line 969.
+    Found 16x15-bit multiplier for signal <n0712[30:0]> created at line 996.
+    Found 16x13-bit multiplier for signal <n0721[28:0]> created at line 1019.
+    Found 16x15-bit multiplier for signal <n0737[30:0]> created at line 1046.
+    Found 16x13-bit multiplier for signal <n0746[28:0]> created at line 1069.
+    Found 16x15-bit multiplier for signal <n0762[30:0]> created at line 1096.
+    Found 16x13-bit multiplier for signal <n0771[28:0]> created at line 1119.
+    Found 16x15-bit multiplier for signal <n0787[30:0]> created at line 1146.
+    Found 16x12-bit multiplier for signal <n0796[27:0]> created at line 1169.
+    Found 16x15-bit multiplier for signal <n0812[30:0]> created at line 1196.
+    Found 16x12-bit multiplier for signal <n0821[27:0]> created at line 1219.
+    Found 16x15-bit multiplier for signal <n0837[30:0]> created at line 1246.
+    Found 16x11-bit multiplier for signal <n0846[26:0]> created at line 1269.
+    Found 16x15-bit multiplier for signal <n0862[30:0]> created at line 1296.
+    Found 16x11-bit multiplier for signal <n0871[26:0]> created at line 1319.
+    Found 16x15-bit multiplier for signal <n0887[30:0]> created at line 1346.
+    Found 16x10-bit multiplier for signal <n0896[25:0]> created at line 1369.
+    Found 16x15-bit multiplier for signal <n0912[30:0]> created at line 1396.
+    Found 16x9-bit multiplier for signal <n0921[24:0]> created at line 1419.
+    Found 16x15-bit multiplier for signal <n0937[30:0]> created at line 1446.
+    Found 16x7-bit multiplier for signal <n0946[22:0]> created at line 1469.
+    Summary:
+	inferred  34 Multiplier(s).
+	inferred 106 Adder/Subtractor(s).
+	inferred 592 D-type flip-flop(s).
+Unit <butter_quantized> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 68
+ 16x10-bit multiplier                                  : 2
+ 16x11-bit multiplier                                  : 4
+ 16x12-bit multiplier                                  : 4
+ 16x13-bit multiplier                                  : 6
+ 16x14-bit multiplier                                  : 6
+ 16x15-bit multiplier                                  : 42
+ 16x7-bit multiplier                                   : 2
+ 16x9-bit multiplier                                   : 2
+# Adders/Subtractors                                   : 212
+ 30-bit adder                                          : 36
+ 34-bit adder                                          : 36
+ 37-bit adder                                          : 36
+ 40-bit subtractor                                     : 34
+ 41-bit adder                                          : 70
+# Registers                                            : 74
+ 16-bit register                                       : 74
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/polyDecimator.ngc>.
+Reading Secure Unit <blk00000001>.
+Reading core <ipcore_dir/ncoTest.ngc>.
+Reading Secure Unit <blk00000001>.
+Reading core <ipcore_dir/mul16to32.ngc>.
+Reading Secure Unit <blk00000001>.
+Loading core <polyDecimator> for timing and area information for instance <myfirFilterTest>.
+Loading core <ncoTest> for timing and area information for instance <myncotest>.
+Loading core <mul16to32> for timing and area information for instance <mynewmul16to32testRe>.
+Loading core <mul16to32> for timing and area information for instance <mynewmul16to32testIm>.
+
+Synthesizing (advanced) Unit <butter_quantized>.
+	Multiplier <Mmult_n0946[22:0]> in block <butter_quantized> and adder/subtractor <Msub_sub_temp_16<39:0>_Madd> in block <butter_quantized> are combined into a MAC<Maddsub_n0946[22:0]>.
+	Multiplier <Mmult_n0921[24:0]> in block <butter_quantized> and adder/subtractor <Msub_sub_temp_15<39:0>_Madd> in block <butter_quantized> are combined into a MAC<Maddsub_n0921[24:0]>.
+	Multiplier <Mmult_n0896[25:0]> in block <butter_quantized> and adder/subtractor <Msub_sub_temp_14<39:0>_Madd> in block <butter_quantized> are combined into a MAC<Maddsub_n0896[25:0]>.
+	Multiplier <Mmult_n0871[26:0]> in block <butter_quantized> and adder/subtractor <Msub_sub_temp_13<39:0>_Madd> in block <butter_quantized> are combined into a MAC<Maddsub_n0871[26:0]>.
+	Multiplier <Mmult_n0846[26:0]> in block <butter_quantized> and adder/subtractor <Msub_sub_temp_12<39:0>_Madd> in block <butter_quantized> are combined into a MAC<Maddsub_n0846[26:0]>.
+	Multiplier <Mmult_n0821[27:0]> in block <butter_quantized> and adder/subtractor <Msub_sub_temp_11<39:0>_Madd> in block <butter_quantized> are combined into a MAC<Maddsub_n0821[27:0]>.
+	Multiplier <Mmult_n0796[27:0]> in block <butter_quantized> and adder/subtractor <Msub_sub_temp_10<39:0>_Madd> in block <butter_quantized> are combined into a MAC<Maddsub_n0796[27:0]>.
+	Multiplier <Mmult_n0771[28:0]> in block <butter_quantized> and adder/subtractor <Msub_sub_temp_9<39:0>_Madd> in block <butter_quantized> are combined into a MAC<Maddsub_n0771[28:0]>.
+	Multiplier <Mmult_n0746[28:0]> in block <butter_quantized> and adder/subtractor <Msub_sub_temp_8<39:0>_Madd> in block <butter_quantized> are combined into a MAC<Maddsub_n0746[28:0]>.
+	Multiplier <Mmult_n0721[28:0]> in block <butter_quantized> and adder/subtractor <Msub_sub_temp_7<39:0>_Madd> in block <butter_quantized> are combined into a MAC<Maddsub_n0721[28:0]>.
+	Multiplier <Mmult_n0696[29:0]> in block <butter_quantized> and adder/subtractor <Msub_sub_temp_6<39:0>_Madd> in block <butter_quantized> are combined into a MAC<Maddsub_n0696[29:0]>.
+	Multiplier <Mmult_n0671[29:0]> in block <butter_quantized> and adder/subtractor <Msub_sub_temp_5<39:0>_Madd> in block <butter_quantized> are combined into a MAC<Maddsub_n0671[29:0]>.
+	Multiplier <Mmult_n0646[29:0]> in block <butter_quantized> and adder/subtractor <Msub_sub_temp_4<39:0>_Madd> in block <butter_quantized> are combined into a MAC<Maddsub_n0646[29:0]>.
+	Multiplier <Mmult_n0621[30:0]> in block <butter_quantized> and adder/subtractor <Msub_sub_temp_3<39:0>_Madd> in block <butter_quantized> are combined into a MAC<Maddsub_n0621[30:0]>.
+	Multiplier <Mmult_n0596[30:0]> in block <butter_quantized> and adder/subtractor <Msub_sub_temp_2<39:0>_Madd> in block <butter_quantized> are combined into a MAC<Maddsub_n0596[30:0]>.
+	Multiplier <Mmult_n0571[30:0]> in block <butter_quantized> and adder/subtractor <Msub_sub_temp_1<39:0>_Madd> in block <butter_quantized> are combined into a MAC<Maddsub_n0571[30:0]>.
+	Multiplier <Mmult_n0546[30:0]> in block <butter_quantized> and adder/subtractor <Msub_sub_temp<39:0>_Madd> in block <butter_quantized> are combined into a MAC<Maddsub_n0546[30:0]>.
+Unit <butter_quantized> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# MACs                                                 : 34
+ 16x10-to-30-bit MAC                                   : 2
+ 16x11-to-30-bit MAC                                   : 4
+ 16x12-to-30-bit MAC                                   : 4
+ 16x13-to-30-bit MAC                                   : 6
+ 16x14-to-30-bit MAC                                   : 6
+ 16x15-to-30-bit MAC                                   : 8
+ 16x7-to-30-bit MAC                                    : 2
+ 16x9-to-30-bit MAC                                    : 2
+# Multipliers                                          : 34
+ 16x15-bit multiplier                                  : 34
+# Adders/Subtractors                                   : 178
+ 30-bit adder                                          : 40
+ 31-bit adder                                          : 36
+ 34-bit adder                                          : 102
+# Registers                                            : 1184
+ Flip-Flops                                            : 1184
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <delay_section18_0> (without init value) has a constant value of 0 in block <butter_quantized>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_section18_1> (without init value) has a constant value of 0 in block <butter_quantized>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_section18_2> (without init value) has a constant value of 0 in block <butter_quantized>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_section18_3> (without init value) has a constant value of 0 in block <butter_quantized>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_section18_4> (without init value) has a constant value of 0 in block <butter_quantized>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_section18_5> (without init value) has a constant value of 0 in block <butter_quantized>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <output_register_0> (without init value) has a constant value of 0 in block <butter_quantized>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <output_register_12> in Unit <butter_quantized> is equivalent to the following 3 FFs/Latches, which will be removed : <output_register_13> <output_register_14> <output_register_15> 
+
+Optimizing unit <polyDecimDemodFilter_Top> ...
+
+Optimizing unit <butter_quantized> ...
+INFO:Xst:2261 - The FF/Latch <mybutterworthIm/output_register_12> in Unit <polyDecimDemodFilter_Top> is equivalent to the following FF/Latch, which will be removed : <mybutterworthIm/output_register_11> 
+INFO:Xst:2261 - The FF/Latch <mybutterworthRe/output_register_12> in Unit <polyDecimDemodFilter_Top> is equivalent to the following FF/Latch, which will be removed : <mybutterworthRe/output_register_11> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block polyDecimDemodFilter_Top, actual ratio is 32.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1162
+ Flip-Flops                                            : 1162
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : polyDecimDemodFilter_Top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 17306
+#      GND                         : 1
+#      INV                         : 404
+#      LUT1                        : 1314
+#      LUT2                        : 2636
+#      LUT3                        : 848
+#      LUT4                        : 848
+#      LUT5                        : 322
+#      LUT6                        : 404
+#      MUXCY                       : 5554
+#      VCC                         : 1
+#      XORCY                       : 4974
+# FlipFlops/Latches                : 1162
+#      FDCE                        : 1162
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 68
+#      IBUF                        : 36
+#      OBUF                        : 32
+# DSPs                             : 58
+#      DSP48A1                     : 58
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45fgg484-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1162  out of  54576     2%  
+ Number of Slice LUTs:                 6776  out of  27288    24%  
+    Number used as Logic:              6776  out of  27288    24%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   7752
+   Number with an unused Flip Flop:    6590  out of   7752    85%  
+   Number with an unused LUT:           976  out of   7752    12%  
+   Number of fully used LUT-FF pairs:   186  out of   7752     2%  
+   Number of unique control sets:         1
+
+IO Utilization: 
+ Number of IOs:                         152
+ Number of bonded IOBs:                  69  out of    316    21%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRL/BUFHCEs:         1  out of     16     6%  
+ Number of DSP48A1s:                     58  out of     58   100%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+----------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)            | Load  |
+-----------------------------------+----------------------------------+-------+
+outputDataRe_0_OBUF                | NONE(mybutterworthIm/Madd_n08671)| 28    |
+clk                                | BUFGP                            | 1884  |
+-----------------------------------+----------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 358.790ns (Maximum Frequency: 2.787MHz)
+   Minimum input arrival time before clock: 4.725ns
+   Maximum output required time after clock: 4.277ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 358.790ns (frequency: 2.787MHz)
+  Total number of paths / destination ports: 17518533682621841810430046933593289145605689369952211443814308892530481004923445064573981902467177125898898755466825351906375045759188135327099684249846294884471215686542163968 / 3371
+-------------------------------------------------------------------------
+Delay:               358.790ns (Levels of Logic = 983)
+  Source:            mybutterworthIm/input_register_15 (FF)
+  Destination:       mybutterworthIm/output_register_12 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: mybutterworthIm/input_register_15 to mybutterworthIm/output_register_12
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.525   0.765  mybutterworthIm/input_register_15 (mybutterworthIm/input_register_15)
+     DSP48A1:B15->M21     22   3.894   1.334  mybutterworthIm/Mmult_n0537[30:0] (mybutterworthIm/n0537[30:0]<21>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_n0538_Madd_lut<0> (mybutterworthIm/Madd_n0538_Madd_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0538_Madd_cy<0> (mybutterworthIm/Madd_n0538_Madd_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0538_Madd_cy<1> (mybutterworthIm/Madd_n0538_Madd_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0538_Madd_cy<2> (mybutterworthIm/Madd_n0538_Madd_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0538_Madd_cy<3> (mybutterworthIm/Madd_n0538_Madd_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0538_Madd_cy<4> (mybutterworthIm/Madd_n0538_Madd_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0538_Madd_cy<5> (mybutterworthIm/Madd_n0538_Madd_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0538_Madd_cy<6> (mybutterworthIm/Madd_n0538_Madd_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0538_Madd_cy<7> (mybutterworthIm/Madd_n0538_Madd_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0538_Madd_cy<8> (mybutterworthIm/Madd_n0538_Madd_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0538_Madd_cy<9> (mybutterworthIm/Madd_n0538_Madd_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0538_Madd_cy<10> (mybutterworthIm/Madd_n0538_Madd_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0538_Madd_cy<11> (mybutterworthIm/Madd_n0538_Madd_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0538_Madd_cy<12> (mybutterworthIm/Madd_n0538_Madd_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0538_Madd_cy<13> (mybutterworthIm/Madd_n0538_Madd_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0538_Madd_cy<14> (mybutterworthIm/Madd_n0538_Madd_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0538_Madd_cy<15> (mybutterworthIm/Madd_n0538_Madd_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0538_Madd_cy<16> (mybutterworthIm/Madd_n0538_Madd_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0538_Madd_cy<17> (mybutterworthIm/Madd_n0538_Madd_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0538_Madd_cy<18> (mybutterworthIm/Madd_n0538_Madd_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0538_Madd_cy<19> (mybutterworthIm/Madd_n0538_Madd_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0538_Madd_cy<20> (mybutterworthIm/Madd_n0538_Madd_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0538_Madd_cy<21> (mybutterworthIm/Madd_n0538_Madd_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0538_Madd_cy<22> (mybutterworthIm/Madd_n0538_Madd_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0538_Madd_cy<23> (mybutterworthIm/Madd_n0538_Madd_cy<23>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0538_Madd_cy<24> (mybutterworthIm/Madd_n0538_Madd_cy<24>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0538_Madd_cy<25> (mybutterworthIm/Madd_n0538_Madd_cy<25>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0538_Madd_cy<26> (mybutterworthIm/Madd_n0538_Madd_cy<26>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0538_Madd_cy<27> (mybutterworthIm/Madd_n0538_Madd_cy<27>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0538_Madd_cy<28> (mybutterworthIm/Madd_n0538_Madd_cy<28>)
+     MUXCY:CI->O           0   0.023   0.000  mybutterworthIm/Madd_n0538_Madd_cy<29> (mybutterworthIm/Madd_n0538_Madd_cy<29>)
+     XORCY:CI->O          19   0.206   1.260  mybutterworthIm/Madd_n0538_Madd_xor<30> (mybutterworthIm/n0538<30>)
+     DSP48A1:C29->P14      2   3.141   0.725  mybutterworthIm/Maddsub_n0546[30:0] (mybutterworthIm/sub_temp<14>)
+     INV:I->O             13   0.255   1.097  mybutterworthIm/a1sum1[14]_INV_52_o1_INV_0 (mybutterworthIm/a1sum1[14]_INV_52_o)
+     DSP48A1:B0->P15       3   3.651   0.994  mybutterworthIm/Madd_n05421 (mybutterworthIm/n0542<15>)
+     LUT3:I0->O            1   0.235   0.682  mybutterworthIm/Madd_add_temp_1_Madd1 (mybutterworthIm/Madd_add_temp_1_Madd1)
+     LUT4:I3->O            1   0.254   0.000  mybutterworthIm/Madd_add_temp_1_Madd_lut<0>2 (mybutterworthIm/Madd_add_temp_1_Madd_lut<0>2)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_add_temp_1_Madd_cy<0>_14 (mybutterworthIm/Madd_add_temp_1_Madd_cy<0>15)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_add_temp_1_Madd_cy<0>_15 (mybutterworthIm/Madd_add_temp_1_Madd_cy<0>16)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_add_temp_1_Madd_cy<0>_16 (mybutterworthIm/Madd_add_temp_1_Madd_cy<0>17)
+     XORCY:CI->O           9   0.206   0.976  mybutterworthIm/Madd_add_temp_1_Madd_xor<0>_17 (mybutterworthIm/add_temp_1<18>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_n0560_lut<1> (mybutterworthIm/Madd_n0560_lut<1>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0560_cy<1> (mybutterworthIm/Madd_n0560_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0560_cy<2> (mybutterworthIm/Madd_n0560_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0560_cy<3> (mybutterworthIm/Madd_n0560_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0560_cy<4> (mybutterworthIm/Madd_n0560_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0560_cy<5> (mybutterworthIm/Madd_n0560_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0560_cy<6> (mybutterworthIm/Madd_n0560_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0560_cy<7> (mybutterworthIm/Madd_n0560_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0560_cy<8> (mybutterworthIm/Madd_n0560_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0560_cy<9> (mybutterworthIm/Madd_n0560_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0560_cy<10> (mybutterworthIm/Madd_n0560_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0560_cy<11> (mybutterworthIm/Madd_n0560_cy<11>)
+     XORCY:CI->O          40   0.206   2.084  mybutterworthIm/Madd_n0560_xor<12> (mybutterworthIm/n0560<21>)
+     LUT5:I0->O            1   0.254   0.682  mybutterworthIm/Mmult_n0562[30:0]_Madd2_cy<9>11 (mybutterworthIm/Mmult_n0562[30:0]_Madd2_cy<9>)
+     LUT6:I5->O            2   0.254   0.726  mybutterworthIm/Mmult_n0562[30:0]_Madd2_cy<12>11 (mybutterworthIm/Mmult_n0562[30:0]_Madd2_cy<12>)
+     LUT5:I4->O            1   0.254   0.682  mybutterworthIm/Mmult_n0562[30:0]_Madd2_cy<15>11 (mybutterworthIm/Mmult_n0562[30:0]_Madd2_cy<15>)
+     LUT5:I4->O            1   0.254   0.000  mybutterworthIm/Mmult_n0562[30:0]_Madd2_xor<20>11 (mybutterworthIm/Mmult_n0562[30:0]_Madd_213)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0562[30:0]_Madd4_cy<20> (mybutterworthIm/Mmult_n0562[30:0]_Madd4_cy<20>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Mmult_n0562[30:0]_Madd4_xor<21> (mybutterworthIm/Mmult_n0562[30:0]_Madd_224)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Mmult_n0562[30:0]_Madd6_lut<22> (mybutterworthIm/Mmult_n0562[30:0]_Madd6_lut<22>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0562[30:0]_Madd6_cy<22> (mybutterworthIm/Mmult_n0562[30:0]_Madd6_cy<22>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Mmult_n0562[30:0]_Madd6_xor<23> (mybutterworthIm/Mmult_n0562[30:0]_Madd_236)
+     LUT5:I4->O            1   0.254   0.000  mybutterworthIm/Mmult_n0562[30:0]_Madd7_lut<23> (mybutterworthIm/Mmult_n0562[30:0]_Madd7_lut<23>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0562[30:0]_Madd7_cy<23> (mybutterworthIm/Mmult_n0562[30:0]_Madd7_cy<23>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Mmult_n0562[30:0]_Madd7_xor<24> (mybutterworthIm/n0562[30:0]<24>)
+     LUT1:I0->O            1   0.254   0.000  mybutterworthIm/Madd_n0563_Madd_cy<26>_rt (mybutterworthIm/Madd_n0563_Madd_cy<26>_rt)
+     MUXCY:S->O            0   0.215   0.000  mybutterworthIm/Madd_n0563_Madd_cy<26> (mybutterworthIm/Madd_n0563_Madd_cy<26>)
+     XORCY:CI->O          19   0.206   1.260  mybutterworthIm/Madd_n0563_Madd_xor<27> (mybutterworthIm/n0563<30>)
+     DSP48A1:C29->P14      2   3.141   0.725  mybutterworthIm/Maddsub_n0571[30:0] (mybutterworthIm/sub_temp_1<14>)
+     INV:I->O             13   0.255   1.097  mybutterworthIm/a1sum2[14]_INV_144_o1_INV_0 (mybutterworthIm/a1sum2[14]_INV_144_o)
+     DSP48A1:B0->P15       3   3.651   0.994  mybutterworthIm/Madd_n05671 (mybutterworthIm/n0567<15>)
+     LUT3:I0->O            1   0.235   0.682  mybutterworthIm/Madd_add_temp_3_Madd1 (mybutterworthIm/Madd_add_temp_3_Madd1)
+     LUT4:I3->O            1   0.254   0.000  mybutterworthIm/Madd_add_temp_3_Madd_lut<0>2 (mybutterworthIm/Madd_add_temp_3_Madd_lut<0>2)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_add_temp_3_Madd_cy<0>_14 (mybutterworthIm/Madd_add_temp_3_Madd_cy<0>15)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_add_temp_3_Madd_cy<0>_15 (mybutterworthIm/Madd_add_temp_3_Madd_cy<0>16)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_add_temp_3_Madd_cy<0>_16 (mybutterworthIm/Madd_add_temp_3_Madd_cy<0>17)
+     XORCY:CI->O           9   0.206   0.976  mybutterworthIm/Madd_add_temp_3_Madd_xor<0>_17 (mybutterworthIm/add_temp_3<18>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_n0585_lut<1> (mybutterworthIm/Madd_n0585_lut<1>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0585_cy<1> (mybutterworthIm/Madd_n0585_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0585_cy<2> (mybutterworthIm/Madd_n0585_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0585_cy<3> (mybutterworthIm/Madd_n0585_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0585_cy<4> (mybutterworthIm/Madd_n0585_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0585_cy<5> (mybutterworthIm/Madd_n0585_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0585_cy<6> (mybutterworthIm/Madd_n0585_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0585_cy<7> (mybutterworthIm/Madd_n0585_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0585_cy<8> (mybutterworthIm/Madd_n0585_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0585_cy<9> (mybutterworthIm/Madd_n0585_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0585_cy<10> (mybutterworthIm/Madd_n0585_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0585_cy<11> (mybutterworthIm/Madd_n0585_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0585_cy<12> (mybutterworthIm/Madd_n0585_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0585_cy<13> (mybutterworthIm/Madd_n0585_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0585_cy<14> (mybutterworthIm/Madd_n0585_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0585_cy<15> (mybutterworthIm/Madd_n0585_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0585_cy<16> (mybutterworthIm/Madd_n0585_cy<16>)
+     XORCY:CI->O          17   0.206   1.639  mybutterworthIm/Madd_n0585_xor<17> (mybutterworthIm/Mmult_n0587[30:0]_Madd2_lut<16>)
+     LUT5:I0->O            2   0.254   0.834  mybutterworthIm/Mmult_n0587[30:0]_Madd2_cy<12>11 (mybutterworthIm/Mmult_n0587[30:0]_Madd2_cy<12>)
+     LUT4:I2->O            1   0.250   0.000  mybutterworthIm/Mmult_n0587[30:0]_Madd4_lut<14> (mybutterworthIm/Mmult_n0587[30:0]_Madd4_lut<14>)
+     XORCY:LI->O           1   0.149   0.790  mybutterworthIm/Mmult_n0587[30:0]_Madd4_xor<14> (mybutterworthIm/Mmult_n0587[30:0]_Madd_154)
+     LUT2:I0->O            1   0.250   0.000  mybutterworthIm/Mmult_n0587[30:0]_Madd6_lut<15> (mybutterworthIm/Mmult_n0587[30:0]_Madd6_lut<15>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0587[30:0]_Madd6_cy<15> (mybutterworthIm/Mmult_n0587[30:0]_Madd6_cy<15>)
+     XORCY:CI->O          16   0.206   1.182  mybutterworthIm/Mmult_n0587[30:0]_Madd6_xor<16> (mybutterworthIm/n0587[30:0]<16>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_n0588_Madd_lut<2> (mybutterworthIm/Madd_n0588_Madd_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0588_Madd_cy<2> (mybutterworthIm/Madd_n0588_Madd_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0588_Madd_cy<3> (mybutterworthIm/Madd_n0588_Madd_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0588_Madd_cy<4> (mybutterworthIm/Madd_n0588_Madd_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0588_Madd_cy<5> (mybutterworthIm/Madd_n0588_Madd_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0588_Madd_cy<6> (mybutterworthIm/Madd_n0588_Madd_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0588_Madd_cy<7> (mybutterworthIm/Madd_n0588_Madd_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0588_Madd_cy<8> (mybutterworthIm/Madd_n0588_Madd_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0588_Madd_cy<9> (mybutterworthIm/Madd_n0588_Madd_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0588_Madd_cy<10> (mybutterworthIm/Madd_n0588_Madd_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0588_Madd_cy<11> (mybutterworthIm/Madd_n0588_Madd_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0588_Madd_cy<12> (mybutterworthIm/Madd_n0588_Madd_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0588_Madd_cy<13> (mybutterworthIm/Madd_n0588_Madd_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0588_Madd_cy<14> (mybutterworthIm/Madd_n0588_Madd_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0588_Madd_cy<15> (mybutterworthIm/Madd_n0588_Madd_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0588_Madd_cy<16> (mybutterworthIm/Madd_n0588_Madd_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0588_Madd_cy<17> (mybutterworthIm/Madd_n0588_Madd_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0588_Madd_cy<18> (mybutterworthIm/Madd_n0588_Madd_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0588_Madd_cy<19> (mybutterworthIm/Madd_n0588_Madd_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0588_Madd_cy<20> (mybutterworthIm/Madd_n0588_Madd_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0588_Madd_cy<21> (mybutterworthIm/Madd_n0588_Madd_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0588_Madd_cy<22> (mybutterworthIm/Madd_n0588_Madd_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0588_Madd_cy<23> (mybutterworthIm/Madd_n0588_Madd_cy<23>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0588_Madd_cy<24> (mybutterworthIm/Madd_n0588_Madd_cy<24>)
+     MUXCY:CI->O           0   0.023   0.000  mybutterworthIm/Madd_n0588_Madd_cy<25> (mybutterworthIm/Madd_n0588_Madd_cy<25>)
+     XORCY:CI->O          19   0.206   1.260  mybutterworthIm/Madd_n0588_Madd_xor<26> (mybutterworthIm/n0588<30>)
+     DSP48A1:C29->P14      2   3.141   0.725  mybutterworthIm/Maddsub_n0596[30:0] (mybutterworthIm/sub_temp_2<14>)
+     INV:I->O             13   0.255   1.097  mybutterworthIm/a1sum3[14]_INV_194_o1_INV_0 (mybutterworthIm/a1sum3[14]_INV_194_o)
+     DSP48A1:B0->P15       3   3.651   0.994  mybutterworthIm/Madd_n05921 (mybutterworthIm/n0592<15>)
+     LUT3:I0->O            1   0.235   0.682  mybutterworthIm/Madd_add_temp_5_Madd1 (mybutterworthIm/Madd_add_temp_5_Madd1)
+     LUT4:I3->O            1   0.254   0.000  mybutterworthIm/Madd_add_temp_5_Madd_lut<0>2 (mybutterworthIm/Madd_add_temp_5_Madd_lut<0>2)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_add_temp_5_Madd_cy<0>_14 (mybutterworthIm/Madd_add_temp_5_Madd_cy<0>15)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_add_temp_5_Madd_cy<0>_15 (mybutterworthIm/Madd_add_temp_5_Madd_cy<0>16)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_add_temp_5_Madd_cy<0>_16 (mybutterworthIm/Madd_add_temp_5_Madd_cy<0>17)
+     XORCY:CI->O           9   0.206   0.976  mybutterworthIm/Madd_add_temp_5_Madd_xor<0>_17 (mybutterworthIm/add_temp_5<18>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_n0610_lut<1> (mybutterworthIm/Madd_n0610_lut<1>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0610_cy<1> (mybutterworthIm/Madd_n0610_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0610_cy<2> (mybutterworthIm/Madd_n0610_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0610_cy<3> (mybutterworthIm/Madd_n0610_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0610_cy<4> (mybutterworthIm/Madd_n0610_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0610_cy<5> (mybutterworthIm/Madd_n0610_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0610_cy<6> (mybutterworthIm/Madd_n0610_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0610_cy<7> (mybutterworthIm/Madd_n0610_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0610_cy<8> (mybutterworthIm/Madd_n0610_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0610_cy<9> (mybutterworthIm/Madd_n0610_cy<9>)
+     XORCY:CI->O          17   0.206   1.317  mybutterworthIm/Madd_n0610_xor<10> (mybutterworthIm/n0610<19>)
+     LUT2:I0->O            1   0.250   0.000  mybutterworthIm/Mmult_n0612[30:0]_Madd1_lut<8>1 (mybutterworthIm/Mmult_n0612[30:0]_Madd1_lut<8>1)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0612[30:0]_Madd1_cy<8> (mybutterworthIm/Mmult_n0612[30:0]_Madd1_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0612[30:0]_Madd1_cy<9> (mybutterworthIm/Mmult_n0612[30:0]_Madd1_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0612[30:0]_Madd1_cy<10> (mybutterworthIm/Mmult_n0612[30:0]_Madd1_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0612[30:0]_Madd1_cy<11> (mybutterworthIm/Mmult_n0612[30:0]_Madd1_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0612[30:0]_Madd1_cy<12> (mybutterworthIm/Mmult_n0612[30:0]_Madd1_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0612[30:0]_Madd1_cy<13> (mybutterworthIm/Mmult_n0612[30:0]_Madd1_cy<13>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Mmult_n0612[30:0]_Madd1_xor<14> (mybutterworthIm/Mmult_n0612[30:0]_Madd_141)
+     LUT4:I3->O            1   0.254   0.000  mybutterworthIm/Mmult_n0612[30:0]_Madd4_lut<14> (mybutterworthIm/Mmult_n0612[30:0]_Madd4_lut<14>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0612[30:0]_Madd4_cy<14> (mybutterworthIm/Mmult_n0612[30:0]_Madd4_cy<14>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Mmult_n0612[30:0]_Madd4_xor<15> (mybutterworthIm/Mmult_n0612[30:0]_Madd_154)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Mmult_n0612[30:0]_Madd5_lut<15> (mybutterworthIm/Mmult_n0612[30:0]_Madd5_lut<15>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0612[30:0]_Madd5_cy<15> (mybutterworthIm/Mmult_n0612[30:0]_Madd5_cy<15>)
+     XORCY:CI->O          15   0.206   1.155  mybutterworthIm/Mmult_n0612[30:0]_Madd5_xor<16> (mybutterworthIm/n0612[30:0]<16>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_n0613_Madd_lut<2> (mybutterworthIm/Madd_n0613_Madd_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0613_Madd_cy<2> (mybutterworthIm/Madd_n0613_Madd_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0613_Madd_cy<3> (mybutterworthIm/Madd_n0613_Madd_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0613_Madd_cy<4> (mybutterworthIm/Madd_n0613_Madd_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0613_Madd_cy<5> (mybutterworthIm/Madd_n0613_Madd_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0613_Madd_cy<6> (mybutterworthIm/Madd_n0613_Madd_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0613_Madd_cy<7> (mybutterworthIm/Madd_n0613_Madd_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0613_Madd_cy<8> (mybutterworthIm/Madd_n0613_Madd_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0613_Madd_cy<9> (mybutterworthIm/Madd_n0613_Madd_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0613_Madd_cy<10> (mybutterworthIm/Madd_n0613_Madd_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0613_Madd_cy<11> (mybutterworthIm/Madd_n0613_Madd_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0613_Madd_cy<12> (mybutterworthIm/Madd_n0613_Madd_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0613_Madd_cy<13> (mybutterworthIm/Madd_n0613_Madd_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0613_Madd_cy<14> (mybutterworthIm/Madd_n0613_Madd_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0613_Madd_cy<15> (mybutterworthIm/Madd_n0613_Madd_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0613_Madd_cy<16> (mybutterworthIm/Madd_n0613_Madd_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0613_Madd_cy<17> (mybutterworthIm/Madd_n0613_Madd_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0613_Madd_cy<18> (mybutterworthIm/Madd_n0613_Madd_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0613_Madd_cy<19> (mybutterworthIm/Madd_n0613_Madd_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0613_Madd_cy<20> (mybutterworthIm/Madd_n0613_Madd_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0613_Madd_cy<21> (mybutterworthIm/Madd_n0613_Madd_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0613_Madd_cy<22> (mybutterworthIm/Madd_n0613_Madd_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0613_Madd_cy<23> (mybutterworthIm/Madd_n0613_Madd_cy<23>)
+     MUXCY:CI->O           0   0.023   0.000  mybutterworthIm/Madd_n0613_Madd_cy<24> (mybutterworthIm/Madd_n0613_Madd_cy<24>)
+     XORCY:CI->O          19   0.206   1.260  mybutterworthIm/Madd_n0613_Madd_xor<25> (mybutterworthIm/n0613<30>)
+     DSP48A1:C29->P14      2   3.141   0.725  mybutterworthIm/Maddsub_n0621[30:0] (mybutterworthIm/sub_temp_3<14>)
+     INV:I->O             13   0.255   1.097  mybutterworthIm/a1sum4[14]_INV_244_o1_INV_0 (mybutterworthIm/a1sum4[14]_INV_244_o)
+     DSP48A1:B0->P15       3   3.651   0.994  mybutterworthIm/Madd_n06171 (mybutterworthIm/n0617<15>)
+     LUT3:I0->O            1   0.235   0.682  mybutterworthIm/Madd_add_temp_7_Madd1 (mybutterworthIm/Madd_add_temp_7_Madd1)
+     LUT4:I3->O            1   0.254   0.000  mybutterworthIm/Madd_add_temp_7_Madd_lut<0>2 (mybutterworthIm/Madd_add_temp_7_Madd_lut<0>2)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_add_temp_7_Madd_cy<0>_14 (mybutterworthIm/Madd_add_temp_7_Madd_cy<0>15)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_add_temp_7_Madd_cy<0>_15 (mybutterworthIm/Madd_add_temp_7_Madd_cy<0>16)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_add_temp_7_Madd_cy<0>_16 (mybutterworthIm/Madd_add_temp_7_Madd_cy<0>17)
+     XORCY:CI->O           9   0.206   0.976  mybutterworthIm/Madd_add_temp_7_Madd_xor<0>_17 (mybutterworthIm/add_temp_7<18>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_n0635_lut<1> (mybutterworthIm/Madd_n0635_lut<1>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0635_cy<1> (mybutterworthIm/Madd_n0635_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0635_cy<2> (mybutterworthIm/Madd_n0635_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0635_cy<3> (mybutterworthIm/Madd_n0635_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0635_cy<4> (mybutterworthIm/Madd_n0635_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0635_cy<5> (mybutterworthIm/Madd_n0635_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0635_cy<6> (mybutterworthIm/Madd_n0635_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0635_cy<7> (mybutterworthIm/Madd_n0635_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0635_cy<8> (mybutterworthIm/Madd_n0635_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0635_cy<9> (mybutterworthIm/Madd_n0635_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0635_cy<10> (mybutterworthIm/Madd_n0635_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0635_cy<11> (mybutterworthIm/Madd_n0635_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0635_cy<12> (mybutterworthIm/Madd_n0635_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0635_cy<13> (mybutterworthIm/Madd_n0635_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0635_cy<14> (mybutterworthIm/Madd_n0635_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0635_cy<15> (mybutterworthIm/Madd_n0635_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0635_cy<16> (mybutterworthIm/Madd_n0635_cy<16>)
+     XORCY:CI->O          27   0.206   1.436  mybutterworthIm/Madd_n0635_xor<17> (mybutterworthIm/n0635<26>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Mmult_n0637[30:0]_Madd4_lut<8> (mybutterworthIm/Mmult_n0637[30:0]_Madd4_lut<8>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0637[30:0]_Madd4_cy<8> (mybutterworthIm/Mmult_n0637[30:0]_Madd4_cy<8>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Mmult_n0637[30:0]_Madd4_xor<9> (mybutterworthIm/Mmult_n0637[30:0]_Madd_134)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Mmult_n0637[30:0]_Madd6_lut<13> (mybutterworthIm/Mmult_n0637[30:0]_Madd6_lut<13>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0637[30:0]_Madd6_cy<13> (mybutterworthIm/Mmult_n0637[30:0]_Madd6_cy<13>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Mmult_n0637[30:0]_Madd6_xor<14> (mybutterworthIm/Mmult_n0637[30:0]_Madd_146)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Mmult_n0637[30:0]_Madd7_lut<14> (mybutterworthIm/Mmult_n0637[30:0]_Madd7_lut<14>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0637[30:0]_Madd7_cy<14> (mybutterworthIm/Mmult_n0637[30:0]_Madd7_cy<14>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Mmult_n0637[30:0]_Madd7_xor<15> (mybutterworthIm/Mmult_n0637[30:0]_Madd_157)
+     LUT5:I4->O            1   0.254   0.000  mybutterworthIm/Mmult_n0637[30:0]_Madd8_lut<15> (mybutterworthIm/Mmult_n0637[30:0]_Madd8_lut<15>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0637[30:0]_Madd8_cy<15> (mybutterworthIm/Mmult_n0637[30:0]_Madd8_cy<15>)
+     XORCY:CI->O          17   0.206   1.209  mybutterworthIm/Mmult_n0637[30:0]_Madd8_xor<16> (mybutterworthIm/n0637[30:0]<16>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_n0638_Madd_lut<2> (mybutterworthIm/Madd_n0638_Madd_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0638_Madd_cy<2> (mybutterworthIm/Madd_n0638_Madd_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0638_Madd_cy<3> (mybutterworthIm/Madd_n0638_Madd_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0638_Madd_cy<4> (mybutterworthIm/Madd_n0638_Madd_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0638_Madd_cy<5> (mybutterworthIm/Madd_n0638_Madd_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0638_Madd_cy<6> (mybutterworthIm/Madd_n0638_Madd_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0638_Madd_cy<7> (mybutterworthIm/Madd_n0638_Madd_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0638_Madd_cy<8> (mybutterworthIm/Madd_n0638_Madd_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0638_Madd_cy<9> (mybutterworthIm/Madd_n0638_Madd_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0638_Madd_cy<10> (mybutterworthIm/Madd_n0638_Madd_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0638_Madd_cy<11> (mybutterworthIm/Madd_n0638_Madd_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0638_Madd_cy<12> (mybutterworthIm/Madd_n0638_Madd_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0638_Madd_cy<13> (mybutterworthIm/Madd_n0638_Madd_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0638_Madd_cy<14> (mybutterworthIm/Madd_n0638_Madd_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0638_Madd_cy<15> (mybutterworthIm/Madd_n0638_Madd_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0638_Madd_cy<16> (mybutterworthIm/Madd_n0638_Madd_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0638_Madd_cy<17> (mybutterworthIm/Madd_n0638_Madd_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0638_Madd_cy<18> (mybutterworthIm/Madd_n0638_Madd_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0638_Madd_cy<19> (mybutterworthIm/Madd_n0638_Madd_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0638_Madd_cy<20> (mybutterworthIm/Madd_n0638_Madd_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0638_Madd_cy<21> (mybutterworthIm/Madd_n0638_Madd_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0638_Madd_cy<22> (mybutterworthIm/Madd_n0638_Madd_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0638_Madd_cy<23> (mybutterworthIm/Madd_n0638_Madd_cy<23>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0638_Madd_cy<24> (mybutterworthIm/Madd_n0638_Madd_cy<24>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0638_Madd_cy<25> (mybutterworthIm/Madd_n0638_Madd_cy<25>)
+     MUXCY:CI->O           0   0.023   0.000  mybutterworthIm/Madd_n0638_Madd_cy<26> (mybutterworthIm/Madd_n0638_Madd_cy<26>)
+     XORCY:CI->O          19   0.206   1.260  mybutterworthIm/Madd_n0638_Madd_xor<27> (mybutterworthIm/n0638<30>)
+     DSP48A1:C29->P14      2   3.141   0.725  mybutterworthIm/Maddsub_n0646[29:0] (mybutterworthIm/sub_temp_4<14>)
+     INV:I->O             13   0.255   1.097  mybutterworthIm/a1sum5[14]_INV_294_o1_INV_0 (mybutterworthIm/a1sum5[14]_INV_294_o)
+     DSP48A1:B0->P15       3   3.651   0.994  mybutterworthIm/Madd_n06421 (mybutterworthIm/n0642<15>)
+     LUT3:I0->O            1   0.235   0.682  mybutterworthIm/Madd_add_temp_9_Madd1 (mybutterworthIm/Madd_add_temp_9_Madd1)
+     LUT4:I3->O            1   0.254   0.000  mybutterworthIm/Madd_add_temp_9_Madd_lut<0>2 (mybutterworthIm/Madd_add_temp_9_Madd_lut<0>2)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_add_temp_9_Madd_cy<0>_14 (mybutterworthIm/Madd_add_temp_9_Madd_cy<0>15)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_add_temp_9_Madd_cy<0>_15 (mybutterworthIm/Madd_add_temp_9_Madd_cy<0>16)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_add_temp_9_Madd_cy<0>_16 (mybutterworthIm/Madd_add_temp_9_Madd_cy<0>17)
+     XORCY:CI->O           9   0.206   0.976  mybutterworthIm/Madd_add_temp_9_Madd_xor<0>_17 (mybutterworthIm/add_temp_9<18>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_n0660_lut<1> (mybutterworthIm/Madd_n0660_lut<1>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0660_cy<1> (mybutterworthIm/Madd_n0660_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0660_cy<2> (mybutterworthIm/Madd_n0660_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0660_cy<3> (mybutterworthIm/Madd_n0660_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0660_cy<4> (mybutterworthIm/Madd_n0660_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0660_cy<5> (mybutterworthIm/Madd_n0660_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0660_cy<6> (mybutterworthIm/Madd_n0660_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0660_cy<7> (mybutterworthIm/Madd_n0660_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0660_cy<8> (mybutterworthIm/Madd_n0660_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0660_cy<9> (mybutterworthIm/Madd_n0660_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0660_cy<10> (mybutterworthIm/Madd_n0660_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0660_cy<11> (mybutterworthIm/Madd_n0660_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0660_cy<12> (mybutterworthIm/Madd_n0660_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0660_cy<13> (mybutterworthIm/Madd_n0660_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0660_cy<14> (mybutterworthIm/Madd_n0660_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0660_cy<15> (mybutterworthIm/Madd_n0660_cy<15>)
+     XORCY:CI->O          15   0.206   1.263  mybutterworthIm/Madd_n0660_xor<16> (mybutterworthIm/n0660<25>)
+     LUT2:I0->O            1   0.250   0.000  mybutterworthIm/Mmult_n0662[30:0]_Madd2_lut<6> (mybutterworthIm/Mmult_n0662[30:0]_Madd2_lut<6>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0662[30:0]_Madd2_cy<6> (mybutterworthIm/Mmult_n0662[30:0]_Madd2_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0662[30:0]_Madd2_cy<7> (mybutterworthIm/Mmult_n0662[30:0]_Madd2_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0662[30:0]_Madd2_cy<8> (mybutterworthIm/Mmult_n0662[30:0]_Madd2_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0662[30:0]_Madd2_cy<9> (mybutterworthIm/Mmult_n0662[30:0]_Madd2_cy<9>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Mmult_n0662[30:0]_Madd2_xor<10> (mybutterworthIm/Mmult_n0662[30:0]_Madd_132)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Mmult_n0662[30:0]_Madd4_lut<10> (mybutterworthIm/Mmult_n0662[30:0]_Madd4_lut<10>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0662[30:0]_Madd4_cy<10> (mybutterworthIm/Mmult_n0662[30:0]_Madd4_cy<10>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Mmult_n0662[30:0]_Madd4_xor<11> (mybutterworthIm/Mmult_n0662[30:0]_Madd_144)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Mmult_n0662[30:0]_Madd6_lut<14> (mybutterworthIm/Mmult_n0662[30:0]_Madd6_lut<14>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0662[30:0]_Madd6_cy<14> (mybutterworthIm/Mmult_n0662[30:0]_Madd6_cy<14>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Mmult_n0662[30:0]_Madd6_xor<15> (mybutterworthIm/Mmult_n0662[30:0]_Madd_156)
+     LUT5:I4->O            1   0.254   0.000  mybutterworthIm/Mmult_n0662[30:0]_Madd7_lut<15> (mybutterworthIm/Mmult_n0662[30:0]_Madd7_lut<15>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0662[30:0]_Madd7_cy<15> (mybutterworthIm/Mmult_n0662[30:0]_Madd7_cy<15>)
+     XORCY:CI->O          15   0.206   1.155  mybutterworthIm/Mmult_n0662[30:0]_Madd7_xor<16> (mybutterworthIm/n0662[30:0]<16>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_n0663_Madd_lut<2> (mybutterworthIm/Madd_n0663_Madd_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0663_Madd_cy<2> (mybutterworthIm/Madd_n0663_Madd_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0663_Madd_cy<3> (mybutterworthIm/Madd_n0663_Madd_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0663_Madd_cy<4> (mybutterworthIm/Madd_n0663_Madd_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0663_Madd_cy<5> (mybutterworthIm/Madd_n0663_Madd_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0663_Madd_cy<6> (mybutterworthIm/Madd_n0663_Madd_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0663_Madd_cy<7> (mybutterworthIm/Madd_n0663_Madd_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0663_Madd_cy<8> (mybutterworthIm/Madd_n0663_Madd_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0663_Madd_cy<9> (mybutterworthIm/Madd_n0663_Madd_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0663_Madd_cy<10> (mybutterworthIm/Madd_n0663_Madd_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0663_Madd_cy<11> (mybutterworthIm/Madd_n0663_Madd_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0663_Madd_cy<12> (mybutterworthIm/Madd_n0663_Madd_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0663_Madd_cy<13> (mybutterworthIm/Madd_n0663_Madd_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0663_Madd_cy<14> (mybutterworthIm/Madd_n0663_Madd_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0663_Madd_cy<15> (mybutterworthIm/Madd_n0663_Madd_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0663_Madd_cy<16> (mybutterworthIm/Madd_n0663_Madd_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0663_Madd_cy<17> (mybutterworthIm/Madd_n0663_Madd_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0663_Madd_cy<18> (mybutterworthIm/Madd_n0663_Madd_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0663_Madd_cy<19> (mybutterworthIm/Madd_n0663_Madd_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0663_Madd_cy<20> (mybutterworthIm/Madd_n0663_Madd_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0663_Madd_cy<21> (mybutterworthIm/Madd_n0663_Madd_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0663_Madd_cy<22> (mybutterworthIm/Madd_n0663_Madd_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0663_Madd_cy<23> (mybutterworthIm/Madd_n0663_Madd_cy<23>)
+     MUXCY:CI->O           0   0.023   0.000  mybutterworthIm/Madd_n0663_Madd_cy<24> (mybutterworthIm/Madd_n0663_Madd_cy<24>)
+     XORCY:CI->O          19   0.206   1.260  mybutterworthIm/Madd_n0663_Madd_xor<25> (mybutterworthIm/n0663<30>)
+     DSP48A1:C29->P14      2   3.141   0.725  mybutterworthIm/Maddsub_n0671[29:0] (mybutterworthIm/sub_temp_5<14>)
+     INV:I->O             13   0.255   1.097  mybutterworthIm/a1sum6[14]_INV_375_o1_INV_0 (mybutterworthIm/a1sum6[14]_INV_375_o)
+     DSP48A1:B0->P15       3   3.651   0.994  mybutterworthIm/Madd_n06671 (mybutterworthIm/n0667<15>)
+     LUT3:I0->O            1   0.235   0.682  mybutterworthIm/Madd_add_temp_11_Madd1 (mybutterworthIm/Madd_add_temp_11_Madd1)
+     LUT4:I3->O            1   0.254   0.000  mybutterworthIm/Madd_add_temp_11_Madd_lut<0>2 (mybutterworthIm/Madd_add_temp_11_Madd_lut<0>2)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_add_temp_11_Madd_cy<0>_14 (mybutterworthIm/Madd_add_temp_11_Madd_cy<0>15)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_add_temp_11_Madd_cy<0>_15 (mybutterworthIm/Madd_add_temp_11_Madd_cy<0>16)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_add_temp_11_Madd_cy<0>_16 (mybutterworthIm/Madd_add_temp_11_Madd_cy<0>17)
+     XORCY:CI->O           9   0.206   0.976  mybutterworthIm/Madd_add_temp_11_Madd_xor<0>_17 (mybutterworthIm/add_temp_11<18>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_n0685_lut<1> (mybutterworthIm/Madd_n0685_lut<1>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0685_cy<1> (mybutterworthIm/Madd_n0685_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0685_cy<2> (mybutterworthIm/Madd_n0685_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0685_cy<3> (mybutterworthIm/Madd_n0685_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0685_cy<4> (mybutterworthIm/Madd_n0685_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0685_cy<5> (mybutterworthIm/Madd_n0685_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0685_cy<6> (mybutterworthIm/Madd_n0685_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0685_cy<7> (mybutterworthIm/Madd_n0685_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0685_cy<8> (mybutterworthIm/Madd_n0685_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0685_cy<9> (mybutterworthIm/Madd_n0685_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0685_cy<10> (mybutterworthIm/Madd_n0685_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0685_cy<11> (mybutterworthIm/Madd_n0685_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0685_cy<12> (mybutterworthIm/Madd_n0685_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0685_cy<13> (mybutterworthIm/Madd_n0685_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0685_cy<14> (mybutterworthIm/Madd_n0685_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0685_cy<15> (mybutterworthIm/Madd_n0685_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0685_cy<16> (mybutterworthIm/Madd_n0685_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0685_cy<17> (mybutterworthIm/Madd_n0685_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0685_cy<18> (mybutterworthIm/Madd_n0685_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0685_cy<19> (mybutterworthIm/Madd_n0685_cy<19>)
+     XORCY:CI->O           5   0.206   0.841  mybutterworthIm/Madd_n0685_xor<20> (mybutterworthIm/n0685<29>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Mmult_n0687[30:0]_Madd2_lut<9> (mybutterworthIm/Mmult_n0687[30:0]_Madd2_lut<9>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0687[30:0]_Madd2_cy<9> (mybutterworthIm/Mmult_n0687[30:0]_Madd2_cy<9>)
+     XORCY:CI->O           1   0.206   0.790  mybutterworthIm/Mmult_n0687[30:0]_Madd2_xor<10> (mybutterworthIm/Mmult_n0687[30:0]_Madd_142)
+     LUT2:I0->O            1   0.250   0.000  mybutterworthIm/Mmult_n0687[30:0]_Madd3_lut<14> (mybutterworthIm/Mmult_n0687[30:0]_Madd3_lut<14>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0687[30:0]_Madd3_cy<14> (mybutterworthIm/Mmult_n0687[30:0]_Madd3_cy<14>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Mmult_n0687[30:0]_Madd3_xor<15> (mybutterworthIm/Mmult_n0687[30:0]_Madd_153)
+     LUT6:I5->O            1   0.254   0.000  mybutterworthIm/Mmult_n0687[30:0]_Madd4_lut<15> (mybutterworthIm/Mmult_n0687[30:0]_Madd4_lut<15>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0687[30:0]_Madd4_cy<15> (mybutterworthIm/Mmult_n0687[30:0]_Madd4_cy<15>)
+     XORCY:CI->O          15   0.206   1.155  mybutterworthIm/Mmult_n0687[30:0]_Madd4_xor<16> (mybutterworthIm/n0687[30:0]<16>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_n0688_Madd_lut<2> (mybutterworthIm/Madd_n0688_Madd_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0688_Madd_cy<2> (mybutterworthIm/Madd_n0688_Madd_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0688_Madd_cy<3> (mybutterworthIm/Madd_n0688_Madd_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0688_Madd_cy<4> (mybutterworthIm/Madd_n0688_Madd_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0688_Madd_cy<5> (mybutterworthIm/Madd_n0688_Madd_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0688_Madd_cy<6> (mybutterworthIm/Madd_n0688_Madd_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0688_Madd_cy<7> (mybutterworthIm/Madd_n0688_Madd_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0688_Madd_cy<8> (mybutterworthIm/Madd_n0688_Madd_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0688_Madd_cy<9> (mybutterworthIm/Madd_n0688_Madd_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0688_Madd_cy<10> (mybutterworthIm/Madd_n0688_Madd_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0688_Madd_cy<11> (mybutterworthIm/Madd_n0688_Madd_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0688_Madd_cy<12> (mybutterworthIm/Madd_n0688_Madd_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0688_Madd_cy<13> (mybutterworthIm/Madd_n0688_Madd_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0688_Madd_cy<14> (mybutterworthIm/Madd_n0688_Madd_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0688_Madd_cy<15> (mybutterworthIm/Madd_n0688_Madd_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0688_Madd_cy<16> (mybutterworthIm/Madd_n0688_Madd_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0688_Madd_cy<17> (mybutterworthIm/Madd_n0688_Madd_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0688_Madd_cy<18> (mybutterworthIm/Madd_n0688_Madd_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0688_Madd_cy<19> (mybutterworthIm/Madd_n0688_Madd_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0688_Madd_cy<20> (mybutterworthIm/Madd_n0688_Madd_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0688_Madd_cy<21> (mybutterworthIm/Madd_n0688_Madd_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0688_Madd_cy<22> (mybutterworthIm/Madd_n0688_Madd_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0688_Madd_cy<23> (mybutterworthIm/Madd_n0688_Madd_cy<23>)
+     MUXCY:CI->O           0   0.023   0.000  mybutterworthIm/Madd_n0688_Madd_cy<24> (mybutterworthIm/Madd_n0688_Madd_cy<24>)
+     XORCY:CI->O          19   0.206   1.260  mybutterworthIm/Madd_n0688_Madd_xor<25> (mybutterworthIm/n0688<30>)
+     DSP48A1:C29->P14      2   3.141   0.725  mybutterworthIm/Maddsub_n0696[29:0] (mybutterworthIm/sub_temp_6<14>)
+     INV:I->O             13   0.255   1.097  mybutterworthIm/a1sum7[14]_INV_425_o1_INV_0 (mybutterworthIm/a1sum7[14]_INV_425_o)
+     DSP48A1:B0->P15       3   3.651   0.994  mybutterworthIm/Madd_n06921 (mybutterworthIm/n0692<15>)
+     LUT3:I0->O            1   0.235   0.682  mybutterworthIm/Madd_add_temp_13_Madd1 (mybutterworthIm/Madd_add_temp_13_Madd1)
+     LUT4:I3->O            1   0.254   0.000  mybutterworthIm/Madd_add_temp_13_Madd_lut<0>2 (mybutterworthIm/Madd_add_temp_13_Madd_lut<0>2)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_add_temp_13_Madd_cy<0>_14 (mybutterworthIm/Madd_add_temp_13_Madd_cy<0>15)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_add_temp_13_Madd_cy<0>_15 (mybutterworthIm/Madd_add_temp_13_Madd_cy<0>16)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_add_temp_13_Madd_cy<0>_16 (mybutterworthIm/Madd_add_temp_13_Madd_cy<0>17)
+     XORCY:CI->O           9   0.206   0.976  mybutterworthIm/Madd_add_temp_13_Madd_xor<0>_17 (mybutterworthIm/add_temp_13<18>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_n0710_lut<1> (mybutterworthIm/Madd_n0710_lut<1>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0710_cy<1> (mybutterworthIm/Madd_n0710_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0710_cy<2> (mybutterworthIm/Madd_n0710_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0710_cy<3> (mybutterworthIm/Madd_n0710_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0710_cy<4> (mybutterworthIm/Madd_n0710_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0710_cy<5> (mybutterworthIm/Madd_n0710_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0710_cy<6> (mybutterworthIm/Madd_n0710_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0710_cy<7> (mybutterworthIm/Madd_n0710_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0710_cy<8> (mybutterworthIm/Madd_n0710_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0710_cy<9> (mybutterworthIm/Madd_n0710_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0710_cy<10> (mybutterworthIm/Madd_n0710_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0710_cy<11> (mybutterworthIm/Madd_n0710_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0710_cy<12> (mybutterworthIm/Madd_n0710_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0710_cy<13> (mybutterworthIm/Madd_n0710_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0710_cy<14> (mybutterworthIm/Madd_n0710_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0710_cy<15> (mybutterworthIm/Madd_n0710_cy<15>)
+     XORCY:CI->O          35   0.206   1.570  mybutterworthIm/Madd_n0710_xor<16> (mybutterworthIm/n0710<25>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Mmult_n0712[30:0]_Madd2_lut<6> (mybutterworthIm/Mmult_n0712[30:0]_Madd2_lut<6>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0712[30:0]_Madd2_cy<6> (mybutterworthIm/Mmult_n0712[30:0]_Madd2_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0712[30:0]_Madd2_cy<7> (mybutterworthIm/Mmult_n0712[30:0]_Madd2_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0712[30:0]_Madd2_cy<8> (mybutterworthIm/Mmult_n0712[30:0]_Madd2_cy<8>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Mmult_n0712[30:0]_Madd2_xor<9> (mybutterworthIm/Mmult_n0712[30:0]_Madd_132)
+     LUT3:I2->O            1   0.254   0.000  mybutterworthIm/Mmult_n0712[30:0]_Madd4_lut<10> (mybutterworthIm/Mmult_n0712[30:0]_Madd4_lut<10>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0712[30:0]_Madd4_cy<10> (mybutterworthIm/Mmult_n0712[30:0]_Madd4_cy<10>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Mmult_n0712[30:0]_Madd4_xor<11> (mybutterworthIm/Mmult_n0712[30:0]_Madd_144)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Mmult_n0712[30:0]_Madd6_lut<14> (mybutterworthIm/Mmult_n0712[30:0]_Madd6_lut<14>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0712[30:0]_Madd6_cy<14> (mybutterworthIm/Mmult_n0712[30:0]_Madd6_cy<14>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Mmult_n0712[30:0]_Madd6_xor<15> (mybutterworthIm/Mmult_n0712[30:0]_Madd_156)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Mmult_n0712[30:0]_Madd7_lut<15> (mybutterworthIm/Mmult_n0712[30:0]_Madd7_lut<15>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0712[30:0]_Madd7_cy<15> (mybutterworthIm/Mmult_n0712[30:0]_Madd7_cy<15>)
+     XORCY:CI->O          15   0.206   1.155  mybutterworthIm/Mmult_n0712[30:0]_Madd7_xor<16> (mybutterworthIm/n0712[30:0]<16>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_n0713_Madd_lut<2> (mybutterworthIm/Madd_n0713_Madd_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0713_Madd_cy<2> (mybutterworthIm/Madd_n0713_Madd_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0713_Madd_cy<3> (mybutterworthIm/Madd_n0713_Madd_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0713_Madd_cy<4> (mybutterworthIm/Madd_n0713_Madd_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0713_Madd_cy<5> (mybutterworthIm/Madd_n0713_Madd_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0713_Madd_cy<6> (mybutterworthIm/Madd_n0713_Madd_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0713_Madd_cy<7> (mybutterworthIm/Madd_n0713_Madd_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0713_Madd_cy<8> (mybutterworthIm/Madd_n0713_Madd_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0713_Madd_cy<9> (mybutterworthIm/Madd_n0713_Madd_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0713_Madd_cy<10> (mybutterworthIm/Madd_n0713_Madd_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0713_Madd_cy<11> (mybutterworthIm/Madd_n0713_Madd_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0713_Madd_cy<12> (mybutterworthIm/Madd_n0713_Madd_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0713_Madd_cy<13> (mybutterworthIm/Madd_n0713_Madd_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0713_Madd_cy<14> (mybutterworthIm/Madd_n0713_Madd_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0713_Madd_cy<15> (mybutterworthIm/Madd_n0713_Madd_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0713_Madd_cy<16> (mybutterworthIm/Madd_n0713_Madd_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0713_Madd_cy<17> (mybutterworthIm/Madd_n0713_Madd_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0713_Madd_cy<18> (mybutterworthIm/Madd_n0713_Madd_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0713_Madd_cy<19> (mybutterworthIm/Madd_n0713_Madd_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0713_Madd_cy<20> (mybutterworthIm/Madd_n0713_Madd_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0713_Madd_cy<21> (mybutterworthIm/Madd_n0713_Madd_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0713_Madd_cy<22> (mybutterworthIm/Madd_n0713_Madd_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0713_Madd_cy<23> (mybutterworthIm/Madd_n0713_Madd_cy<23>)
+     MUXCY:CI->O           0   0.023   0.000  mybutterworthIm/Madd_n0713_Madd_cy<24> (mybutterworthIm/Madd_n0713_Madd_cy<24>)
+     XORCY:CI->O          19   0.206   1.260  mybutterworthIm/Madd_n0713_Madd_xor<25> (mybutterworthIm/n0713<30>)
+     DSP48A1:C29->P14      2   3.141   0.725  mybutterworthIm/Maddsub_n0721[28:0] (mybutterworthIm/sub_temp_7<14>)
+     INV:I->O             13   0.255   1.097  mybutterworthIm/a1sum8[14]_INV_475_o1_INV_0 (mybutterworthIm/a1sum8[14]_INV_475_o)
+     DSP48A1:B0->P15       3   3.651   0.994  mybutterworthIm/Madd_n07171 (mybutterworthIm/n0717<15>)
+     LUT3:I0->O            1   0.235   0.682  mybutterworthIm/Madd_add_temp_15_Madd1 (mybutterworthIm/Madd_add_temp_15_Madd1)
+     LUT4:I3->O            1   0.254   0.000  mybutterworthIm/Madd_add_temp_15_Madd_lut<0>2 (mybutterworthIm/Madd_add_temp_15_Madd_lut<0>2)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_add_temp_15_Madd_cy<0>_14 (mybutterworthIm/Madd_add_temp_15_Madd_cy<0>15)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_add_temp_15_Madd_cy<0>_15 (mybutterworthIm/Madd_add_temp_15_Madd_cy<0>16)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_add_temp_15_Madd_cy<0>_16 (mybutterworthIm/Madd_add_temp_15_Madd_cy<0>17)
+     XORCY:CI->O           9   0.206   0.976  mybutterworthIm/Madd_add_temp_15_Madd_xor<0>_17 (mybutterworthIm/add_temp_15<18>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_n0735_lut<1> (mybutterworthIm/Madd_n0735_lut<1>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0735_cy<1> (mybutterworthIm/Madd_n0735_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0735_cy<2> (mybutterworthIm/Madd_n0735_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0735_cy<3> (mybutterworthIm/Madd_n0735_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0735_cy<4> (mybutterworthIm/Madd_n0735_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0735_cy<5> (mybutterworthIm/Madd_n0735_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0735_cy<6> (mybutterworthIm/Madd_n0735_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0735_cy<7> (mybutterworthIm/Madd_n0735_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0735_cy<8> (mybutterworthIm/Madd_n0735_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0735_cy<9> (mybutterworthIm/Madd_n0735_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0735_cy<10> (mybutterworthIm/Madd_n0735_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0735_cy<11> (mybutterworthIm/Madd_n0735_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0735_cy<12> (mybutterworthIm/Madd_n0735_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0735_cy<13> (mybutterworthIm/Madd_n0735_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0735_cy<14> (mybutterworthIm/Madd_n0735_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0735_cy<15> (mybutterworthIm/Madd_n0735_cy<15>)
+     XORCY:CI->O          27   0.206   1.436  mybutterworthIm/Madd_n0735_xor<16> (mybutterworthIm/n0735<25>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Mmult_n0737[30:0]_Madd3_lut<8> (mybutterworthIm/Mmult_n0737[30:0]_Madd3_lut<8>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0737[30:0]_Madd3_cy<8> (mybutterworthIm/Mmult_n0737[30:0]_Madd3_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0737[30:0]_Madd3_cy<9> (mybutterworthIm/Mmult_n0737[30:0]_Madd3_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0737[30:0]_Madd3_cy<10> (mybutterworthIm/Mmult_n0737[30:0]_Madd3_cy<10>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Mmult_n0737[30:0]_Madd3_xor<11> (mybutterworthIm/Mmult_n0737[30:0]_Madd_133)
+     LUT3:I2->O            1   0.254   0.000  mybutterworthIm/Mmult_n0737[30:0]_Madd4_lut<11> (mybutterworthIm/Mmult_n0737[30:0]_Madd4_lut<11>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0737[30:0]_Madd4_cy<11> (mybutterworthIm/Mmult_n0737[30:0]_Madd4_cy<11>)
+     XORCY:CI->O           1   0.206   0.790  mybutterworthIm/Mmult_n0737[30:0]_Madd4_xor<12> (mybutterworthIm/Mmult_n0737[30:0]_Madd_144)
+     LUT2:I0->O            1   0.250   0.000  mybutterworthIm/Mmult_n0737[30:0]_Madd6_lut<14> (mybutterworthIm/Mmult_n0737[30:0]_Madd6_lut<14>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0737[30:0]_Madd6_cy<14> (mybutterworthIm/Mmult_n0737[30:0]_Madd6_cy<14>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Mmult_n0737[30:0]_Madd6_xor<15> (mybutterworthIm/Mmult_n0737[30:0]_Madd_156)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Mmult_n0737[30:0]_Madd7_lut<15> (mybutterworthIm/Mmult_n0737[30:0]_Madd7_lut<15>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0737[30:0]_Madd7_cy<15> (mybutterworthIm/Mmult_n0737[30:0]_Madd7_cy<15>)
+     XORCY:CI->O          17   0.206   1.209  mybutterworthIm/Mmult_n0737[30:0]_Madd7_xor<16> (mybutterworthIm/n0737[30:0]<16>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_n0738_Madd_lut<2> (mybutterworthIm/Madd_n0738_Madd_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0738_Madd_cy<2> (mybutterworthIm/Madd_n0738_Madd_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0738_Madd_cy<3> (mybutterworthIm/Madd_n0738_Madd_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0738_Madd_cy<4> (mybutterworthIm/Madd_n0738_Madd_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0738_Madd_cy<5> (mybutterworthIm/Madd_n0738_Madd_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0738_Madd_cy<6> (mybutterworthIm/Madd_n0738_Madd_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0738_Madd_cy<7> (mybutterworthIm/Madd_n0738_Madd_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0738_Madd_cy<8> (mybutterworthIm/Madd_n0738_Madd_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0738_Madd_cy<9> (mybutterworthIm/Madd_n0738_Madd_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0738_Madd_cy<10> (mybutterworthIm/Madd_n0738_Madd_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0738_Madd_cy<11> (mybutterworthIm/Madd_n0738_Madd_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0738_Madd_cy<12> (mybutterworthIm/Madd_n0738_Madd_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0738_Madd_cy<13> (mybutterworthIm/Madd_n0738_Madd_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0738_Madd_cy<14> (mybutterworthIm/Madd_n0738_Madd_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0738_Madd_cy<15> (mybutterworthIm/Madd_n0738_Madd_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0738_Madd_cy<16> (mybutterworthIm/Madd_n0738_Madd_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0738_Madd_cy<17> (mybutterworthIm/Madd_n0738_Madd_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0738_Madd_cy<18> (mybutterworthIm/Madd_n0738_Madd_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0738_Madd_cy<19> (mybutterworthIm/Madd_n0738_Madd_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0738_Madd_cy<20> (mybutterworthIm/Madd_n0738_Madd_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0738_Madd_cy<21> (mybutterworthIm/Madd_n0738_Madd_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0738_Madd_cy<22> (mybutterworthIm/Madd_n0738_Madd_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0738_Madd_cy<23> (mybutterworthIm/Madd_n0738_Madd_cy<23>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0738_Madd_cy<24> (mybutterworthIm/Madd_n0738_Madd_cy<24>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0738_Madd_cy<25> (mybutterworthIm/Madd_n0738_Madd_cy<25>)
+     MUXCY:CI->O           0   0.023   0.000  mybutterworthIm/Madd_n0738_Madd_cy<26> (mybutterworthIm/Madd_n0738_Madd_cy<26>)
+     XORCY:CI->O          19   0.206   1.260  mybutterworthIm/Madd_n0738_Madd_xor<27> (mybutterworthIm/n0738<30>)
+     DSP48A1:C29->P14      2   3.141   0.725  mybutterworthIm/Maddsub_n0746[28:0] (mybutterworthIm/sub_temp_8<14>)
+     INV:I->O             13   0.255   1.097  mybutterworthIm/a1sum9[14]_INV_556_o1_INV_0 (mybutterworthIm/a1sum9[14]_INV_556_o)
+     DSP48A1:B0->P15       3   3.651   0.994  mybutterworthIm/Madd_n07421 (mybutterworthIm/n0742<15>)
+     LUT3:I0->O            1   0.235   0.682  mybutterworthIm/Madd_add_temp_17_Madd1 (mybutterworthIm/Madd_add_temp_17_Madd1)
+     LUT4:I3->O            1   0.254   0.000  mybutterworthIm/Madd_add_temp_17_Madd_lut<0>2 (mybutterworthIm/Madd_add_temp_17_Madd_lut<0>2)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_add_temp_17_Madd_cy<0>_14 (mybutterworthIm/Madd_add_temp_17_Madd_cy<0>15)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_add_temp_17_Madd_cy<0>_15 (mybutterworthIm/Madd_add_temp_17_Madd_cy<0>16)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_add_temp_17_Madd_cy<0>_16 (mybutterworthIm/Madd_add_temp_17_Madd_cy<0>17)
+     XORCY:CI->O           9   0.206   0.976  mybutterworthIm/Madd_add_temp_17_Madd_xor<0>_17 (mybutterworthIm/add_temp_17<18>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_n0760_lut<1> (mybutterworthIm/Madd_n0760_lut<1>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0760_cy<1> (mybutterworthIm/Madd_n0760_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0760_cy<2> (mybutterworthIm/Madd_n0760_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0760_cy<3> (mybutterworthIm/Madd_n0760_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0760_cy<4> (mybutterworthIm/Madd_n0760_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0760_cy<5> (mybutterworthIm/Madd_n0760_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0760_cy<6> (mybutterworthIm/Madd_n0760_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0760_cy<7> (mybutterworthIm/Madd_n0760_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0760_cy<8> (mybutterworthIm/Madd_n0760_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0760_cy<9> (mybutterworthIm/Madd_n0760_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0760_cy<10> (mybutterworthIm/Madd_n0760_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0760_cy<11> (mybutterworthIm/Madd_n0760_cy<11>)
+     XORCY:CI->O          16   0.206   1.182  mybutterworthIm/Madd_n0760_xor<12> (mybutterworthIm/Mmult_n0762[30:0]_Madd_cy<2>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Mmult_n0762[30:0]_Madd1_lut<10> (mybutterworthIm/Mmult_n0762[30:0]_Madd1_lut<10>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0762[30:0]_Madd1_cy<10> (mybutterworthIm/Mmult_n0762[30:0]_Madd1_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0762[30:0]_Madd1_cy<11> (mybutterworthIm/Mmult_n0762[30:0]_Madd1_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0762[30:0]_Madd1_cy<12> (mybutterworthIm/Mmult_n0762[30:0]_Madd1_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0762[30:0]_Madd1_cy<13> (mybutterworthIm/Mmult_n0762[30:0]_Madd1_cy<13>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Mmult_n0762[30:0]_Madd1_xor<14> (mybutterworthIm/Mmult_n0762[30:0]_Madd_141)
+     LUT3:I2->O            1   0.254   0.000  mybutterworthIm/Mmult_n0762[30:0]_Madd2_lut<14> (mybutterworthIm/Mmult_n0762[30:0]_Madd2_lut<14>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0762[30:0]_Madd2_cy<14> (mybutterworthIm/Mmult_n0762[30:0]_Madd2_cy<14>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Mmult_n0762[30:0]_Madd2_xor<15> (mybutterworthIm/Mmult_n0762[30:0]_Madd_152)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Mmult_n0762[30:0]_Madd3_lut<15> (mybutterworthIm/Mmult_n0762[30:0]_Madd3_lut<15>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0762[30:0]_Madd3_cy<15> (mybutterworthIm/Mmult_n0762[30:0]_Madd3_cy<15>)
+     XORCY:CI->O          16   0.206   1.182  mybutterworthIm/Mmult_n0762[30:0]_Madd3_xor<16> (mybutterworthIm/n0762[30:0]<16>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_n0763_Madd_lut<2> (mybutterworthIm/Madd_n0763_Madd_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0763_Madd_cy<2> (mybutterworthIm/Madd_n0763_Madd_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0763_Madd_cy<3> (mybutterworthIm/Madd_n0763_Madd_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0763_Madd_cy<4> (mybutterworthIm/Madd_n0763_Madd_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0763_Madd_cy<5> (mybutterworthIm/Madd_n0763_Madd_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0763_Madd_cy<6> (mybutterworthIm/Madd_n0763_Madd_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0763_Madd_cy<7> (mybutterworthIm/Madd_n0763_Madd_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0763_Madd_cy<8> (mybutterworthIm/Madd_n0763_Madd_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0763_Madd_cy<9> (mybutterworthIm/Madd_n0763_Madd_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0763_Madd_cy<10> (mybutterworthIm/Madd_n0763_Madd_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0763_Madd_cy<11> (mybutterworthIm/Madd_n0763_Madd_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0763_Madd_cy<12> (mybutterworthIm/Madd_n0763_Madd_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0763_Madd_cy<13> (mybutterworthIm/Madd_n0763_Madd_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0763_Madd_cy<14> (mybutterworthIm/Madd_n0763_Madd_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0763_Madd_cy<15> (mybutterworthIm/Madd_n0763_Madd_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0763_Madd_cy<16> (mybutterworthIm/Madd_n0763_Madd_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0763_Madd_cy<17> (mybutterworthIm/Madd_n0763_Madd_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0763_Madd_cy<18> (mybutterworthIm/Madd_n0763_Madd_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0763_Madd_cy<19> (mybutterworthIm/Madd_n0763_Madd_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0763_Madd_cy<20> (mybutterworthIm/Madd_n0763_Madd_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0763_Madd_cy<21> (mybutterworthIm/Madd_n0763_Madd_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0763_Madd_cy<22> (mybutterworthIm/Madd_n0763_Madd_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0763_Madd_cy<23> (mybutterworthIm/Madd_n0763_Madd_cy<23>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0763_Madd_cy<24> (mybutterworthIm/Madd_n0763_Madd_cy<24>)
+     MUXCY:CI->O           0   0.023   0.000  mybutterworthIm/Madd_n0763_Madd_cy<25> (mybutterworthIm/Madd_n0763_Madd_cy<25>)
+     XORCY:CI->O          19   0.206   1.260  mybutterworthIm/Madd_n0763_Madd_xor<26> (mybutterworthIm/n0763<30>)
+     DSP48A1:C29->P14      2   3.141   0.725  mybutterworthIm/Maddsub_n0771[28:0] (mybutterworthIm/sub_temp_9<14>)
+     INV:I->O             13   0.255   1.097  mybutterworthIm/a1sum10[14]_INV_606_o1_INV_0 (mybutterworthIm/a1sum10[14]_INV_606_o)
+     DSP48A1:B0->P15       3   3.651   0.994  mybutterworthIm/Madd_n07671 (mybutterworthIm/n0767<15>)
+     LUT3:I0->O            1   0.235   0.682  mybutterworthIm/Madd_add_temp_19_Madd1 (mybutterworthIm/Madd_add_temp_19_Madd1)
+     LUT4:I3->O            1   0.254   0.000  mybutterworthIm/Madd_add_temp_19_Madd_lut<0>2 (mybutterworthIm/Madd_add_temp_19_Madd_lut<0>2)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_add_temp_19_Madd_cy<0>_14 (mybutterworthIm/Madd_add_temp_19_Madd_cy<0>15)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_add_temp_19_Madd_cy<0>_15 (mybutterworthIm/Madd_add_temp_19_Madd_cy<0>16)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_add_temp_19_Madd_cy<0>_16 (mybutterworthIm/Madd_add_temp_19_Madd_cy<0>17)
+     XORCY:CI->O           9   0.206   0.976  mybutterworthIm/Madd_add_temp_19_Madd_xor<0>_17 (mybutterworthIm/add_temp_19<18>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_n0785_lut<1> (mybutterworthIm/Madd_n0785_lut<1>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0785_cy<1> (mybutterworthIm/Madd_n0785_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0785_cy<2> (mybutterworthIm/Madd_n0785_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0785_cy<3> (mybutterworthIm/Madd_n0785_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0785_cy<4> (mybutterworthIm/Madd_n0785_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0785_cy<5> (mybutterworthIm/Madd_n0785_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0785_cy<6> (mybutterworthIm/Madd_n0785_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0785_cy<7> (mybutterworthIm/Madd_n0785_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0785_cy<8> (mybutterworthIm/Madd_n0785_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0785_cy<9> (mybutterworthIm/Madd_n0785_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0785_cy<10> (mybutterworthIm/Madd_n0785_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0785_cy<11> (mybutterworthIm/Madd_n0785_cy<11>)
+     XORCY:CI->O          20   0.206   1.286  mybutterworthIm/Madd_n0785_xor<12> (mybutterworthIm/Mmult_n0787[30:0]_Madd_cy<2>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Mmult_n0787[30:0]_Madd1_lut<8> (mybutterworthIm/Mmult_n0787[30:0]_Madd1_lut<8>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0787[30:0]_Madd1_cy<8> (mybutterworthIm/Mmult_n0787[30:0]_Madd1_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0787[30:0]_Madd1_cy<9> (mybutterworthIm/Mmult_n0787[30:0]_Madd1_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0787[30:0]_Madd1_cy<10> (mybutterworthIm/Mmult_n0787[30:0]_Madd1_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0787[30:0]_Madd1_cy<11> (mybutterworthIm/Mmult_n0787[30:0]_Madd1_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0787[30:0]_Madd1_cy<12> (mybutterworthIm/Mmult_n0787[30:0]_Madd1_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0787[30:0]_Madd1_cy<13> (mybutterworthIm/Mmult_n0787[30:0]_Madd1_cy<13>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Mmult_n0787[30:0]_Madd1_xor<14> (mybutterworthIm/Mmult_n0787[30:0]_Madd_141)
+     LUT5:I4->O            1   0.254   0.000  mybutterworthIm/Mmult_n0787[30:0]_Madd4_lut<14> (mybutterworthIm/Mmult_n0787[30:0]_Madd4_lut<14>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0787[30:0]_Madd4_cy<14> (mybutterworthIm/Mmult_n0787[30:0]_Madd4_cy<14>)
+     XORCY:CI->O           1   0.206   0.790  mybutterworthIm/Mmult_n0787[30:0]_Madd4_xor<15> (mybutterworthIm/Mmult_n0787[30:0]_Madd_154)
+     LUT2:I0->O            1   0.250   0.000  mybutterworthIm/Mmult_n0787[30:0]_Madd5_lut<15> (mybutterworthIm/Mmult_n0787[30:0]_Madd5_lut<15>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0787[30:0]_Madd5_cy<15> (mybutterworthIm/Mmult_n0787[30:0]_Madd5_cy<15>)
+     XORCY:CI->O          17   0.206   1.209  mybutterworthIm/Mmult_n0787[30:0]_Madd5_xor<16> (mybutterworthIm/n0787[30:0]<16>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_n0788_Madd_lut<2> (mybutterworthIm/Madd_n0788_Madd_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0788_Madd_cy<2> (mybutterworthIm/Madd_n0788_Madd_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0788_Madd_cy<3> (mybutterworthIm/Madd_n0788_Madd_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0788_Madd_cy<4> (mybutterworthIm/Madd_n0788_Madd_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0788_Madd_cy<5> (mybutterworthIm/Madd_n0788_Madd_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0788_Madd_cy<6> (mybutterworthIm/Madd_n0788_Madd_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0788_Madd_cy<7> (mybutterworthIm/Madd_n0788_Madd_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0788_Madd_cy<8> (mybutterworthIm/Madd_n0788_Madd_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0788_Madd_cy<9> (mybutterworthIm/Madd_n0788_Madd_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0788_Madd_cy<10> (mybutterworthIm/Madd_n0788_Madd_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0788_Madd_cy<11> (mybutterworthIm/Madd_n0788_Madd_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0788_Madd_cy<12> (mybutterworthIm/Madd_n0788_Madd_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0788_Madd_cy<13> (mybutterworthIm/Madd_n0788_Madd_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0788_Madd_cy<14> (mybutterworthIm/Madd_n0788_Madd_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0788_Madd_cy<15> (mybutterworthIm/Madd_n0788_Madd_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0788_Madd_cy<16> (mybutterworthIm/Madd_n0788_Madd_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0788_Madd_cy<17> (mybutterworthIm/Madd_n0788_Madd_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0788_Madd_cy<18> (mybutterworthIm/Madd_n0788_Madd_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0788_Madd_cy<19> (mybutterworthIm/Madd_n0788_Madd_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0788_Madd_cy<20> (mybutterworthIm/Madd_n0788_Madd_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0788_Madd_cy<21> (mybutterworthIm/Madd_n0788_Madd_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0788_Madd_cy<22> (mybutterworthIm/Madd_n0788_Madd_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0788_Madd_cy<23> (mybutterworthIm/Madd_n0788_Madd_cy<23>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0788_Madd_cy<24> (mybutterworthIm/Madd_n0788_Madd_cy<24>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0788_Madd_cy<25> (mybutterworthIm/Madd_n0788_Madd_cy<25>)
+     MUXCY:CI->O           0   0.023   0.000  mybutterworthIm/Madd_n0788_Madd_cy<26> (mybutterworthIm/Madd_n0788_Madd_cy<26>)
+     XORCY:CI->O          19   0.206   1.260  mybutterworthIm/Madd_n0788_Madd_xor<27> (mybutterworthIm/n0788<30>)
+     DSP48A1:C29->P14      2   3.141   0.725  mybutterworthIm/Maddsub_n0796[27:0] (mybutterworthIm/sub_temp_10<14>)
+     INV:I->O             13   0.255   1.097  mybutterworthIm/a1sum11[14]_INV_656_o1_INV_0 (mybutterworthIm/a1sum11[14]_INV_656_o)
+     DSP48A1:B0->P15       3   3.651   0.994  mybutterworthIm/Madd_n07921 (mybutterworthIm/n0792<15>)
+     LUT3:I0->O            1   0.235   0.682  mybutterworthIm/Madd_add_temp_21_Madd1 (mybutterworthIm/Madd_add_temp_21_Madd1)
+     LUT4:I3->O            1   0.254   0.000  mybutterworthIm/Madd_add_temp_21_Madd_lut<0>2 (mybutterworthIm/Madd_add_temp_21_Madd_lut<0>2)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_add_temp_21_Madd_cy<0>_14 (mybutterworthIm/Madd_add_temp_21_Madd_cy<0>15)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_add_temp_21_Madd_cy<0>_15 (mybutterworthIm/Madd_add_temp_21_Madd_cy<0>16)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_add_temp_21_Madd_cy<0>_16 (mybutterworthIm/Madd_add_temp_21_Madd_cy<0>17)
+     XORCY:CI->O           9   0.206   0.976  mybutterworthIm/Madd_add_temp_21_Madd_xor<0>_17 (mybutterworthIm/add_temp_21<18>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_n0810_lut<1> (mybutterworthIm/Madd_n0810_lut<1>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0810_cy<1> (mybutterworthIm/Madd_n0810_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0810_cy<2> (mybutterworthIm/Madd_n0810_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0810_cy<3> (mybutterworthIm/Madd_n0810_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0810_cy<4> (mybutterworthIm/Madd_n0810_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0810_cy<5> (mybutterworthIm/Madd_n0810_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0810_cy<6> (mybutterworthIm/Madd_n0810_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0810_cy<7> (mybutterworthIm/Madd_n0810_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0810_cy<8> (mybutterworthIm/Madd_n0810_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0810_cy<9> (mybutterworthIm/Madd_n0810_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0810_cy<10> (mybutterworthIm/Madd_n0810_cy<10>)
+     XORCY:CI->O          11   0.206   1.147  mybutterworthIm/Madd_n0810_xor<11> (mybutterworthIm/n0810<20>)
+     LUT2:I0->O            1   0.250   0.000  mybutterworthIm/Mmult_n0812[30:0]_Madd2_lut<3> (mybutterworthIm/Mmult_n0812[30:0]_Madd2_lut<3>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0812[30:0]_Madd2_cy<3> (mybutterworthIm/Mmult_n0812[30:0]_Madd2_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0812[30:0]_Madd2_cy<4> (mybutterworthIm/Mmult_n0812[30:0]_Madd2_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0812[30:0]_Madd2_cy<5> (mybutterworthIm/Mmult_n0812[30:0]_Madd2_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0812[30:0]_Madd2_cy<6> (mybutterworthIm/Mmult_n0812[30:0]_Madd2_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0812[30:0]_Madd2_cy<7> (mybutterworthIm/Mmult_n0812[30:0]_Madd2_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0812[30:0]_Madd2_cy<8> (mybutterworthIm/Mmult_n0812[30:0]_Madd2_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0812[30:0]_Madd2_cy<9> (mybutterworthIm/Mmult_n0812[30:0]_Madd2_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0812[30:0]_Madd2_cy<10> (mybutterworthIm/Mmult_n0812[30:0]_Madd2_cy<10>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Mmult_n0812[30:0]_Madd2_xor<11> (mybutterworthIm/Mmult_n0812[30:0]_Madd_142)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Mmult_n0812[30:0]_Madd3_lut<13> (mybutterworthIm/Mmult_n0812[30:0]_Madd3_lut<13>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0812[30:0]_Madd3_cy<13> (mybutterworthIm/Mmult_n0812[30:0]_Madd3_cy<13>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Mmult_n0812[30:0]_Madd3_xor<14> (mybutterworthIm/Mmult_n0812[30:0]_Madd_153)
+     LUT6:I5->O            1   0.254   0.000  mybutterworthIm/Mmult_n0812[30:0]_Madd4_lut<14> (mybutterworthIm/Mmult_n0812[30:0]_Madd4_lut<14>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0812[30:0]_Madd4_cy<14> (mybutterworthIm/Mmult_n0812[30:0]_Madd4_cy<14>)
+     XORCY:CI->O          13   0.206   1.098  mybutterworthIm/Mmult_n0812[30:0]_Madd4_xor<15> (mybutterworthIm/n0812[30:0]<16>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_n0813_Madd_lut<2> (mybutterworthIm/Madd_n0813_Madd_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0813_Madd_cy<2> (mybutterworthIm/Madd_n0813_Madd_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0813_Madd_cy<3> (mybutterworthIm/Madd_n0813_Madd_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0813_Madd_cy<4> (mybutterworthIm/Madd_n0813_Madd_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0813_Madd_cy<5> (mybutterworthIm/Madd_n0813_Madd_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0813_Madd_cy<6> (mybutterworthIm/Madd_n0813_Madd_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0813_Madd_cy<7> (mybutterworthIm/Madd_n0813_Madd_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0813_Madd_cy<8> (mybutterworthIm/Madd_n0813_Madd_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0813_Madd_cy<9> (mybutterworthIm/Madd_n0813_Madd_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0813_Madd_cy<10> (mybutterworthIm/Madd_n0813_Madd_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0813_Madd_cy<11> (mybutterworthIm/Madd_n0813_Madd_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0813_Madd_cy<12> (mybutterworthIm/Madd_n0813_Madd_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0813_Madd_cy<13> (mybutterworthIm/Madd_n0813_Madd_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0813_Madd_cy<14> (mybutterworthIm/Madd_n0813_Madd_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0813_Madd_cy<15> (mybutterworthIm/Madd_n0813_Madd_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0813_Madd_cy<16> (mybutterworthIm/Madd_n0813_Madd_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0813_Madd_cy<17> (mybutterworthIm/Madd_n0813_Madd_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0813_Madd_cy<18> (mybutterworthIm/Madd_n0813_Madd_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0813_Madd_cy<19> (mybutterworthIm/Madd_n0813_Madd_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0813_Madd_cy<20> (mybutterworthIm/Madd_n0813_Madd_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0813_Madd_cy<21> (mybutterworthIm/Madd_n0813_Madd_cy<21>)
+     MUXCY:CI->O           0   0.023   0.000  mybutterworthIm/Madd_n0813_Madd_cy<22> (mybutterworthIm/Madd_n0813_Madd_cy<22>)
+     XORCY:CI->O          19   0.206   1.260  mybutterworthIm/Madd_n0813_Madd_xor<23> (mybutterworthIm/n0813<30>)
+     DSP48A1:C29->P14      2   3.141   0.725  mybutterworthIm/Maddsub_n0821[27:0] (mybutterworthIm/sub_temp_11<14>)
+     INV:I->O             13   0.255   1.097  mybutterworthIm/a1sum12[14]_INV_737_o1_INV_0 (mybutterworthIm/a1sum12[14]_INV_737_o)
+     DSP48A1:B0->P15       3   3.651   0.994  mybutterworthIm/Madd_n08171 (mybutterworthIm/n0817<15>)
+     LUT3:I0->O            1   0.235   0.682  mybutterworthIm/Madd_add_temp_23_Madd1 (mybutterworthIm/Madd_add_temp_23_Madd1)
+     LUT4:I3->O            1   0.254   0.000  mybutterworthIm/Madd_add_temp_23_Madd_lut<0>2 (mybutterworthIm/Madd_add_temp_23_Madd_lut<0>2)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_add_temp_23_Madd_cy<0>_14 (mybutterworthIm/Madd_add_temp_23_Madd_cy<0>15)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_add_temp_23_Madd_cy<0>_15 (mybutterworthIm/Madd_add_temp_23_Madd_cy<0>16)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_add_temp_23_Madd_cy<0>_16 (mybutterworthIm/Madd_add_temp_23_Madd_cy<0>17)
+     XORCY:CI->O           9   0.206   0.976  mybutterworthIm/Madd_add_temp_23_Madd_xor<0>_17 (mybutterworthIm/add_temp_23<18>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_n0835_lut<1> (mybutterworthIm/Madd_n0835_lut<1>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0835_cy<1> (mybutterworthIm/Madd_n0835_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0835_cy<2> (mybutterworthIm/Madd_n0835_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0835_cy<3> (mybutterworthIm/Madd_n0835_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0835_cy<4> (mybutterworthIm/Madd_n0835_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0835_cy<5> (mybutterworthIm/Madd_n0835_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0835_cy<6> (mybutterworthIm/Madd_n0835_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0835_cy<7> (mybutterworthIm/Madd_n0835_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0835_cy<8> (mybutterworthIm/Madd_n0835_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0835_cy<9> (mybutterworthIm/Madd_n0835_cy<9>)
+     XORCY:CI->O          28   0.206   1.729  mybutterworthIm/Madd_n0835_xor<10> (mybutterworthIm/n0835<19>)
+     LUT4:I0->O            2   0.254   0.726  mybutterworthIm/Mmult_n0837[30:0]_Madd2_cy<9>11 (mybutterworthIm/Mmult_n0837[30:0]_Madd2_cy<9>)
+     LUT6:I5->O            1   0.254   0.682  mybutterworthIm/Mmult_n0837[30:0]_Madd4_lut<15>_SW2 (N449)
+     LUT6:I5->O            1   0.254   0.000  mybutterworthIm/Mmult_n0837[30:0]_Madd4_lut<15> (mybutterworthIm/Mmult_n0837[30:0]_Madd4_lut<15>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0837[30:0]_Madd4_cy<15> (mybutterworthIm/Mmult_n0837[30:0]_Madd4_cy<15>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Mmult_n0837[30:0]_Madd4_xor<16> (mybutterworthIm/Mmult_n0837[30:0]_Madd_164)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Mmult_n0837[30:0]_Madd6_lut<16> (mybutterworthIm/Mmult_n0837[30:0]_Madd6_lut<16>)
+     XORCY:LI->O          17   0.149   1.209  mybutterworthIm/Mmult_n0837[30:0]_Madd6_xor<16> (mybutterworthIm/n0837[30:0]<16>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_n0838_Madd_lut<2> (mybutterworthIm/Madd_n0838_Madd_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0838_Madd_cy<2> (mybutterworthIm/Madd_n0838_Madd_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0838_Madd_cy<3> (mybutterworthIm/Madd_n0838_Madd_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0838_Madd_cy<4> (mybutterworthIm/Madd_n0838_Madd_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0838_Madd_cy<5> (mybutterworthIm/Madd_n0838_Madd_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0838_Madd_cy<6> (mybutterworthIm/Madd_n0838_Madd_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0838_Madd_cy<7> (mybutterworthIm/Madd_n0838_Madd_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0838_Madd_cy<8> (mybutterworthIm/Madd_n0838_Madd_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0838_Madd_cy<9> (mybutterworthIm/Madd_n0838_Madd_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0838_Madd_cy<10> (mybutterworthIm/Madd_n0838_Madd_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0838_Madd_cy<11> (mybutterworthIm/Madd_n0838_Madd_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0838_Madd_cy<12> (mybutterworthIm/Madd_n0838_Madd_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0838_Madd_cy<13> (mybutterworthIm/Madd_n0838_Madd_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0838_Madd_cy<14> (mybutterworthIm/Madd_n0838_Madd_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0838_Madd_cy<15> (mybutterworthIm/Madd_n0838_Madd_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0838_Madd_cy<16> (mybutterworthIm/Madd_n0838_Madd_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0838_Madd_cy<17> (mybutterworthIm/Madd_n0838_Madd_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0838_Madd_cy<18> (mybutterworthIm/Madd_n0838_Madd_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0838_Madd_cy<19> (mybutterworthIm/Madd_n0838_Madd_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0838_Madd_cy<20> (mybutterworthIm/Madd_n0838_Madd_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0838_Madd_cy<21> (mybutterworthIm/Madd_n0838_Madd_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0838_Madd_cy<22> (mybutterworthIm/Madd_n0838_Madd_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0838_Madd_cy<23> (mybutterworthIm/Madd_n0838_Madd_cy<23>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0838_Madd_cy<24> (mybutterworthIm/Madd_n0838_Madd_cy<24>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0838_Madd_cy<25> (mybutterworthIm/Madd_n0838_Madd_cy<25>)
+     MUXCY:CI->O           0   0.023   0.000  mybutterworthIm/Madd_n0838_Madd_cy<26> (mybutterworthIm/Madd_n0838_Madd_cy<26>)
+     XORCY:CI->O          19   0.206   1.260  mybutterworthIm/Madd_n0838_Madd_xor<27> (mybutterworthIm/n0838<30>)
+     DSP48A1:C29->P14      2   3.141   0.725  mybutterworthIm/Maddsub_n0846[26:0] (mybutterworthIm/sub_temp_12<14>)
+     INV:I->O             13   0.255   1.097  mybutterworthIm/a1sum13[14]_INV_787_o1_INV_0 (mybutterworthIm/a1sum13[14]_INV_787_o)
+     DSP48A1:B0->P15       3   3.651   0.994  mybutterworthIm/Madd_n08421 (mybutterworthIm/n0842<15>)
+     LUT3:I0->O            1   0.235   0.682  mybutterworthIm/Madd_add_temp_25_Madd1 (mybutterworthIm/Madd_add_temp_25_Madd1)
+     LUT4:I3->O            1   0.254   0.000  mybutterworthIm/Madd_add_temp_25_Madd_lut<0>2 (mybutterworthIm/Madd_add_temp_25_Madd_lut<0>2)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_add_temp_25_Madd_cy<0>_14 (mybutterworthIm/Madd_add_temp_25_Madd_cy<0>15)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_add_temp_25_Madd_cy<0>_15 (mybutterworthIm/Madd_add_temp_25_Madd_cy<0>16)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_add_temp_25_Madd_cy<0>_16 (mybutterworthIm/Madd_add_temp_25_Madd_cy<0>17)
+     XORCY:CI->O           9   0.206   0.976  mybutterworthIm/Madd_add_temp_25_Madd_xor<0>_17 (mybutterworthIm/add_temp_25<18>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_n0860_lut<1> (mybutterworthIm/Madd_n0860_lut<1>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0860_cy<1> (mybutterworthIm/Madd_n0860_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0860_cy<2> (mybutterworthIm/Madd_n0860_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0860_cy<3> (mybutterworthIm/Madd_n0860_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0860_cy<4> (mybutterworthIm/Madd_n0860_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0860_cy<5> (mybutterworthIm/Madd_n0860_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0860_cy<6> (mybutterworthIm/Madd_n0860_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0860_cy<7> (mybutterworthIm/Madd_n0860_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0860_cy<8> (mybutterworthIm/Madd_n0860_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0860_cy<9> (mybutterworthIm/Madd_n0860_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0860_cy<10> (mybutterworthIm/Madd_n0860_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0860_cy<11> (mybutterworthIm/Madd_n0860_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0860_cy<12> (mybutterworthIm/Madd_n0860_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0860_cy<13> (mybutterworthIm/Madd_n0860_cy<13>)
+     XORCY:CI->O          14   0.206   1.127  mybutterworthIm/Madd_n0860_xor<14> (mybutterworthIm/n0860<23>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Mmult_n0862[30:0]_Madd1_lut<9> (mybutterworthIm/Mmult_n0862[30:0]_Madd1_lut<9>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0862[30:0]_Madd1_cy<9> (mybutterworthIm/Mmult_n0862[30:0]_Madd1_cy<9>)
+     XORCY:CI->O           1   0.206   0.790  mybutterworthIm/Mmult_n0862[30:0]_Madd1_xor<10> (mybutterworthIm/Mmult_n0862[30:0]_Madd_141)
+     LUT2:I0->O            1   0.250   0.000  mybutterworthIm/Mmult_n0862[30:0]_Madd3_lut<14> (mybutterworthIm/Mmult_n0862[30:0]_Madd3_lut<14>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0862[30:0]_Madd3_cy<14> (mybutterworthIm/Mmult_n0862[30:0]_Madd3_cy<14>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Mmult_n0862[30:0]_Madd3_xor<15> (mybutterworthIm/Mmult_n0862[30:0]_Madd_153)
+     LUT6:I5->O            1   0.254   0.000  mybutterworthIm/Mmult_n0862[30:0]_Madd4_lut<15> (mybutterworthIm/Mmult_n0862[30:0]_Madd4_lut<15>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0862[30:0]_Madd4_cy<15> (mybutterworthIm/Mmult_n0862[30:0]_Madd4_cy<15>)
+     XORCY:CI->O          16   0.206   1.182  mybutterworthIm/Mmult_n0862[30:0]_Madd4_xor<16> (mybutterworthIm/n0862[30:0]<16>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_n0863_Madd_lut<2> (mybutterworthIm/Madd_n0863_Madd_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0863_Madd_cy<2> (mybutterworthIm/Madd_n0863_Madd_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0863_Madd_cy<3> (mybutterworthIm/Madd_n0863_Madd_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0863_Madd_cy<4> (mybutterworthIm/Madd_n0863_Madd_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0863_Madd_cy<5> (mybutterworthIm/Madd_n0863_Madd_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0863_Madd_cy<6> (mybutterworthIm/Madd_n0863_Madd_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0863_Madd_cy<7> (mybutterworthIm/Madd_n0863_Madd_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0863_Madd_cy<8> (mybutterworthIm/Madd_n0863_Madd_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0863_Madd_cy<9> (mybutterworthIm/Madd_n0863_Madd_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0863_Madd_cy<10> (mybutterworthIm/Madd_n0863_Madd_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0863_Madd_cy<11> (mybutterworthIm/Madd_n0863_Madd_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0863_Madd_cy<12> (mybutterworthIm/Madd_n0863_Madd_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0863_Madd_cy<13> (mybutterworthIm/Madd_n0863_Madd_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0863_Madd_cy<14> (mybutterworthIm/Madd_n0863_Madd_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0863_Madd_cy<15> (mybutterworthIm/Madd_n0863_Madd_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0863_Madd_cy<16> (mybutterworthIm/Madd_n0863_Madd_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0863_Madd_cy<17> (mybutterworthIm/Madd_n0863_Madd_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0863_Madd_cy<18> (mybutterworthIm/Madd_n0863_Madd_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0863_Madd_cy<19> (mybutterworthIm/Madd_n0863_Madd_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0863_Madd_cy<20> (mybutterworthIm/Madd_n0863_Madd_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0863_Madd_cy<21> (mybutterworthIm/Madd_n0863_Madd_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0863_Madd_cy<22> (mybutterworthIm/Madd_n0863_Madd_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0863_Madd_cy<23> (mybutterworthIm/Madd_n0863_Madd_cy<23>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0863_Madd_cy<24> (mybutterworthIm/Madd_n0863_Madd_cy<24>)
+     MUXCY:CI->O           0   0.023   0.000  mybutterworthIm/Madd_n0863_Madd_cy<25> (mybutterworthIm/Madd_n0863_Madd_cy<25>)
+     XORCY:CI->O          19   0.206   1.260  mybutterworthIm/Madd_n0863_Madd_xor<26> (mybutterworthIm/n0863<30>)
+     DSP48A1:C29->P14      2   3.141   0.725  mybutterworthIm/Maddsub_n0871[26:0] (mybutterworthIm/sub_temp_13<14>)
+     INV:I->O             13   0.255   1.097  mybutterworthIm/a1sum14[14]_INV_868_o1_INV_0 (mybutterworthIm/a1sum14[14]_INV_868_o)
+     DSP48A1:B0->P15       3   3.651   0.994  mybutterworthIm/Madd_n08671 (mybutterworthIm/n0867<15>)
+     LUT3:I0->O            1   0.235   0.682  mybutterworthIm/Madd_add_temp_27_Madd1 (mybutterworthIm/Madd_add_temp_27_Madd1)
+     LUT4:I3->O            1   0.254   0.000  mybutterworthIm/Madd_add_temp_27_Madd_lut<0>2 (mybutterworthIm/Madd_add_temp_27_Madd_lut<0>2)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_add_temp_27_Madd_cy<0>_14 (mybutterworthIm/Madd_add_temp_27_Madd_cy<0>15)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_add_temp_27_Madd_cy<0>_15 (mybutterworthIm/Madd_add_temp_27_Madd_cy<0>16)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_add_temp_27_Madd_cy<0>_16 (mybutterworthIm/Madd_add_temp_27_Madd_cy<0>17)
+     XORCY:CI->O           9   0.206   0.976  mybutterworthIm/Madd_add_temp_27_Madd_xor<0>_17 (mybutterworthIm/add_temp_27<18>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_n0885_lut<1> (mybutterworthIm/Madd_n0885_lut<1>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0885_cy<1> (mybutterworthIm/Madd_n0885_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0885_cy<2> (mybutterworthIm/Madd_n0885_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0885_cy<3> (mybutterworthIm/Madd_n0885_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0885_cy<4> (mybutterworthIm/Madd_n0885_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0885_cy<5> (mybutterworthIm/Madd_n0885_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0885_cy<6> (mybutterworthIm/Madd_n0885_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0885_cy<7> (mybutterworthIm/Madd_n0885_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0885_cy<8> (mybutterworthIm/Madd_n0885_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0885_cy<9> (mybutterworthIm/Madd_n0885_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0885_cy<10> (mybutterworthIm/Madd_n0885_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0885_cy<11> (mybutterworthIm/Madd_n0885_cy<11>)
+     XORCY:CI->O          10   0.206   1.116  mybutterworthIm/Madd_n0885_xor<12> (mybutterworthIm/Mmult_n0887[30:0]_Madd2_lut<16>)
+     LUT2:I0->O            1   0.250   0.000  mybutterworthIm/Mmult_n0887[30:0]_Madd1_lut<4> (mybutterworthIm/Mmult_n0887[30:0]_Madd1_lut<4>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0887[30:0]_Madd1_cy<4> (mybutterworthIm/Mmult_n0887[30:0]_Madd1_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0887[30:0]_Madd1_cy<5> (mybutterworthIm/Mmult_n0887[30:0]_Madd1_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0887[30:0]_Madd1_cy<6> (mybutterworthIm/Mmult_n0887[30:0]_Madd1_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0887[30:0]_Madd1_cy<7> (mybutterworthIm/Mmult_n0887[30:0]_Madd1_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0887[30:0]_Madd1_cy<8> (mybutterworthIm/Mmult_n0887[30:0]_Madd1_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0887[30:0]_Madd1_cy<9> (mybutterworthIm/Mmult_n0887[30:0]_Madd1_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0887[30:0]_Madd1_cy<10> (mybutterworthIm/Mmult_n0887[30:0]_Madd1_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0887[30:0]_Madd1_cy<11> (mybutterworthIm/Mmult_n0887[30:0]_Madd1_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0887[30:0]_Madd1_cy<12> (mybutterworthIm/Mmult_n0887[30:0]_Madd1_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0887[30:0]_Madd1_cy<13> (mybutterworthIm/Mmult_n0887[30:0]_Madd1_cy<13>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Mmult_n0887[30:0]_Madd1_xor<14> (mybutterworthIm/Mmult_n0887[30:0]_Madd_141)
+     LUT5:I4->O            1   0.254   0.000  mybutterworthIm/Mmult_n0887[30:0]_Madd3_lut<14> (mybutterworthIm/Mmult_n0887[30:0]_Madd3_lut<14>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0887[30:0]_Madd3_cy<14> (mybutterworthIm/Mmult_n0887[30:0]_Madd3_cy<14>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Mmult_n0887[30:0]_Madd3_xor<15> (mybutterworthIm/Mmult_n0887[30:0]_Madd_153)
+     LUT5:I4->O            1   0.254   0.000  mybutterworthIm/Mmult_n0887[30:0]_Madd4_lut<15> (mybutterworthIm/Mmult_n0887[30:0]_Madd4_lut<15>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0887[30:0]_Madd4_cy<15> (mybutterworthIm/Mmult_n0887[30:0]_Madd4_cy<15>)
+     XORCY:CI->O          16   0.206   1.182  mybutterworthIm/Mmult_n0887[30:0]_Madd4_xor<16> (mybutterworthIm/n0887[30:0]<16>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_n0888_Madd_lut<2> (mybutterworthIm/Madd_n0888_Madd_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0888_Madd_cy<2> (mybutterworthIm/Madd_n0888_Madd_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0888_Madd_cy<3> (mybutterworthIm/Madd_n0888_Madd_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0888_Madd_cy<4> (mybutterworthIm/Madd_n0888_Madd_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0888_Madd_cy<5> (mybutterworthIm/Madd_n0888_Madd_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0888_Madd_cy<6> (mybutterworthIm/Madd_n0888_Madd_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0888_Madd_cy<7> (mybutterworthIm/Madd_n0888_Madd_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0888_Madd_cy<8> (mybutterworthIm/Madd_n0888_Madd_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0888_Madd_cy<9> (mybutterworthIm/Madd_n0888_Madd_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0888_Madd_cy<10> (mybutterworthIm/Madd_n0888_Madd_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0888_Madd_cy<11> (mybutterworthIm/Madd_n0888_Madd_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0888_Madd_cy<12> (mybutterworthIm/Madd_n0888_Madd_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0888_Madd_cy<13> (mybutterworthIm/Madd_n0888_Madd_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0888_Madd_cy<14> (mybutterworthIm/Madd_n0888_Madd_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0888_Madd_cy<15> (mybutterworthIm/Madd_n0888_Madd_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0888_Madd_cy<16> (mybutterworthIm/Madd_n0888_Madd_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0888_Madd_cy<17> (mybutterworthIm/Madd_n0888_Madd_cy<17>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Madd_n0888_Madd_xor<18> (mybutterworthIm/n0888<22>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Maddsub_n0896[25:0]_Madd_lut<21> (mybutterworthIm/Maddsub_n0896[25:0]_Madd_lut<21>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Maddsub_n0896[25:0]_Madd_cy<21> (mybutterworthIm/Maddsub_n0896[25:0]_Madd_cy<21>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Maddsub_n0896[25:0]_Madd_xor<22> (mybutterworthIm/sub_temp_14<22>)
+     LUT1:I0->O            1   0.254   0.000  mybutterworthIm/Madd_n0892_cy<22>_rt (mybutterworthIm/Madd_n0892_cy<22>_rt)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0892_cy<22> (mybutterworthIm/Madd_n0892_cy<22>)
+     XORCY:CI->O           3   0.206   0.994  mybutterworthIm/Madd_n0892_xor<23> (mybutterworthIm/n0892<23>)
+     LUT3:I0->O            1   0.235   0.682  mybutterworthIm/Madd_add_temp_29_Madd9 (mybutterworthIm/Madd_add_temp_29_Madd9)
+     LUT4:I3->O            1   0.254   0.000  mybutterworthIm/Madd_add_temp_29_Madd_lut<0>10 (mybutterworthIm/Madd_add_temp_29_Madd_lut<0>10)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_add_temp_29_Madd_cy<0>_22 (mybutterworthIm/Madd_add_temp_29_Madd_cy<0>23)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Madd_add_temp_29_Madd_xor<0>_23 (mybutterworthIm/add_temp_29<24>)
+     LUT1:I0->O            1   0.254   0.000  mybutterworthIm/Madd_n0910_cy<15>_rt (mybutterworthIm/Madd_n0910_cy<15>_rt)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0910_cy<15> (mybutterworthIm/Madd_n0910_cy<15>)
+     XORCY:CI->O          15   0.206   1.155  mybutterworthIm/Madd_n0910_xor<16> (mybutterworthIm/Mmult_n0912[30:0]_Madd_cy<2>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Mmult_n0912[30:0]_Madd1_lut<8> (mybutterworthIm/Mmult_n0912[30:0]_Madd1_lut<8>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0912[30:0]_Madd1_cy<8> (mybutterworthIm/Mmult_n0912[30:0]_Madd1_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0912[30:0]_Madd1_cy<9> (mybutterworthIm/Mmult_n0912[30:0]_Madd1_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0912[30:0]_Madd1_cy<10> (mybutterworthIm/Mmult_n0912[30:0]_Madd1_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0912[30:0]_Madd1_cy<11> (mybutterworthIm/Mmult_n0912[30:0]_Madd1_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0912[30:0]_Madd1_cy<12> (mybutterworthIm/Mmult_n0912[30:0]_Madd1_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0912[30:0]_Madd1_cy<13> (mybutterworthIm/Mmult_n0912[30:0]_Madd1_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0912[30:0]_Madd1_cy<14> (mybutterworthIm/Mmult_n0912[30:0]_Madd1_cy<14>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Mmult_n0912[30:0]_Madd1_xor<15> (mybutterworthIm/Mmult_n0912[30:0]_Madd_151)
+     LUT4:I3->O            1   0.254   0.000  mybutterworthIm/Mmult_n0912[30:0]_Madd2_lut<15> (mybutterworthIm/Mmult_n0912[30:0]_Madd2_lut<15>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0912[30:0]_Madd2_cy<15> (mybutterworthIm/Mmult_n0912[30:0]_Madd2_cy<15>)
+     XORCY:CI->O          16   0.206   1.182  mybutterworthIm/Mmult_n0912[30:0]_Madd2_xor<16> (mybutterworthIm/n0912[30:0]<16>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_n0913_Madd_lut<2> (mybutterworthIm/Madd_n0913_Madd_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0913_Madd_cy<2> (mybutterworthIm/Madd_n0913_Madd_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0913_Madd_cy<3> (mybutterworthIm/Madd_n0913_Madd_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0913_Madd_cy<4> (mybutterworthIm/Madd_n0913_Madd_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0913_Madd_cy<5> (mybutterworthIm/Madd_n0913_Madd_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0913_Madd_cy<6> (mybutterworthIm/Madd_n0913_Madd_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0913_Madd_cy<7> (mybutterworthIm/Madd_n0913_Madd_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0913_Madd_cy<8> (mybutterworthIm/Madd_n0913_Madd_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0913_Madd_cy<9> (mybutterworthIm/Madd_n0913_Madd_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0913_Madd_cy<10> (mybutterworthIm/Madd_n0913_Madd_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0913_Madd_cy<11> (mybutterworthIm/Madd_n0913_Madd_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0913_Madd_cy<12> (mybutterworthIm/Madd_n0913_Madd_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0913_Madd_cy<13> (mybutterworthIm/Madd_n0913_Madd_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0913_Madd_cy<14> (mybutterworthIm/Madd_n0913_Madd_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0913_Madd_cy<15> (mybutterworthIm/Madd_n0913_Madd_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0913_Madd_cy<16> (mybutterworthIm/Madd_n0913_Madd_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0913_Madd_cy<17> (mybutterworthIm/Madd_n0913_Madd_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0913_Madd_cy<18> (mybutterworthIm/Madd_n0913_Madd_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0913_Madd_cy<19> (mybutterworthIm/Madd_n0913_Madd_cy<19>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Madd_n0913_Madd_xor<20> (mybutterworthIm/n0913<24>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Maddsub_n0921[24:0]_Madd_lut<23> (mybutterworthIm/Maddsub_n0921[24:0]_Madd_lut<23>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Maddsub_n0921[24:0]_Madd_cy<23> (mybutterworthIm/Maddsub_n0921[24:0]_Madd_cy<23>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Maddsub_n0921[24:0]_Madd_xor<24> (mybutterworthIm/sub_temp_15<24>)
+     LUT1:I0->O            1   0.254   0.000  mybutterworthIm/Madd_n0917_cy<24>_rt (mybutterworthIm/Madd_n0917_cy<24>_rt)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0917_cy<24> (mybutterworthIm/Madd_n0917_cy<24>)
+     XORCY:CI->O           3   0.206   0.994  mybutterworthIm/Madd_n0917_xor<25> (mybutterworthIm/n0917<25>)
+     LUT3:I0->O            1   0.235   0.682  mybutterworthIm/Madd_add_temp_31_Madd11 (mybutterworthIm/Madd_add_temp_31_Madd11)
+     LUT4:I3->O            1   0.254   0.000  mybutterworthIm/Madd_add_temp_31_Madd_lut<0>12 (mybutterworthIm/Madd_add_temp_31_Madd_lut<0>12)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_add_temp_31_Madd_cy<0>_24 (mybutterworthIm/Madd_add_temp_31_Madd_cy<0>25)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Madd_add_temp_31_Madd_xor<0>_25 (mybutterworthIm/add_temp_31<26>)
+     LUT1:I0->O            1   0.254   0.000  mybutterworthIm/Madd_n0935_cy<17>_rt (mybutterworthIm/Madd_n0935_cy<17>_rt)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0935_cy<17> (mybutterworthIm/Madd_n0935_cy<17>)
+     XORCY:CI->O          15   0.206   1.155  mybutterworthIm/Madd_n0935_xor<18> (mybutterworthIm/Mmult_n0937[30:0]_Madd_cy<2>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Mmult_n0937[30:0]_Madd1_lut<9> (mybutterworthIm/Mmult_n0937[30:0]_Madd1_lut<9>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0937[30:0]_Madd1_cy<9> (mybutterworthIm/Mmult_n0937[30:0]_Madd1_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0937[30:0]_Madd1_cy<10> (mybutterworthIm/Mmult_n0937[30:0]_Madd1_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0937[30:0]_Madd1_cy<11> (mybutterworthIm/Mmult_n0937[30:0]_Madd1_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0937[30:0]_Madd1_cy<12> (mybutterworthIm/Mmult_n0937[30:0]_Madd1_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0937[30:0]_Madd1_cy<13> (mybutterworthIm/Mmult_n0937[30:0]_Madd1_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Mmult_n0937[30:0]_Madd1_cy<14> (mybutterworthIm/Mmult_n0937[30:0]_Madd1_cy<14>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Mmult_n0937[30:0]_Madd1_xor<15> (mybutterworthIm/Mmult_n0937[30:0]_Madd_151)
+     LUT4:I3->O            1   0.254   0.000  mybutterworthIm/Mmult_n0937[30:0]_Madd2_lut<15> (mybutterworthIm/Mmult_n0937[30:0]_Madd2_lut<15>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Mmult_n0937[30:0]_Madd2_cy<15> (mybutterworthIm/Mmult_n0937[30:0]_Madd2_cy<15>)
+     XORCY:CI->O          17   0.206   1.209  mybutterworthIm/Mmult_n0937[30:0]_Madd2_xor<16> (mybutterworthIm/n0937[30:0]<16>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_n0938_Madd_lut<2> (mybutterworthIm/Madd_n0938_Madd_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0938_Madd_cy<2> (mybutterworthIm/Madd_n0938_Madd_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0938_Madd_cy<3> (mybutterworthIm/Madd_n0938_Madd_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0938_Madd_cy<4> (mybutterworthIm/Madd_n0938_Madd_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0938_Madd_cy<5> (mybutterworthIm/Madd_n0938_Madd_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0938_Madd_cy<6> (mybutterworthIm/Madd_n0938_Madd_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0938_Madd_cy<7> (mybutterworthIm/Madd_n0938_Madd_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0938_Madd_cy<8> (mybutterworthIm/Madd_n0938_Madd_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0938_Madd_cy<9> (mybutterworthIm/Madd_n0938_Madd_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0938_Madd_cy<10> (mybutterworthIm/Madd_n0938_Madd_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0938_Madd_cy<11> (mybutterworthIm/Madd_n0938_Madd_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0938_Madd_cy<12> (mybutterworthIm/Madd_n0938_Madd_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0938_Madd_cy<13> (mybutterworthIm/Madd_n0938_Madd_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0938_Madd_cy<14> (mybutterworthIm/Madd_n0938_Madd_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0938_Madd_cy<15> (mybutterworthIm/Madd_n0938_Madd_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0938_Madd_cy<16> (mybutterworthIm/Madd_n0938_Madd_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0938_Madd_cy<17> (mybutterworthIm/Madd_n0938_Madd_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0938_Madd_cy<18> (mybutterworthIm/Madd_n0938_Madd_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0938_Madd_cy<19> (mybutterworthIm/Madd_n0938_Madd_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0938_Madd_cy<20> (mybutterworthIm/Madd_n0938_Madd_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  mybutterworthIm/Madd_n0938_Madd_cy<21> (mybutterworthIm/Madd_n0938_Madd_cy<21>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Madd_n0938_Madd_xor<22> (mybutterworthIm/n0938<25>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Maddsub_n0946[22:0]_Madd_lut<24> (mybutterworthIm/Maddsub_n0946[22:0]_Madd_lut<24>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Maddsub_n0946[22:0]_Madd_cy<24> (mybutterworthIm/Maddsub_n0946[22:0]_Madd_cy<24>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Maddsub_n0946[22:0]_Madd_xor<25> (mybutterworthIm/sub_temp_16<25>)
+     LUT1:I0->O            1   0.254   0.000  mybutterworthIm/Madd_n0942_cy<25>_rt (mybutterworthIm/Madd_n0942_cy<25>_rt)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0942_cy<25> (mybutterworthIm/Madd_n0942_cy<25>)
+     XORCY:CI->O           2   0.206   0.726  mybutterworthIm/Madd_n0942_xor<26> (mybutterworthIm/n0942<26>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_add_temp_32_Madd_Madd_lut<14> (mybutterworthIm/Madd_add_temp_32_Madd_Madd_lut<14>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_add_temp_32_Madd_Madd_cy<14> (mybutterworthIm/Madd_add_temp_32_Madd_Madd_cy<14>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Madd_add_temp_32_Madd_Madd_xor<15> (mybutterworthIm/add_temp_32<26>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_add_temp_33_Madd_Madd_lut<15> (mybutterworthIm/Madd_add_temp_33_Madd_Madd_lut<15>)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_add_temp_33_Madd_Madd_cy<15> (mybutterworthIm/Madd_add_temp_33_Madd_Madd_cy<15>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Madd_add_temp_33_Madd_Madd_xor<16> (mybutterworthIm/add_temp_33<27>)
+     LUT1:I0->O            1   0.254   0.000  mybutterworthIm/Madd_n0960_Madd_cy<16>_rt (mybutterworthIm/Madd_n0960_Madd_cy<16>_rt)
+     MUXCY:S->O            1   0.215   0.000  mybutterworthIm/Madd_n0960_Madd_cy<16> (mybutterworthIm/Madd_n0960_Madd_cy<16>)
+     XORCY:CI->O           1   0.206   0.682  mybutterworthIm/Madd_n0960_Madd_xor<17> (mybutterworthIm/n0960<28>)
+     LUT1:I0->O            1   0.254   0.000  mybutterworthIm/Madd_n0962_Madd_cy<12>_rt (mybutterworthIm/Madd_n0962_Madd_cy<12>_rt)
+     MUXCY:S->O            0   0.215   0.000  mybutterworthIm/Madd_n0962_Madd_cy<12> (mybutterworthIm/Madd_n0962_Madd_cy<12>)
+     XORCY:CI->O           3   0.206   0.766  mybutterworthIm/Madd_n0962_Madd_xor<13> (mybutterworthIm/n0962<30>)
+     LUT2:I1->O            1   0.254   0.000  mybutterworthIm/Madd_add_temp_34_Madd_lut<17> (mybutterworthIm/Madd_add_temp_34_Madd_lut<17>)
+     MUXCY:S->O            0   0.215   0.000  mybutterworthIm/Madd_add_temp_34_Madd_cy<17> (mybutterworthIm/Madd_add_temp_34_Madd_cy<17>)
+     XORCY:CI->O           0   0.206   0.000  mybutterworthIm/Madd_add_temp_34_Madd_xor<18> (mybutterworthIm/add_temp_34<29>)
+     XORCY:LI->O           1   0.149   0.000  mybutterworthIm/Madd_n0974_xor<19> (mybutterworthIm/n0974<30>)
+     FDCE:D                    0.074          mybutterworthIm/output_register_12
+    ----------------------------------------
+    Total                    358.790ns (197.534ns logic, 161.256ns route)
+                                       (55.1% logic, 44.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 2741 / 2438
+-------------------------------------------------------------------------
+Offset:              4.725ns (Levels of Logic = 21)
+  Source:            tValidIn_Array<1> (PAD)
+  Destination:       sec_inst (FF)
+  Destination Clock: clk rising
+
+  Data Path: tValidIn_Array<1> to sec_inst
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            16   1.328   1.290  tValidIn_Array_1_IBUF (tValidIn_Array_1_IBUF)
+     begin scope: 'mydigitalDemod/myncotest:s_axis_config_tvalid'
+     begin scope: 'mydigitalDemod/myncotest/blk00000001:s_axis_config_tvalid'
+     SEC:in->out           2   0.250   0.726  sec_inst (sec_net)
+     SEC:in->out           1   0.254   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.215   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.023   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.262   0.000  sec_inst (sec_net)
+     SEC:in                    0.074          sec_inst
+    ----------------------------------------
+    Total                      4.725ns (2.709ns logic, 2.016ns route)
+                                       (57.3% logic, 42.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 30 / 30
+-------------------------------------------------------------------------
+Offset:              4.277ns (Levels of Logic = 1)
+  Source:            mybutterworthRe/output_register_12 (FF)
+  Destination:       outputDataRe<15> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: mybutterworthRe/output_register_12 to outputDataRe<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             5   0.525   0.840  mybutterworthRe/output_register_12 (mybutterworthRe/output_register_12)
+     OBUF:I->O                 2.912          outputDataRe_15_OBUF (outputDataRe<15>)
+    ----------------------------------------
+    Total                      4.277ns (3.437ns logic, 0.840ns route)
+                                       (80.4% logic, 19.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |  358.790|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock outputDataRe_0_OBUF
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |  309.336|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 54.00 secs
+Total CPU time to Xst completion: 52.57 secs
+ 
+--> 
+
+
+Total memory usage is 564220 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   15 (   0 filtered)
+Number of infos    :    7 (   0 filtered)
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="c_mul32by40">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2013-9-30T12:46:11</timestamp>
+    <pin polarity="Input" x="0" y="80" name="s_axis_a_tvalid" />
+    <pin polarity="Input" x="0" y="176" name="s_axis_a_tdata[47:0]" />
+    <pin polarity="Input" x="0" y="272" name="s_axis_b_tvalid" />
+    <pin polarity="Input" x="0" y="368" name="s_axis_b_tdata[31:0]" />
+    <pin polarity="Input" x="0" y="656" name="aclk" />
+    <pin polarity="Output" x="640" y="80" name="m_axis_dout_tvalid" />
+    <pin polarity="Output" x="640" y="176" name="m_axis_dout_tdata[79:0]" />
+    <graph>
+        <text style="fontsize:40;fontname:Arial" x="32" y="32">c_mul32by40</text>
+        <rect width="576" x="32" y="32" height="768" />
+        <line x2="32" y1="80" y2="80" x1="0" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="80" type="pin s_axis_a_tvalid" />
+        <line x2="32" y1="176" y2="176" style="linewidth:W" x1="0" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="176" type="pin s_axis_a_tdata[47:0]" />
+        <line x2="32" y1="272" y2="272" x1="0" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="272" type="pin s_axis_b_tvalid" />
+        <line x2="32" y1="368" y2="368" style="linewidth:W" x1="0" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="368" type="pin s_axis_b_tdata[31:0]" />
+        <line x2="32" y1="656" y2="656" x1="0" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="656" type="pin aclk" />
+        <line x2="608" y1="80" y2="80" x1="640" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="604" y="80" type="pin m_axis_dout_tvalid" />
+        <line x2="608" y1="176" y2="176" style="linewidth:W" x1="640" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="604" y="176" type="pin m_axis_dout_tdata[79:0]" />
+    </graph>
+</symbol>

@@ -1,0 +1,25 @@
+SET_PARAMETER roundmode Truncate
+SET_PARAMETER optimizegoal Resources
+SET_PARAMETER aresetn false
+SET_PARAMETER multtype Use_Mults
+SET_PARAMETER latencyconfig Automatic
+SET_PARAMETER aclken false
+SET_PARAMETER ctrltuserwidth 1
+SET_PARAMETER atuserwidth 1
+SET_PARAMETER hasatuser false
+SET_PARAMETER bportwidth 16
+SET_PARAMETER btuserwidth 1
+SET_PARAMETER hasctrltuser false
+SET_PARAMETER outtlastbehv Null
+SET_PARAMETER component_name c_mul32by40
+SET_PARAMETER minimumlatency 10
+SET_PARAMETER hasbtuser false
+SET_PARAMETER hasatlast false
+SET_PARAMETER aportwidth 20
+SET_PARAMETER hasctrltlast false
+SET_PARAMETER hasbtlast false
+SET_PARAMETER flowcontrol NonBlocking
+SET_PARAMETER outputwidth 36
+SET_ERROR_CODE 2
+SET_ERROR_MSG  CANCEL: Customization cancelled.
+SET_ERROR_TEXT Finished initializing IP model.	
